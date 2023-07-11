@@ -185,6 +185,8 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+# whether we show sphinx in the end of footer or not
+html_show_sphinx = False
 
 def setup(app):
     pass
