@@ -22,8 +22,8 @@ from docutils.parsers.rst.roles import set_classes
 # -- Project information -----------------------------------------------------
 
 project = u'VyOS'
-copyright = u'2021, VyOS maintainers and contributors'
-author = u'VyOS maintainers and contributors'
+copyright = u'2021, VyOS maintainers and contributors. Revision acd3cece'
+author = u'VyOS maintainers and contributors. Revision acd3cece.'
 
 # The short X.Y version
 version = u'1.3'
