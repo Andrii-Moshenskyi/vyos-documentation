@@ -130,6 +130,7 @@ p.devwarning {
   background-color: #fff;
   color: #FD8F01;
   border: transparent;
+  padding: 11px 12px;
 }
 
 .wy-menu-vertical li.toctree-l1.current .toctree-l2 > a {
@@ -259,7 +260,7 @@ div.card-header {
 
 .rst-footer-buttons > .btn-neutral {
   background: #fff !important;
-  width: 90px;
+  min-width: 90px;
   height: 40px;
   border: 2px solid #FD8F01;
   color: #121010 !important;
