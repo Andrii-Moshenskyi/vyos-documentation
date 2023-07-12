@@ -345,6 +345,21 @@ div.card-header {
   font-weight: 400;
 }
 
+.wy-menu-vertical ul li .current > a {
+  padding: 11px 12px !important;
+}
+
+.rst-footer-buttons .btn-neutral > .fa-arrow-circle-left {
+  padding-left: 20px;
+} 
+
+.rst-footer-buttons .btn-neutral > .fa-arrow-circle-left::before {
+  content: url('../images/arrow-left.png');
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
 /* footer */
 
 footer > hr {
