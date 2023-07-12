@@ -1,7 +1,4 @@
 .wy-menu-vertical ul li .current > a {
-  /* background-color: #fff; */
-  /* color: #FD8F01; */
-  /* border: transparent; */
   padding: 11px 12px !important;
 }
 
@@ -29,8 +26,8 @@
   font-weight: 400;
 }
 
-.rst-footer-buttons .btn-neutral:nth-child(1) {
-  padding-left: 35px;
+.rst-footer-buttons .btn-neutral > .fa-arrow-circle-left {
+  padding-left: 20px;
 } 
 
 .rst-footer-buttons .btn-neutral > .fa-arrow-circle-left::before {
