@@ -35,8 +35,14 @@ p.devwarning {
   position: relative;
 }
 
-.wy-nav-shift {
+.wy-nav-side {
   border-radius: 16px;
+}
+
+@media screen and (min-width: 1100px) {
+  .wy-nav-side {
+    left: calc(50% - 570px);
+  }
 }
 
 .wy-nav-side {
@@ -161,7 +167,7 @@ p.devwarning {
 .wy-breadcrumbs > li > .icon-home::after {
   content: url('../images/breadcrumb-icon.png');
   visibility: visible;
-  right: -6px;
+  right: -5px;
   top: 6px;
   position: absolute
 }
@@ -170,11 +176,16 @@ p.devwarning {
   padding-right: 0;
   content: 'Home';
   visibility: visible;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
 }
 
 .wy-breadcrumbs > li:nth-child(2) {
-  padding-left: 12px;
+  padding-left: 10px;
   font-weight: 500;
+  color: #121010;
 }
 
 /* main-page content */
@@ -184,9 +195,14 @@ p.devwarning {
   padding-right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  #vyos-user-guide .container {
+    max-width: none;
+  }
+}
+
 #vyos-user-guide .container > .docutils > .p-2 {
   padding: 7px 1px 10px 0px !important;
-  width: calc(50%  - 30px);
   max-width: 387px;
   box-shadow: none;
   
@@ -199,7 +215,39 @@ p.devwarning {
   };
 
   & .card-body .card-text {
-    height: 120px;
+    min-height: 120px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #vyos-user-guide .container > .docutils > .p-2 {
+    max-width: 100%;
+    &:nth-child(2n) {
+      margin-left: 0;
+    };
+
+    & .card-body .card-text {
+      min-height: 80px;
+    }
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 768px) {
+  #vyos-user-guide .container > .docutils > .p-2 {
+    width: calc(50% - 15px);
+    flex: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #vyos-user-guide .container > .docutils > .p-2 {
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  #vyos-user-guide .container > .docutils > .p-2 {
+    flex: none;
   }
 }
 
@@ -235,6 +283,13 @@ div.card-header {
 .card-header,
 .card-body {
   padding: 0 15px 0 0;
+}
+
+@media screen and (max-width: 575px) {
+  .card-header,
+  .card-body {
+    padding: 0 15px;
+  }
 }
 
 .rst-content > div > hr {
