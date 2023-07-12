@@ -41,7 +41,7 @@ p.devwarning {
 
 .wy-nav-side {
   padding: 20px 19px;
-  position: absolute;
+  position: fixed;
   width: 294px;
 }
 
