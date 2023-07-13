@@ -36,3 +36,82 @@
 #running-on-bare-metal h5 {
   font-size: 20px;
 }
+
+#running-on-bare-metal p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
+
+/* lists */
+.simple > li {
+  list-style: none !important;
+  position: relative;
+}
+
+.simple > li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -15px;
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* code snippets */
+
+.rst-content div[class^=highlight], 
+.rst-content pre.literal-block {
+  border: none;
+  background: linear-gradient(#FF9000, #FFBF12);
+  border-radius: 8px;
+  padding-left: 5px;
+}
+.rst-content div[class^=highlight] div[class^=highlight], 
+.rst-content pre.literal-block div[class^=highlight] {
+  background: #525659 !important;
+  border-radius: 4px;
+  border: none;
+  padding: 24px 30px;
+}
+
+.rst-content .linenodiv pre, 
+.rst-content div[class^=highlight] pre, 
+.rst-content pre.literal-block {
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* separate commands */
+
+.rst-content code.literal {
+  border: 1px solid rgba(253, 143, 1, 0.2);
+  background-color: #FFF4E6;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #121010;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+
+div.note {
+  padding: 20px !important;
+  background-color: #F5FCFF !important;
+  border-radius: 8px;
+
+}
+
+div.note > .admonition-title {
+  padding: 5px 8px;
+  background-color: #CCEFFB !important;
+  border-radius: 6px;
+}

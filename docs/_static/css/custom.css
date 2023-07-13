@@ -208,26 +208,25 @@ p.devwarning {
   padding-left: 10px;
   font-weight: 500;
   color: #121010;
-  position: relative;
-}
-
-.wy-breadcrumbs > li:nth-child(2)::after {
-  content: url('../images/breadcrumb-icon.png');
-  visibility: visible;
-  right: -10px;
-  top: 5px;
-  position: absolute;
-  width: 20px;
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  z-index: 2;
 }
 
 .wy-breadcrumbs > li:nth-child(3) {
   padding-left: 10px;
   font-weight: 500;
   color: #121010;
+  position: relative;
+}
+
+.wy-breadcrumbs > li:nth-child(3)::before {
+  content: url('../images/breadcrumb-icon.png');
+  left: -15px;
+  top: 0;
+  position: absolute;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 2;
 }
 
 /* main-page content */
