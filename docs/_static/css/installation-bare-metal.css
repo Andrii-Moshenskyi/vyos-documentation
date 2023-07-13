@@ -114,4 +114,22 @@ div.note > .admonition-title {
   padding: 5px 8px;
   background-color: #CCEFFB !important;
   border-radius: 6px;
+  font-family: 'Archivo', sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 600 !important;
+  color: #356E81 !important;
+}
+
+div.note > .admonition-title::before {
+  content: url('../images/note-icon.svg');
+}
+
+#running-on-bare-metal div.note > p:nth-child(2) {
+  padding: 8px 12px 0 12px;
+}
+
+#partaker-i5 > p > a.external {
+  color: #508EEB;
+  text-decoration: underline;
 }
