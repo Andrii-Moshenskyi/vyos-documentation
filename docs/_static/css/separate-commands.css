@@ -1,0 +1,48 @@
+/* separate commands */
+
+.rst-content code.literal {
+  border: 1px solid rgba(253, 143, 1, 0.2);
+  background-color: #FFF4E6;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #121010;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+
+div.note {
+  padding: 20px !important;
+  background-color: #F5FCFF !important;
+  border-radius: 8px;
+
+}
+
+div.note > .admonition-title {
+  padding: 5px 8px;
+  background-color: #CCEFFB !important;
+  border-radius: 6px;
+  font-family: 'Archivo', sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 600 !important;
+  color: #356E81 !important;
+}
+
+div.note > .admonition-title::before {
+  content: url('../images/note-icon.svg');
+}
+
+#running-on-bare-metal div.note > p:nth-child(2) {
+  padding: 8px 12px 0 12px;
+}
+
+#partaker-i5 > p > a.external {
+  color: #508EEB;
+  text-decoration: underline;
+}
+
+.testClass {
+  font-size: 50px !important;
+  background-color: red !important;
+}

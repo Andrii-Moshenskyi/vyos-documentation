@@ -1,0 +1,16 @@
+/* lists */
+.simple > li {
+  list-style: none !important;
+  position: relative;
+}
+
+.simple > li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -15px;
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
+}
