@@ -140,7 +140,7 @@ p.devwarning {
 }
 
 .wy-menu-vertical > ul.current > li.toctree-l1.current > a.internal {
-  padding-left: 25px;
+  padding-left: 25px !important;
 }
 
 .wy-menu-vertical > ul.current > li.toctree-l1.current > a.current {
@@ -399,10 +399,6 @@ div.card-header {
   top: 10px;
   left: 15px;
 }
-
-
-
-
 
 /* footer */
 
