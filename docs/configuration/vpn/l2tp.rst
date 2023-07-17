@@ -14,20 +14,17 @@ with native Windows and Mac VPN clients):
 
 .. code-block:: none
 
-  vyos@vyos:~$ show configuration commands
-  set interfaces ethernet eth0 address 'dhcp'
-  set interfaces ethernet eth0 hw-id '00:53:dd:44:3b:0f'
-  set interfaces loopback 'lo'
-  set service ssh port '22'
-  set system config-management commit-revisions '20'
-  set system console device ttyS0 speed '9600'
-  set system login user vyos authentication encrypted-password '$6$Vt68...QzF0'
-  set system login user vyos level 'admin'
-  set system ntp server '0.pool.ntp.org'
-  set system ntp server '1.pool.ntp.org'
-  set system ntp server '2.pool.ntp.org'
-  set system syslog global facility all level 'notice'
-  set system syslog global facility protocols level 'debug'
+  set vpn ipsec ipsec-interfaces interface eth0
+  set vpn ipsec nat-traversal enable
+  set vpn ipsec nat-networks allowed-network 0.0.0.0/0
+
+  set vpn l2tp remote-access outside-address 192.0.2.2
+  set vpn l2tp remote-access client-ip-pool start 192.168.255.2
+  set vpn l2tp remote-access client-ip-pool stop 192.168.255.254
+  set vpn l2tp remote-access ipsec-settings authentication mode pre-shared-secret
+  set vpn l2tp remote-access ipsec-settings authentication pre-shared-secret <secret>
+  set vpn l2tp remote-access authentication mode local
+  set vpn l2tp remote-access authentication local-users username test password 'test'
 
 In the above example, an external IP of 192.0.2.2 is assumed.
 

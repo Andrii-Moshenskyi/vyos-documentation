@@ -27,14 +27,14 @@
   color: #fff;
   line-height: 1.2;
   overflow-x: scroll;
-  padding: 30px 36px;
+  padding: 18px 28px 32px;
 }
 
 /* copy code div */
 .highlight > .copyDiv {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  right: 14px;
   background-color: #111111;
   width: 62px;
   height: 32px;

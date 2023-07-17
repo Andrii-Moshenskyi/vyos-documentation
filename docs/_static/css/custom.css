@@ -59,9 +59,18 @@ p.devwarning {
   background-color: #fff;
 }
 
-.wy-nav-content {
-  padding: 25px 25px 27px 40px;
+@media screen and (max-width: 1200px) {
+  .wy-nav-content {
+    padding: 25px 25px 27px 40px;
+  }
 }
+
+@media screen and (min-width: 1200px) {
+  .wy-nav-content {
+    padding: 25px 0 27px 40px;
+  }
+}
+
 
 @media screen and (min-width: 768px) {
   .wy-nav-content-wrap {
@@ -207,7 +216,7 @@ p.devwarning {
 }
 
 .wy-breadcrumbs > li {
-  padding: 5px 5px 5px 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 .wy-breadcrumbs > li a {
@@ -217,12 +226,13 @@ p.devwarning {
 .wy-breadcrumbs > li:nth-child(1) {
   visibility: hidden;
   position: relative;
+  padding-left: 0;
 }
 
 .wy-breadcrumbs > li > .icon-home::after {
   content: url('../images/breadcrumbs-icon.svg');
   visibility: visible;
-  right: -5px;
+  right: 0px;
   top: 5px;
   position: absolute
 }
@@ -321,20 +331,15 @@ p.devwarning {
   }
 }
 
-@media screen and (min-width: 575px) and (max-width: 768px) {
+@media screen and (min-width: 575px) {
   #vyos-user-guide .container > .docutils > .p-2 {
     width: calc(50% - 15px);
   }
 }
 
-@media screen and (min-width: 768px) {
-  #vyos-user-guide .container > .docutils > .p-2 {
-    width: calc(50% - 30px);
-  }
-}
-
 #vyos-user-guide .container > .row {
   margin: 0;
+  justify-content: space-between;
 }
 
 #vyos-user-guide > h1 {
@@ -342,6 +347,7 @@ p.devwarning {
   font-weight: 700;
   font-size: 34px;
   letter-spacing: -0.02em;
+  margin-bottom: 28px;
 }
 
 #vyos-user-guide > .pb-4 {
