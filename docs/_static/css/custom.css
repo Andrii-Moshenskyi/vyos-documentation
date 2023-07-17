@@ -156,6 +156,10 @@ p.devwarning {
   padding-left: 25px !important;
 }
 
+.wy-menu-vertical li.toctree-l1.current .toctree-l2 > a:hover {
+  background-color: #E1E4E5;
+}
+
 .wy-menu-vertical li.toctree-l1.current .toctree-l2 > a.current {
   color: #fdab10;
 }
