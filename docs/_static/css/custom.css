@@ -129,6 +129,26 @@ p.devwarning {
   padding: 11px 12px;
 }
 
+ul.current > li.toctree-l1[aria-expanded=false] > a.current {
+  padding-left: 25px;
+  color: #FD8F01;
+
+  & button.toctree-expand::before {
+    content: '+';
+    color: #FD8F01;
+  }
+}
+
+ul.current > li.toctree-l1[aria-expanded=false] > a.internal:has( + ul[aria-expanded=false]) {
+  padding-left: 25px;
+  color: #FD8F01;
+
+  & button.toctree-expand::before {
+    content: '+';
+    color: #FD8F01;
+  }
+}
+
 .wy-menu-vertical p.caption {
   color: #8D9499;
   font-family: 'Archivo', sans-serif;
@@ -162,16 +182,16 @@ p.devwarning {
 }
 
 .wy-menu-vertical li.toctree-l1.current .toctree-l2 > a.internal {
-  padding-left: 25px !important;
+  padding-left: 35px !important;
 }
 
 .wy-menu-vertical li.toctree-l1.current .toctree-l2.current > a.internal:first-of-type {
   color: #fdab10;
-  padding-left: 35px !important;
 }
 
 .wy-menu-vertical li.toctree-l1.current .toctree-l2 > a.current {
   color: #fdab10;
+  padding: 11px 12px 11px 35px;
 }
 
 .wy-menu-vertical li.toctree-l2.current > a, 
