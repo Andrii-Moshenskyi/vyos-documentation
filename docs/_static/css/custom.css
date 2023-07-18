@@ -164,11 +164,19 @@ p.devwarning {
   color: #fdab10;
 }
 
+.wy-menu-vertical li.toctree-l1.current .toctree-l2 > a:hover {
+  background-color: #E1E4E5;
+}
+
 .wy-menu-vertical li.toctree-l2.current > a, 
 .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
   background: #fff;
   border: none;
   padding-left: 3em;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a:hover {
+  background-color: #E1E4E5;
 }
 
 .wy-menu-vertical a:hover {
