@@ -1,0 +1,14 @@
+#installation-and-image-management h1,
+#installation-and-image-management > div > p > span {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#installation-and-image-management h1 {
+  font-size: 34px;
+}
+
+#installation-and-image-management > div > p > span {
+  font-size: 24px;
+}

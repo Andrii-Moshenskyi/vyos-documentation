@@ -1,6 +1,7 @@
 /* lists */
 .simple > li,
-.compound > ul > li {
+.compound > ul > li,
+#installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2 {
   list-style: none !important;
   position: relative;
 }
@@ -16,7 +17,8 @@
 }
 
 .simple > li::before,
-.compound > ul > li:before {
+.compound > ul > li:before,
+#installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2::before {
   content: '';
   position: absolute;
   top: 8px;
