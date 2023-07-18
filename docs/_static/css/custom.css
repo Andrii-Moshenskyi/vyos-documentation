@@ -480,7 +480,7 @@ div.card-header {
 
 p > a.reference.external,
 p > a,
-p > a:visited {
+#partaker-i5 > p > a.external {
   color: #FD8F01;
 }
 
@@ -502,4 +502,10 @@ footer {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.5px;
+  color: #636A6D;
+}
+
+footer p:has(a) > a,
+footer p:has(a) > a:visited {
+  color: #636A6D;
 }

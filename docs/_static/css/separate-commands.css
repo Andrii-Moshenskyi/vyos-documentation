@@ -37,11 +37,6 @@ div.note > .admonition-title::before {
   padding: 8px 12px 0 12px;
 }
 
-#partaker-i5 > p > a.external {
-  color: #508EEB;
-  text-decoration: underline;
-}
-
 .testClass {
   font-size: 50px !important;
   background-color: red !important;

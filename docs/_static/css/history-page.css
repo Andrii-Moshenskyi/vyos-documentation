@@ -29,6 +29,16 @@
   font-size: 22px;
 }
 
-#a-note-on-copyright > dl.brackets > dt {
+#a-note-on-copyright > dl.brackets > dt,
+#a-note-on-copyright > dl.brackets > dt > .brackets > a,
+a.footnote-reference.brackets {
   color: #FD8F01;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+}
+
+#a-note-on-copyright > dl p {
+  padding-bottom: 12px;
 }
