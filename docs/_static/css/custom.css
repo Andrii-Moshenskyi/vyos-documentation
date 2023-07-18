@@ -210,6 +210,7 @@ ul.current > li.toctree-l1[aria-expanded=false] > a.internal:has( + ul[aria-expa
 
 .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a.current {
   padding-left: 60px !important;
+  color: #fdab10;
 }
 
 .toctree-l2 > ul > li.toctree-l3.current {
@@ -477,6 +478,12 @@ div.card-header {
   left: 15px;
 }
 
+p > a.reference.external,
+p > a,
+#partaker-i5 > p > a.external {
+  color: #FD8F01;
+}
+
 /* footer */
 
 footer > hr {
@@ -495,4 +502,10 @@ footer {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.5px;
+  color: #636A6D;
+}
+
+footer p:has(a) > a,
+footer p:has(a) > a:visited {
+  color: #636A6D;
 }
