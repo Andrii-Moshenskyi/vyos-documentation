@@ -1,10 +1,22 @@
 /* lists */
-.simple > li {
+.simple > li,
+.compound > ul > li {
   list-style: none !important;
   position: relative;
 }
 
-.simple > li::before {
+.simple > li a,
+.compound > ul > li a {
+  color: #FD8F01;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  height: 26px;
+}
+
+.simple > li::before,
+.compound > ul > li:before {
   content: '';
   position: absolute;
   top: 8px;
