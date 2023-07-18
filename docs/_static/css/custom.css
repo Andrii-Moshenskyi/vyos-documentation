@@ -210,6 +210,7 @@ ul.current > li.toctree-l1[aria-expanded=false] > a.internal:has( + ul[aria-expa
 
 .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a.current {
   padding-left: 60px !important;
+  color: #fdab10;
 }
 
 .toctree-l2 > ul > li.toctree-l3.current {
@@ -475,6 +476,12 @@ div.card-header {
   position: absolute;
   top: 10px;
   left: 15px;
+}
+
+p > a.reference.external,
+p > a,
+p > a:visited {
+  color: #FD8F01;
 }
 
 /* footer */
