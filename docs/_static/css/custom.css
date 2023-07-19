@@ -149,6 +149,46 @@ ul.current > li.toctree-l1[aria-expanded=false] > a.internal:has( + ul[aria-expa
   }
 }
 
+ul.current > li.toctree-l1.current > ul > li.toctree-l2[aria-expanded=false]:has(ul > li > a.current) > a.internal {
+  color: #FD8F01;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 12px;
+
+  /* & button.toctree-expand::before {
+    content: '+';
+    color: #FD8F01;
+  } */
+}
+
+ul.current > li.toctree-l1.current > 
+  ul > li.toctree-l2.current > ul > li.toctree-l3[aria-expanded=false]
+  > a.current {
+  color: #FD8F01;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 12px;
+
+  /* & button.toctree-expand::before {
+    content: '+';
+    color: #FD8F01;
+  } */
+}
+
+ul.current > li.toctree-l1.current > 
+  ul > li.toctree-l2.current > ul > li.toctree-l3[aria-expanded=false]:has(ul > li.toctree-l4 > a.current)
+  > a.internal {
+  color: #FD8F01;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 12px;
+
+  /* & button.toctree-expand::before {
+    content: '+';
+    color: #FD8F01;
+  } */
+}
+
 .wy-menu-vertical p.caption {
   color: #8D9499;
   font-family: 'Archivo', sans-serif;
@@ -209,8 +249,9 @@ ul.current > li.toctree-l1[aria-expanded=false] > a.internal:has( + ul[aria-expa
   padding-left: 50px;
 }
 
-.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a.current {
-  padding-left: 60px !important;
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a.current,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3.current > a.internal {
+  padding-left: 50px !important;
   color: #fdab10;
 }
 
@@ -221,8 +262,12 @@ ul.current > li.toctree-l1[aria-expanded=false] > a.internal:has( + ul[aria-expa
 
 .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a {
   background: #fff;
-  padding-left: 75px;
+  padding-left: 65px !important;
   border-right: none;
+}
+
+.wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a.current {
+  color: #fdab10;
 }
 
 .wy-menu-vertical a:hover,
@@ -232,6 +277,8 @@ ul.current > li.toctree-l1[aria-expanded=false] > a.internal:has( + ul[aria-expa
 .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a:hover {
   background-color: #E1E4E5;
 }
+
+
 
 /* breadcrumbs */
 .wy-breadcrumbs > li,
