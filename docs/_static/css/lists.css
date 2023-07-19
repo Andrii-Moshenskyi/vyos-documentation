@@ -1,7 +1,9 @@
 /* lists */
 .simple > li,
 .compound > ul > li,
-#installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2 {
+#installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2,
+#running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2,
+#running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3 {
   list-style: none !important;
   position: relative;
 }
@@ -18,7 +20,9 @@
 
 .simple > li::before,
 .compound > ul > li:before,
-#installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2::before {
+#installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2::before,
+#running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2::before,
+#running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3::before {
   content: '';
   position: absolute;
   top: 8px;
