@@ -532,6 +532,10 @@ p > a,
   color: #FD8F01;
 }
 
+img {
+  height: auto !important;
+}
+
 /* footer */
 
 footer > hr {
