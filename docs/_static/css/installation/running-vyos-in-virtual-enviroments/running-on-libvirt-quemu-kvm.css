@@ -1,0 +1,29 @@
+#running-on-libvirt-qemu-kvm h1,
+#running-on-libvirt-qemu-kvm h2,
+#running-on-libvirt-qemu-kvm h3,
+#running-on-libvirt-qemu-kvm h4,
+#running-on-libvirt-qemu-kvm h5 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#running-on-libvirt-qemu-kvm h1 {
+  font-size: 34px;
+}
+
+#running-on-libvirt-qemu-kvm h2 {
+  font-size: 24px;
+}
+
+#running-on-libvirt-qemu-kvm h3 {
+  font-size: 22px;
+}
+
+#running-on-libvirt-qemu-kvm p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}

@@ -278,8 +278,6 @@ ul.current > li.toctree-l1.current >
   background-color: #E1E4E5;
 }
 
-
-
 /* breadcrumbs */
 .wy-breadcrumbs > li,
 .wy-breadcrumbs > li a {
@@ -289,7 +287,6 @@ ul.current > li.toctree-l1.current >
   font-weight: 400;
   letter-spacing: -0.5px;
   height: 26px;
-  /* padding-left: 10px !important; */
 }
 
 .wy-breadcrumbs > li {
@@ -325,29 +322,39 @@ ul.current > li.toctree-l1.current >
 }
 
 .wy-breadcrumbs > li:nth-child(2) {
-  /* padding-left: 10px; */
   font-weight: 500;
   color: #121010;
 }
 
 .wy-breadcrumbs > li:nth-child(3) {
-  /* padding: 0 0 0 10px; */
   font-weight: 500;
   color: #121010;
   position: relative;
 }
 
 .wy-breadcrumbs > li:nth-child(4) {
-  /* padding-left: 10px; */
   font-weight: 500;
   color: #121010;
   position: relative;
 }
 
-.wy-breadcrumbs > li:nth-child(3)::before,
-.wy-breadcrumbs > li:nth-child(4)::before {
+.wy-breadcrumbs > li:nth-child(3)::before{
   content: url('../images/breadcrumbs-icon.svg');
   left: -17px;
+  top: 0;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.wy-breadcrumbs > li:nth-child(3):has( + li + li)::after {
+  content: url('../images/breadcrumbs-icon.svg');
+  right: -5px;
   top: 0;
   position: absolute;
   width: 20px;
