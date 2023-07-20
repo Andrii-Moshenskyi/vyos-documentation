@@ -1,0 +1,35 @@
+#high-availability h1,
+#high-availability h2,
+#high-availability h3,
+#high-availability h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#high-availability h1 {
+  font-size: 34px;
+}
+
+#high-availability h2 {
+  font-size: 24px;
+}
+
+#high-availability h3 {
+  font-size: 22px;
+}
+
+#high-availability h4 {
+  font-size: 20px;
+}
+
+#high-availability p,
+#high-availability dl,
+#high-availability .cfgcmd,
+#high-availability .opcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}

@@ -11,7 +11,8 @@
 }
 
 div.note,
-div.hint {
+div.hint,
+div.warning {
   padding: 20px !important;
   border-radius: 8px;
 }
@@ -20,9 +21,9 @@ div.note {
   background-color: #F5FCFF !important;
 }
 
-/* note hint */
 div.note > .admonition-title,
-div.hint > .admonition-title {
+div.hint > .admonition-title,
+div.warning > .admonition-title {
   padding: 5px 8px;
   border-radius: 6px;
   font-family: 'Archivo', sans-serif !important;
@@ -37,7 +38,8 @@ div.note > .admonition-title {
 }
 
 div.note > .admonition-title::before,
-div.hint > .admonition-title::before {
+div.hint > .admonition-title::before,
+div.warning > .admonition-title::before {
   content: url('../images/note-icon.svg');
 }
 
@@ -50,8 +52,6 @@ div.hint > .admonition-title::before {
   background-color: red !important;
 }
 
-/* hint hint */
-
 div.hint {
   background-color: #F7FDFB !important;
 }
@@ -59,4 +59,13 @@ div.hint {
 div.hint > .admonition-title {
   background-color: #C6F0E3 !important;
   color: #3F6461 !important;
+}
+
+div.warning {
+  background-color: #FDF7F7 !important;
+}
+
+div.warning > .admonition-title {
+  background-color: #F0C6C6 !important;
+  color: #8E2F2F !important;
 }
