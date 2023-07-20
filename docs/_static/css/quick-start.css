@@ -1,0 +1,22 @@
+#quick-start h1,
+#quick-start h2 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#quick-start h1 {
+  font-size: 34px;
+}
+
+#quick-start h2 {
+  font-size: 24px;
+}
+
+#quick-start p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
