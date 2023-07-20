@@ -1,0 +1,23 @@
+#about h1 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #121010;
+}
+
+#about p,
+#about a .external {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+#about p {
+  color: #525659;
+}
+
+#about a .external {
+  color: #FD8F01;
+}

@@ -522,6 +522,14 @@ div.card-header {
   padding: 11px 12px !important;
 }
 
+.wy-menu-vertical > ul.current[aria-expanded=true] > li.toctree-l1:has(a[aria-expanded=false]) > a {
+  padding-left: 25px;
+}
+
+.wy-menu-vertical > ul.current[aria-expanded=true] > li.toctree-l1:not(:has( ~ li:only-child a)) > a:has(.toctree-expand) {
+  padding-left: 25px;
+}
+
 .rst-footer-buttons .btn-neutral > .fa-arrow-circle-left {
   padding-left: 20px;
 } 
