@@ -12,7 +12,8 @@
 
 div.note,
 div.hint,
-div.warning {
+div.warning,
+div.error {
   padding: 20px !important;
   border-radius: 8px;
 }
@@ -23,7 +24,8 @@ div.note {
 
 div.note > .admonition-title,
 div.hint > .admonition-title,
-div.warning > .admonition-title {
+div.warning > .admonition-title,
+div.error > .admonition-title {
   padding: 5px 8px;
   border-radius: 6px;
   font-family: 'Archivo', sans-serif !important;
@@ -39,7 +41,8 @@ div.note > .admonition-title {
 
 div.note > .admonition-title::before,
 div.hint > .admonition-title::before,
-div.warning > .admonition-title::before {
+div.warning > .admonition-title::before,
+div.error > .admonition-title::before {
   content: url('../images/note-icon.svg');
 }
 
@@ -61,11 +64,13 @@ div.hint > .admonition-title {
   color: #3F6461 !important;
 }
 
-div.warning {
+div.warning,
+div.error {
   background-color: #FDF7F7 !important;
 }
 
-div.warning > .admonition-title {
+div.warning > .admonition-title,
+div.error > .admonition-title {
   background-color: #F0C6C6 !important;
   color: #8E2F2F !important;
 }
