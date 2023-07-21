@@ -1,0 +1,35 @@
+#openvpn h1,
+#openvpn h2,
+#openvpn h3,
+#openvpn h4,
+#openvpn h5 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#openvpn h1 {
+  font-size: 34px;
+}
+
+#openvpn h2 {
+  font-size: 24px;
+}
+
+#openvpn h3 {
+  font-size: 22px;
+}
+
+#openvpn h4,
+#openvpn h5 {
+  font-size: 20px;
+}
+
+#openvpn p,
+#openvpn .opcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
