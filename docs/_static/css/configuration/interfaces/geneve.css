@@ -1,0 +1,28 @@
+#geneve h1,
+#geneve h2,
+#geneve h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#geneve h1 {
+  font-size: 34px;
+}
+
+#geneve h2 {
+  font-size: 24px;
+}
+
+#geneve h3 {
+  font-size: 22px;
+}
+
+#geneve p,
+#geneve .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
