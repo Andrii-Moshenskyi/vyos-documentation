@@ -1,0 +1,34 @@
+#macsec h1,
+#macsec h2,
+#macsec h3,
+#macsec h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#macsec h1 {
+  font-size: 34px;
+}
+
+#macsec h2 {
+  font-size: 24px;
+}
+
+#macsec h3 {
+  font-size: 22px;
+}
+
+#macsec h4 {
+  font-size: 22px;
+}
+
+#macsec p,
+#macsec .cfgcmd,
+#macsec .opcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
