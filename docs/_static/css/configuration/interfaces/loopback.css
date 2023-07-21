@@ -1,0 +1,28 @@
+#loopback h1,
+#loopback h2,
+#loopback h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#loopback h1 {
+  font-size: 34px;
+}
+
+#loopback h2 {
+  font-size: 24px;
+}
+
+#loopback h3 {
+  font-size: 22px;
+}
+
+#loopback p,
+#loopback .opcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
