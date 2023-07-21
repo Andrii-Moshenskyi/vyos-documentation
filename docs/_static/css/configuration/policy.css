@@ -1,19 +1,24 @@
 #policy h1,
-#policy h2 {
+#policy h2,
+#pbr h1,
+#pbr h2 {
   font-family: 'Archivo', sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-#policy h1 {
+#policy h1,
+#pbr h1 {
   font-size: 34px;
 }
 
-#policy h2 {
+#policy h2,
+#pbr h2 {
   font-size: 24px;
 }
 
-#policy p {
+#policy p,
+#pbr p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
