@@ -1,0 +1,28 @@
+#l2tpv3 h1,
+#l2tpv3 h2,
+#l2tpv3 h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#l2tpv3 h1 {
+  font-size: 34px;
+}
+
+#l2tpv3 h2 {
+  font-size: 24px;
+}
+
+#l2tpv3 h3 {
+  font-size: 22px;
+}
+
+#l2tpv3 p,
+#l2tpv3 .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
