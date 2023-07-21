@@ -1,6 +1,7 @@
 /* lists */
 .simple > li,
 .compound > ul > li,
+.simple > li > ul > li,
 #installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2,
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2,
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3,
@@ -11,8 +12,18 @@
 }
 
 .simple > li a,
-.compound > ul > li a {
+.compound > ul > li a,
+.simple > li > ul > li a {
   color: #FD8F01;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  height: 26px;
+}
+
+.simple > li > ul > li p {
+  color: #525659;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -22,6 +33,7 @@
 
 .simple > li::before,
 .compound > ul > li:before,
+.simple > li > ul > li::before,
 #installation-and-image-management > div > ul > li.toctree-l1 > ul > li.toctree-l2::before,
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2::before,
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3::before,
