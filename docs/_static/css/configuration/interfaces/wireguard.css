@@ -1,0 +1,29 @@
+#wireguard h1,
+#wireguard h2,
+#wireguard h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#wireguard h1 {
+  font-size: 34px;
+}
+
+#wireguard h2 {
+  font-size: 24px;
+}
+
+#wireguard h3 {
+  font-size: 22px;
+}
+
+#wireguard p,
+#wireguard .opcmd,
+#wireguard .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
