@@ -1,0 +1,36 @@
+#bgp h1,
+#bgp h2,
+#bgp h3,
+#bgp h4,
+#bgp h5 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#bgp h1 {
+  font-size: 34px;
+}
+
+#bgp h2 {
+  font-size: 24px;
+}
+
+#bgp h3 {
+  font-size: 22px;
+}
+
+#bgp h4,
+#bgp h5 {
+  font-size: 20px;
+}
+
+#bgp p,
+#bgp .opcmd,
+#bgp .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
