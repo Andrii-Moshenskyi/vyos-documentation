@@ -1,0 +1,23 @@
+#udp-broadcast-relay h1,
+#udp-broadcast-relay h2 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#udp-broadcast-relay h1 {
+  font-size: 34px;
+}
+
+#udp-broadcast-relay h2 {
+  font-size: 24px;
+}
+
+#udp-broadcast-relay p,
+#udp-broadcast-relay .cfgcmd{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
