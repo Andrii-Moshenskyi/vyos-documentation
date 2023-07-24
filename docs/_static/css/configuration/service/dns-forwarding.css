@@ -1,0 +1,34 @@
+#dns-forwarding h1,
+#dns-forwarding h2,
+#dns-forwarding h3,
+#dns-forwarding h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#dns-forwarding h1 {
+  font-size: 34px;
+}
+
+#dns-forwarding h2 {
+  font-size: 24px;
+}
+
+#dns-forwarding h3 {
+  font-size: 22px;
+}
+
+#dns-forwarding h4 {
+  font-size: 20px;
+}
+
+#dns-forwarding p,
+#dns-forwarding .cfgcmd,
+#dns-forwarding .opcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
