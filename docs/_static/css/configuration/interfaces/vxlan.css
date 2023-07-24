@@ -1,0 +1,33 @@
+#vxlan h1,
+#vxlan h2,
+#vxlan h3,
+#vxlan h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#vxlan h1 {
+  font-size: 34px;
+}
+
+#vxlan h2 {
+  font-size: 24px;
+}
+
+#vxlan h3 {
+  font-size: 22px;
+}
+
+#vxlan h4 {
+  font-size: 20px;
+}
+
+#vxlan p,
+#vxlan .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
