@@ -14,7 +14,8 @@ div.note,
 div.hint,
 div.warning,
 div.error,
-div.seealso {
+div.seealso,
+div.tip {
   padding: 20px !important;
   border-radius: 8px;
 }
@@ -28,7 +29,8 @@ div.note > .admonition-title,
 div.hint > .admonition-title,
 div.warning > .admonition-title,
 div.error > .admonition-title,
-div.seealso > .admonition-title {
+div.seealso > .admonition-title,
+div.tip > .admonition-title {
   padding: 5px 8px;
   border-radius: 6px;
   font-family: 'Archivo', sans-serif !important;
@@ -47,11 +49,17 @@ div.note > .admonition-title::before,
 div.hint > .admonition-title::before,
 div.warning > .admonition-title::before,
 div.error > .admonition-title::before,
-div.seealso > .admonition-title::before {
+div.seealso > .admonition-title::before,
+div.tip > .admonition-title ::before {
   content: url('../images/note-icon.svg');
 }
 
-div.error > p:not(.admonition-title) {
+div.note > p:nth-child(1n+1),
+div.hint > p:nth-child(1n+1),
+div.warning > p:nth-child(1n+1),
+div.error > p:nth-child(1n+1),
+div.seealso > p:nth-child(1n+1),
+div.tip > p:nth-child(1n+1) {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
@@ -63,16 +71,13 @@ div.error > p:not(.admonition-title) {
   padding: 8px 12px 0 12px;
 }
 
-.testClass {
-  font-size: 50px !important;
-  background-color: red !important;
-}
-
-div.hint {
+div.hint,
+div.tip {
   background-color: #F7FDFB !important;
 }
 
-div.hint > .admonition-title {
+div.hint > .admonition-title,
+div.tip > .admonition-title {
   background-color: #C6F0E3 !important;
   color: #3F6461 !important;
 }
