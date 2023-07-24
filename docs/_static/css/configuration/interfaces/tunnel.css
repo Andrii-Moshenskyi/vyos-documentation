@@ -1,0 +1,28 @@
+#tunnel h1,
+#tunnel h2,
+#tunnel h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#tunnel h1 {
+  font-size: 34px;
+}
+
+#tunnel h2 {
+  font-size: 24px;
+}
+
+#tunnel h3 {
+  font-size: 22px;
+}
+
+#tunnel p,
+#tunnel .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
