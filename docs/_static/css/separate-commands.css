@@ -51,6 +51,14 @@ div.seealso > .admonition-title::before {
   content: url('../images/note-icon.svg');
 }
 
+div.error > p:not(.admonition-title) {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
+
 #running-on-bare-metal div.note > p:nth-child(2) {
   padding: 8px 12px 0 12px;
 }

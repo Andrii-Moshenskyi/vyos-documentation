@@ -1,0 +1,29 @@
+#bfd h1,
+#bfd h2,
+#bfd h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#bfd h1 {
+  font-size: 34px;
+}
+
+#bfd h2 {
+  font-size: 24px;
+}
+
+#bfd h3 {
+  font-size: 22px;
+}
+
+#bfd p,
+#bfd .opcmd,
+#bfd .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
