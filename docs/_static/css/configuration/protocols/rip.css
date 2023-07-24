@@ -1,0 +1,24 @@
+#rip h1,
+#rip h2 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#rip h1 {
+  font-size: 34px;
+}
+
+#rip h2 {
+  font-size: 24px;
+}
+
+#rip p,
+#rip .cfgcmd,
+#rip .opcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
