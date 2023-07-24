@@ -1,0 +1,29 @@
+#wwan-wireless-wide-area-network h1,
+#wwan-wireless-wide-area-network h2,
+#wwan-wireless-wide-area-network h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#wwan-wireless-wide-area-network h1 {
+  font-size: 34px;
+}
+
+#wwan-wireless-wide-area-network h2 {
+  font-size: 24px;
+}
+
+#wwan-wireless-wide-area-network h3 {
+  font-size: 22px;
+}
+
+#wwan-wireless-wide-area-network p,
+#wwan-wireless-wide-area-network .opcmd,
+#wwan-wireless-wide-area-network .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
