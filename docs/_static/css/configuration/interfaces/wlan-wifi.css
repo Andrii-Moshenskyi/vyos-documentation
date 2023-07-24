@@ -1,0 +1,36 @@
+#wlan-wifi-wireless-lan h1,
+#wlan-wifi-wireless-lan h2,
+#wlan-wifi-wireless-lan h3,
+#wlan-wifi-wireless-lan h4,
+#wlan-wifi-wireless-lan h5 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#wlan-wifi-wireless-lan h1 {
+  font-size: 34px;
+}
+
+#wlan-wifi-wireless-lan h2 {
+  font-size: 24px;
+}
+
+#wlan-wifi-wireless-lan h3 {
+  font-size: 22px;
+}
+
+#wlan-wifi-wireless-lan h4,
+#wlan-wifi-wireless-lan h5 {
+  font-size: 20px;
+}
+
+#wlan-wifi-wireless-lan p,
+#wlan-wifi-wireless-lan .opcmd,
+#wlan-wifi-wireless-lan .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
