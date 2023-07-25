@@ -1,0 +1,28 @@
+#event-handler h1,
+#event-handler h2,
+#event-handler h3{
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#event-handler h1 {
+  font-size: 34px;
+}
+
+#event-handler h2 {
+  font-size: 24px;
+}
+
+#event-handler h3 {
+  font-size: 22px;
+}
+
+#event-handler p,
+#event-handler .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
