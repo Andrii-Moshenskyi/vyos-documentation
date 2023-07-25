@@ -1,0 +1,23 @@
+#option h1,
+#option h2 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#option h1 {
+  font-size: 34px;
+}
+
+#option h2 {
+  font-size: 24px;
+}
+
+#option p,
+#option .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
