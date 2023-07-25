@@ -1,0 +1,32 @@
+#snmp h1,
+#snmp h2,
+#snmp h3,
+#snmp h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#snmp h1 {
+  font-size: 34px;
+}
+
+#snmp h2 {
+  font-size: 24px;
+}
+
+#snmp h3 {
+  font-size: 22px;
+}
+
+#snmp h4 {
+  font-size: 20px;
+}
+
+#snmp p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
