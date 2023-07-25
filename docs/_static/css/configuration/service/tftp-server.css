@@ -1,0 +1,28 @@
+#tftp-server h1,
+#tftp-server h2,
+#tftp-server h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#tftp-server h1 {
+  font-size: 34px;
+}
+
+#tftp-server h2 {
+  font-size: 24px;
+}
+
+#tftp-server h3 {
+  font-size: 22px;
+}
+
+#tftp-server p,
+#tftp-server .cfgcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
