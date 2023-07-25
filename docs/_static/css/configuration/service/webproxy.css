@@ -1,0 +1,34 @@
+#webproxy h1,
+#webproxy h2,
+#webproxy h3,
+#webproxy h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#webproxy h1 {
+  font-size: 34px;
+}
+
+#webproxy h2 {
+  font-size: 24px;
+}
+
+#webproxy h3 {
+  font-size: 22px;
+}
+
+#webproxy h4 {
+  font-size: 20px;
+}
+
+#webproxy p,
+#webproxy .cfgcmd,
+#webproxy .opcmd {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
