@@ -6,7 +6,9 @@
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2,
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3,
 #running-vyos-in-cloud-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2,
-#running-vyos-in-cloud-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3 {
+#running-vyos-in-cloud-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3,
+#configuration-blueprints > div > ul > li.toctree-l1 > ul > li.toctree-l2,
+#configuration-blueprints > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3 {
   list-style: none !important;
   position: relative;
 }
@@ -38,7 +40,9 @@
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2::before,
 #running-vyos-in-virtual-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3::before,
 #running-vyos-in-cloud-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2::before,
-#running-vyos-in-cloud-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3::before {
+#running-vyos-in-cloud-environments > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3::before,
+#configuration-blueprints > div > ul > li.toctree-l1 > ul > li.toctree-l2::before,
+#configuration-blueprints > div > ul > li.toctree-l1 > ul > li.toctree-l2 > ul > li.toctree-l3::before {
   content: '';
   position: absolute;
   top: 8px;
