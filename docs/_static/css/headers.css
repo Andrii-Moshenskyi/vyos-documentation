@@ -37,18 +37,19 @@ h5:has(a) > a {
   padding-left: 5px;
 } 
 
-h1 {
+h1:has(a) {
   font-size: 34px !important;
 }
 
-h2 {
+h2:has(a) {
   font-size: 24px !important;
 }
 
-#bridge h3 {
+h3:has(a) {
   font-size: 22px !important;
 }
 
-h4, h5 {
+h4:has(a), 
+h5:has(a) {
   font-size: 20px !important;
 }
