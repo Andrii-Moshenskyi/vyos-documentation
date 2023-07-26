@@ -91,3 +91,37 @@
   border-radius: 8px;
   margin: 0 10px;
 }
+
+.highlight > pre .kn {
+  color: #ccffda;
+}
+
+.highlight > pre .nn {
+  color: #d0eefb;
+}
+
+.highlight > pre .o {
+  color: #e6e6e6;
+}
+
+.highlight > pre .s2 {
+  color: #dbe6f0;
+}
+
+.highlight > pre .s1 {
+  color: #dbe6f0;
+}
+
+.highlight > pre .nb {
+  color: #ccffda;
+}
+
+.highlight > pre .c1 {
+  color: #dcebef;
+  font-style: italic;
+}
+
+.highlight > pre .nt {
+  color: #8db1fe;
+  font-weight: bold;
+}
