@@ -1,34 +1,83 @@
 /* separate commands */
+
 .rst-content code.literal {
+  border: unset;
+  background-color: unset;
+}
+
+.rst-content code.literal > span.pre {
   border: 1px solid rgba(253, 143, 1, 0.2);
   background-color: #FFF4E6;
-  font-family: 'Archivo', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #121010;
+  font-family: 'Archivo', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #121010 !important;
   border-radius: 4px;
   padding: 3px 6px;
 }
 
-div.opcmd-heading {
-  /* padding: 8px 34px 8px 16px; */
+div.opcmd-heading,
+div.cfgcmd-heading {
+  padding: 0;
   display: flex;
-  /* align-items: center;
-  border-left: 5px solid #FD8F01;
-  border-radius: 8px; */
-  /* background-color: #FFF4E6; */
+  background-color: unset;
+  border: none;
+  margin-bottom: 15px;
 }
 
-#opcmd-show-configuration {
+span.opcmd,
+span.cfgcmd {
   display: flex;
-  padding: 8px 34px 8px 16px;
-  background-color: #FFF4E6;
+  padding: 4px 16px 8px 4px;
   align-items: center;
-  border-left: 5px solid #FD8F01;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
+  color: #121010 !important;
+  font-size: 16px !important;
+  font-family: 'Roboto Mono', monospace !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 600 !important;
 }
 
-#opcmd-show-configuration::before {
-  content: '$';
-  display: block;
+span.opcmd {
+  background-color: #EBF9FF;
+  border-left: 5px solid #B8E9F9;
+}
+
+span.cfgcmd {
+  background-color: #FFF4E6;
+  border-left: 5px solid #FD8F01;
+}
+
+span.opcmd::before,
+span.cfgcmd::before {
+  content: url('../images/cmnd-link-dollar-icon.svg');
+  display: flex;
+  padding-right: 8px;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.opcmd-heading > a.cmdlink,
+.cfgcmd-heading > a.cmdlink {
+  display: flex;
+}
+
+.opcmd-heading a.cmdlink:after,
+.cfgcmd-heading a.cmdlink:after {
+  display: flex;
+  align-items: center;
+  content: url('../images/cmnd-link-icon.svg');
+  height: 100%;
+  align-items: center;
+  padding-right: 10px;
+  padding-top: 3px;
+  border-radius: 0 8px 8px 0;
+}
+
+.opcmd-heading a.cmdlink:after {
+  background-color: #EBF9FF;
+}
+
+.cfgcmd-heading a.cmdlink:after {
+  background-color: #FFF4E6;
 }
