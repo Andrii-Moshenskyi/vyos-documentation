@@ -1,0 +1,15 @@
+#dual-hub-dmvpn-with-vyos p,
+#dual-hub-dmvpn-with-vyos td > p {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
+
+#dual-hub-dmvpn-with-vyos p {
+  font-size: 16px;
+}
+
+#dual-hub-dmvpn-with-vyos td > p {
+  font-size: 14px;
+}
