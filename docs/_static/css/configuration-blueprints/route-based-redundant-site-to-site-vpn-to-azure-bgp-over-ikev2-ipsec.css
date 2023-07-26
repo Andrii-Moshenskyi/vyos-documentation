@@ -1,0 +1,15 @@
+#route-based-redundant-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec p,
+#route-based-redundant-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec td > p {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.5px;
+  color: #525659;
+  font-weight: 400;
+}
+
+#route-based-redundant-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec p {
+  font-size: 16px;
+}
+
+#route-based-redundant-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec td > p {
+  font-size: 14px;
+}
