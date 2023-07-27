@@ -125,3 +125,35 @@
   color: #8db1fe;
   font-weight: bold;
 }
+
+.highlight > pre .k {
+  color: #ccffda;
+  font-weight: bold;
+}
+
+.highlight > pre .se {
+  color: #dbe6f0;
+  font-weight: bold;
+}
+
+.highlight > pre .nv {
+  color: #eed7f4;
+}
+
+.highlight > pre .gh {
+  color: #ccccff;
+  font-weight: bold;
+}
+
+.highlight > pre .gd {
+  color: #ffcccc;
+}
+
+.highlight > pre .gi {
+  color: #ccffcc;
+}
+
+.highlight > pre .gu {
+  color: #ffc2ff;
+  font-weight: bold;
+}
