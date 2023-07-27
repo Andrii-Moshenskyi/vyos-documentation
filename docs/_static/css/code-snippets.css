@@ -157,3 +157,43 @@
   color: #ffc2ff;
   font-weight: bold;
 }
+
+.highlight > pre .na {
+  color: #81c0ff;
+}
+
+.highlight > pre .s {
+  color: #dbe6f0;
+}
+
+.highlight > pre .ni {
+  color: #f4d4cd;
+  font-weight: bold;
+}
+
+.highlight > pre .cm {
+  color: #d5e7ec;
+  font-style: italic;
+}
+
+.highlight > pre .cp {
+  color: #c2ffd3;
+}
+
+.highlight > pre .mi {
+  color: #cef3e0;
+}
+
+.highlight > pre .nf {
+  color: #c5d4fc;
+}
+
+.highlight > pre .kc {
+  color: #c2ffd3;
+  font-weight: bold;
+}
+
+.highlight > pre .ch {
+  color: #d5e7ec;
+  font-style: italic;
+}
