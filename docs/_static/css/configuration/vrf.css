@@ -1,31 +1,4 @@
-#vrf h1,
-#vrf h2,
-#vrf h3,
-#vrf h4,
-#vrf h5 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#vrf h1 {
-  font-size: 34px;
-}
-
-#vrf h2 {
-  font-size: 24px;
-}
-
-#vrf h3 {
-  font-size: 22px;
-}
-
-#vrf h4,
-#vrf h5 {
-  font-size: 20px;
-}
-
-#vrf p,
+/* #vrf p,
 #vrf .line-block,
 #vrf .opcmd,
 #vrf .cfgcmd {
@@ -34,4 +7,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

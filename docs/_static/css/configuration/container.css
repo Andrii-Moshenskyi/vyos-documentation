@@ -1,29 +1,4 @@
-#container h1,
-#container h2,
-#container h3,
-#container h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#container h1 {
-  font-size: 34px;
-}
-
-#container h2 {
-  font-size: 24px;
-}
-
-#container h3 {
-  font-size: 22px;
-}
-
-#container h4 {
-  font-size: 20px;
-}
-
-#container p,
+/* #container p,
 #container dl,
 #container .cfgcmd,
 #container .opcmd {
@@ -32,4 +7,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

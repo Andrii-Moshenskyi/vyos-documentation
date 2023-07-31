@@ -1,23 +1,8 @@
-#mdns-repeater h1,
-#mdns-repeater h2 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#mdns-repeater h1 {
-  font-size: 34px;
-}
-
-#mdns-repeater h2 {
-  font-size: 24px;
-}
-
-#mdns-repeater p,
+/* #mdns-repeater p,
 #mdns-repeater .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

@@ -1,24 +1,4 @@
-#ipv6 h1,
-#ipv6 h2,
-#ipv6 h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#ipv6 h1 {
-  font-size: 34px;
-}
-
-#ipv6 h2 {
-  font-size: 24px;
-}
-
-#ipv6 h3 {
-  font-size: 22px;
-}
-
-#ipv6 p,
+/* #ipv6 p,
 #ipv6 .cfgcmd, 
 #ipv6 .opcmd {
   font-family: 'Roboto', sans-serif;
@@ -26,4 +6,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

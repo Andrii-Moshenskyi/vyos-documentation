@@ -1,27 +1,7 @@
-#ipoe-server h1,
-#ipoe-server h2,
-#ipoe-server h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#ipoe-server h1 {
-  font-size: 34px;
-}
-
-#ipoe-server h2 {
-  font-size: 24px;
-}
-
-#ipoe-server h3 {
-  font-size: 22px;
-}
-
-#ipoe-server p {
+/* #ipoe-server p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

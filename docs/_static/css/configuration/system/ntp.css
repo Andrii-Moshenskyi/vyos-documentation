@@ -1,23 +1,8 @@
-#ntp h1,
-#ntp h2 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#ntp h1 {
-  font-size: 34px;
-}
-
-#ntp h2 {
-  font-size: 24px;
-}
-
-#ntp p,
+/* #ntp p,
 #ntp .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

@@ -1,35 +1,8 @@
-#dmvpn h1,
-#dmvpn h2,
-#dmvpn h3,
-#dmvpn h4,
-#dmvpn h5 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#dmvpn h1 {
-  font-size: 34px;
-}
-
-#dmvpn h2 {
-  font-size: 24px;
-}
-
-#dmvpn h3 {
-  font-size: 22px;
-}
-
-#dmvpn h4,
-#dmvpn h5 {
-  font-size: 20px;
-}
-
-#dmvpn p,
+/* #dmvpn p,
 #dmvpn .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

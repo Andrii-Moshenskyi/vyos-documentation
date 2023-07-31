@@ -1,29 +1,4 @@
-#multicast h1,
-#multicast h2,
-#multicast h3,
-#multicast h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#multicast h1 {
-  font-size: 34px;
-}
-
-#multicast h2 {
-  font-size: 24px;
-}
-
-#multicast h3 {
-  font-size: 22px;
-}
-
-#multicast h4 {
-  font-size: 20px;
-}
-
-#multicast p,
+/* #multicast p,
 #multicast .opcmd,
 #multicast .cfgcmd {
   font-family: 'Roboto', sans-serif;
@@ -31,4 +6,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

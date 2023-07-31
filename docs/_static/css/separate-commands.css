@@ -28,7 +28,7 @@ div.cfgcmd-heading {
 span.opcmd,
 span.cfgcmd {
   display: flex;
-  padding: 4px 16px 8px 4px;
+  padding: 4px 16px 8px 30px;
   align-items: center;
   border-radius: 8px 0 0 8px;
   color: #121010 !important;
@@ -36,6 +36,7 @@ span.cfgcmd {
   font-family: 'Roboto Mono', monospace !important;
   letter-spacing: -0.04em !important;
   font-weight: 500 !important;
+  position: relative;
 }
 
 span.opcmd {
@@ -54,7 +55,9 @@ span.cfgcmd::before {
   display: flex;
   padding-right: 8px;
   align-items: center;
-  margin-top: 2px;
+  position: absolute;
+  top: 6px;
+  left: 8px;
 }
 
 .opcmd-heading > a.cmdlink,

@@ -1,29 +1,9 @@
-#bond-link-aggregation h1,
-#bond-link-aggregation h2,
-#bond-link-aggregation h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#bond-link-aggregation h1 {
-  font-size: 34px;
-}
-
-#bond-link-aggregation h2 {
-  font-size: 24px;
-}
-
-#bond-link-aggregation h3 {
-  font-size: 22px;
-}
-
-#bond-link-aggregation p,
-#bond-link-aggregation .cfgcmd,
+/* #bond-link-aggregation p, */
+/* #bond-link-aggregation .cfgcmd,
 #bond-link-aggregation .opcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

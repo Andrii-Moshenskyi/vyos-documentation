@@ -1,28 +1,8 @@
-#user-management h1,
-#user-management h2,
-#user-management h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#user-management h1 {
-  font-size: 34px;
-}
-
-#user-management h2 {
-  font-size: 24px;
-}
-
-#user-management h3 {
-  font-size: 22px;
-}
-
-#user-management p,
+/* #user-management p,
 #user-management .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

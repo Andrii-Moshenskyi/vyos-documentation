@@ -1,33 +1,8 @@
-#sstp h1,
-#sstp h2,
-#sstp h3,
-#sstp h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#sstp h1 {
-  font-size: 34px;
-}
-
-#sstp h2 {
-  font-size: 24px;
-}
-
-#sstp h3 {
-  font-size: 22px;
-}
-
-#sstp h4 {
-  font-size: 20px;
-}
-
-#sstp p,
+/* #sstp p,
 #sstp .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

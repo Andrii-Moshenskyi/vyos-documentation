@@ -1,29 +1,4 @@
-#pppoe-server h1,
-#pppoe-server h2,
-#pppoe-server h3,
-#pppoe-server h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#pppoe-server h1 {
-  font-size: 34px;
-}
-
-#pppoe-server h2 {
-  font-size: 24px;
-}
-
-#pppoe-server h3 {
-  font-size: 22px;
-}
-
-#pppoe-server h4 {
-  font-size: 20px;
-}
-
-#pppoe-server p,
+/* #pppoe-server p,
 #pppoe-server .cfgcmd,
 #pppoe-server .opcmd {
   font-family: 'Roboto', sans-serif;
@@ -31,4 +6,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

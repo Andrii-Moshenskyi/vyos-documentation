@@ -1,29 +1,4 @@
-#bridge h1,
-#bridge h2,
-#bridge h3,
-#bridge h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#bridge h1 {
-  font-size: 34px;
-}
-
-#bridge h2 {
-  font-size: 24px;
-}
-
-#bridge h3 {
-  font-size: 22px;
-}
-
-#bridge h4 {
-  font-size: 20px;
-}
-
-#bridge p,
+/* #bridge p,
 #bridge .cfgcmd,
 #bridge .opcmd {
   font-family: 'Roboto', sans-serif;
@@ -31,4 +6,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

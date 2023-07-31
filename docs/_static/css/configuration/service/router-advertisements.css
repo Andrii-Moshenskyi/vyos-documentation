@@ -1,28 +1,8 @@
-#router-advertisements h1,
-#router-advertisements h2,
-#router-advertisements h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#router-advertisements h1 {
-  font-size: 34px;
-}
-
-#router-advertisements h2 {
-  font-size: 24px;
-}
-
-#router-advertisements h3 {
-  font-size: 22px;
-}
-
-#router-advertisements p,
+/* #router-advertisements p,
 #router-advertisements .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

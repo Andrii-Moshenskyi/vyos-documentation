@@ -1,32 +1,7 @@
-#l2tp h1,
-#l2tp h2,
-#l2tp h3,
-#l2tp h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#l2tp h1 {
-  font-size: 34px;
-}
-
-#l2tp h2 {
-  font-size: 24px;
-}
-
-#l2tp h3 {
-  font-size: 22px;
-}
-
-#l2tp h4 {
-  font-size: 20px;
-}
-
-#l2tp p {
+/* #l2tp p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

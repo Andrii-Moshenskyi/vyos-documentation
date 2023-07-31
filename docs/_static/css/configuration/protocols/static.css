@@ -1,28 +1,8 @@
-#static h1,
-#static h2,
-#static h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#static h1 {
-  font-size: 34px;
-}
-
-#static h2 {
-  font-size: 24px;
-}
-
-#static h3 {
-  font-size: 22px;
-}
-
-#static p,
+/* #static p,
 #static .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

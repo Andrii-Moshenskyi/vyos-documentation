@@ -1,19 +1,4 @@
-#ssh h1,
-#ssh h2 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#ssh h1 {
-  font-size: 34px;
-}
-
-#ssh h2 {
-  font-size: 24px;
-}
-
-#ssh p,
+/* #ssh p,
 #ssh .cfgcmd,
 #ssh .opcmd {
   font-family: 'Roboto', sans-serif;
@@ -21,4 +6,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

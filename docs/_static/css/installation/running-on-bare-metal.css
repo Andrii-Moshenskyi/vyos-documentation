@@ -10,37 +10,10 @@
   border: none !important;
 }
 
-#running-on-bare-metal h1,
-#running-on-bare-metal h2,
-#running-on-bare-metal h3,
-#running-on-bare-metal h4,
-#running-on-bare-metal h5 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#running-on-bare-metal h1 {
-  font-size: 34px;
-}
-
-#running-on-bare-metal h2 {
-  font-size: 24px;
-}
-
-#running-on-bare-metal h3 {
-  font-size: 22px;
-}
-
-#running-on-bare-metal h4, 
-#running-on-bare-metal h5 {
-  font-size: 20px;
-}
-
-#running-on-bare-metal p {
+/* #running-on-bare-metal p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

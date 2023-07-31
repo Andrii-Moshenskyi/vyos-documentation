@@ -1,29 +1,4 @@
-#firewall h1,
-#firewall h2,
-#firewall h3,
-#firewall h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#firewall h1 {
-  font-size: 34px;
-}
-
-#firewall h2 {
-  font-size: 24px;
-}
-
-#firewall h3 {
-  font-size: 22px;
-}
-
-#firewall h4 {
-  font-size: 20px;
-}
-
-#firewall p,
+/* #firewall p,
 #firewall dl,
 #firewall .cfgcmd,
 #firewall .opcmd {
@@ -32,4 +7,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

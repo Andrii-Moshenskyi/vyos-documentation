@@ -8,6 +8,7 @@ h5 {
   font-weight: 700 !important;
   letter-spacing: -0.02em !important;
   display: flex;
+  color: #121010;
 }
 
 h1:has(a):hover > a::after,
@@ -19,7 +20,7 @@ h5:has(a):hover > a::after {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   height: 100%;
   right: 0;

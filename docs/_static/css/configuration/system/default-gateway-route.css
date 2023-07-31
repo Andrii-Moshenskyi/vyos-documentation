@@ -1,19 +1,4 @@
-#default-gateway-route h1,
-#default-gateway-route h2 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#default-gateway-route h1 {
-  font-size: 34px;
-}
-
-#default-gateway-route h2 {
-  font-size: 24px;
-}
-
-#default-gateway-route p,
+/* #default-gateway-route p,
 #default-gateway-route .cfgcmd, 
 #default-gateway-route .opcmd {
   font-family: 'Roboto', sans-serif;
@@ -21,4 +6,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

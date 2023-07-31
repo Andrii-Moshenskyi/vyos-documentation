@@ -1,27 +1,7 @@
-#wan-load-balancing h1,
-#wan-load-balancing h2,
-#wan-load-balancing h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#wan-load-balancing h1 {
-  font-size: 34px;
-}
-
-#wan-load-balancing h2 {
-  font-size: 24px;
-}
-
-#wan-load-balancing h3 {
-  font-size: 22px;
-}
-
-#wan-load-balancing p {
+/* #wan-load-balancing p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

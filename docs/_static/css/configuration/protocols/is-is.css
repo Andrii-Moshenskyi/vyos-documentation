@@ -1,33 +1,8 @@
-#is-is h1,
-#is-is h2,
-#is-is h3,
-#is-is h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#is-is h1 {
-  font-size: 34px;
-}
-
-#is-is h2 {
-  font-size: 24px;
-}
-
-#is-is h3 {
-  font-size: 22px;
-}
-
-#is-is h4 {
-  font-size: 20px;
-}
-
-#is-is p,
+/* #is-is p,
 #is-is .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

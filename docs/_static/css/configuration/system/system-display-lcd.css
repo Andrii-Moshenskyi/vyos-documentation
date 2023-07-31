@@ -1,23 +1,8 @@
-#system-display-lcd h1,
-#system-display-lcd h2 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#system-display-lcd h1 {
-  font-size: 34px;
-}
-
-#system-display-lcd h2 {
-  font-size: 24px;
-}
-
-#system-display-lcd p,
+/* #system-display-lcd p,
 #system-display-lcd .cfgcmd {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

@@ -1,63 +1,13 @@
-#command-line-interface h1,
-#command-line-interface h2,
-#command-line-interface h3,
-#command-line-interface h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#command-line-interface h1 {
-  font-size: 34px;
-}
-
-#command-line-interface h2 {
-  font-size: 24px;
-}
-
-#command-line-interface h3 {
-  font-size: 22px;
-}
-
-#command-line-interface h4 {
-  font-size: 20px;
-}
-
-#command-line-interface p,
+/* #command-line-interface p,
 #command-line-interface dl {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */
 
-#configuration-overview h1,
-#configuration-overview h2,
-#configuration-overview h3,
-#configuration-overview h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#configuration-overview h1 {
-  font-size: 34px;
-}
-
-#configuration-overview h2 {
-  font-size: 24px;
-}
-
-#configuration-overview h3 {
-  font-size: 22px;
-}
-
-#configuration-overview h4 {
-  font-size: 20px;
-}
-
-#configuration-overview p,
+/* #configuration-overview p,
 #configuration-overview dl,
 #configuration-overview span,
 #terminology span,
@@ -67,4 +17,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

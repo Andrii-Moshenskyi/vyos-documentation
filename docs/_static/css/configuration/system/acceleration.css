@@ -1,24 +1,4 @@
-#acceleration h1,
-#acceleration h2,
-#acceleration h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#acceleration h1 {
-  font-size: 34px;
-}
-
-#acceleration h2 {
-  font-size: 24px;
-}
-
-#acceleration h3 {
-  font-size: 22px;
-}
-
-#acceleration p,
+/* #acceleration p,
 #acceleration .cfgcmd,
 #acceleration .opcmd {
   font-family: 'Roboto', sans-serif;
@@ -26,4 +6,4 @@
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
-}
+} */

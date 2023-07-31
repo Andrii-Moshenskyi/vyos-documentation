@@ -1,24 +1,4 @@
-#rpki h1,
-#rpki h2,
-#rpki h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-#rpki h1 {
-  font-size: 34px;
-}
-
-#rpki h2 {
-  font-size: 24px;
-}
-
-#rpki h3 {
-  font-size: 22px;
-}
-
-#rpki p,
+/* #rpki p,
 #rpki .cfgcmd,
 blockquote > div > dl,
 blockquote > div > dd {
@@ -31,4 +11,4 @@ blockquote > div > dd {
 #rpki p,
 #rpki .cfgcmd {
   font-weight: 400;
-}
+} */

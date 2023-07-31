@@ -1,4 +1,4 @@
-#installation p,
+/* #installation p,
 .caption-text {
   color: #636A6D;
   font-family: 'Roboto', sans-serif;
@@ -9,60 +9,4 @@
 
 .caption-text {
   text-align: left;
-}
-
-#installation h1,
-#installation h2,
-#installation h3,
-#installation h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 28px;
-}
-
-#installation h1 {
-  font-size: 34px;
-}
-
-#installation h2 {
-  font-size: 24px;
-}
-
-#installation h3 {
-  font-size: 22px;
-}
-
-#installation h4 {
-  font-size: 20px;
-}
-
-.wy-table-responsive {
-  overflow : scroll ;
-}
-
-.wy-table-responsive table td {
-  white-space : normal;
-}
-
-/* scrolls */
-.wy-table-responsive {
-  scrollbar-color: #99A0A5 transparent;
-  scroll-behavior: smooth;
-}
-
-.wy-table-responsive::-webkit-scrollbar {
-  height: 5px;
-}
-
-.wy-table-responsive::-webkit-scrollbar-track {
-  background-color: transparent;
-  border-radius: 8px;
-  margin: 0 10px;
-}
-
-.wy-table-responsive::-webkit-scrollbar-thumb {
-  background-color: #99A0A5;
-  border-radius: 8px;
-  margin: 0 10px;
-}
+} */
