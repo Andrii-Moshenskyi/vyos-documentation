@@ -68,6 +68,7 @@
 .rst-content pre.literal-block {
   scrollbar-color: #99A0A5 transparent;
   scroll-behavior: smooth;
+  width: 88%;
 }
 
 .rst-content .linenodiv pre::-webkit-scrollbar, 
@@ -196,4 +197,12 @@
 .highlight > pre .ch {
   color: #d5e7ec;
   font-style: italic;
+}
+
+.highlight > pre .mf {
+  color: #d6f5e6;
+}
+
+.highlight > pre .go {
+  color: #e6e6e6;
 }

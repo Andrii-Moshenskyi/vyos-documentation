@@ -23,7 +23,8 @@ h5:has(a):hover > a::after {
   top: 45%;
   transform: translateY(-50%);
   height: 100%;
-  right: 0;
+  width: 20px;
+  right: -5px;
   z-index: 2;
   background-color: #fff;
 }

@@ -304,11 +304,18 @@ blockquote > div > dd,
 #firewall dl,
 #high-availability dl,
 #development td,
-#development th {
+#development th,
+caption.caption-text,
+.simple > dt,
+div.line-block {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
+}
+
+.simple > dt {
+  font-weight: 600;
 }
 
 #dual-hub-dmvpn-with-vyos td > p,
@@ -332,10 +339,15 @@ blockquote > div > dd,
   font-weight: 700;
   letter-spacing: -0.02em;
   font-size: 24px;
+  color: #121010;
 }
 
 .caption-text {
   text-align: left;
+}
+
+p .caption-text {
+  color: #121010
 }
 
 #about a .external {
@@ -364,4 +376,7 @@ a.footnote-reference.brackets {
   font-weight: 400;
   color: #FD8F01;
 }
-  
+
+#specify-custom-config-file {
+  padding-top: 15px;
+}

@@ -30,6 +30,17 @@ p > a,
   padding-left: 16px;
   padding-right: 18px;
   box-shadow: none;
+  transition: transform 250ms linear;
+}
+
+.rst-footer-buttons > .btn-neutral:hover,
+.rst-footer-buttons > .btn-neutral:active {
+  transform: scale(1.05);
+  padding-left: 16px
+}
+
+.rst-footer-buttons > .btn-neutral:focus {
+  outline: none;  
 }
 
 .btn-neutral > .fa-arrow-circle-right::before {
