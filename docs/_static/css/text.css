@@ -7,297 +7,7 @@
   color: #121010;
 }
 
-.card-body .card-text {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  font-weight: 400;
-  padding-bottom: 22px;
-  display: block;
-  color: #525659;
-}
-
-/* div.line,
-#search-results p,
-section#id1 p,
-#equuleus p,
-#bond-link-aggregation p,
-#bridge p,
-#dummy p,
-#ethernet p,
-#geneve p,
-#l2tpv3 p,
-#loopback p,
-#macsec p,
-#openvpn p,
-#pppoe p,
-#macvlan-pseudo-ethernet p,
-#tunnel p,
-#vti-virtual-tunnel-interface p,
-#vxlan p,
-#wireguard p,
-#wlan-wifi-wireless-lan p,
-#wwan-wireless-wide-area-network p,
-#nat p,
-#nptv6 p,
-#arp p,
-#bfd p,
-#bgp p,
-#is-is p,
-#mpls p,
-#multicast p,
-#ospf p,
-#rip p,
-#rpki p,
-#static p,
-#conntrack-sync p,
-#console-server p,
-#dhcp-relay p,
-#dhcp-server p,
-#dns-forwarding p,
-#dynamic-dns p,
-#event-handler p,
-#http-api p,
-#ipoe-server p,
-#lldp p,
-#mdns-repeater p,
-#pppoe-server p,
-#router-advertisements p,
-#salt-minion p,
-#snmp p,
-#ssh p,
-#tftp-server p,
-#udp-broadcast-relay p,
-#webproxy p,
-#acceleration p,
-#conntrack p,
-#default-gateway-route p,
-#flow-accounting p,
-#host-information p,
-#ip p,
-#ipv6 p,
-#ntp p,
-#option p,
-#serial-console p,
-#syslog p,
-#system-display-lcd p,
-#system-dns p,
-#system-proxy p,
-#task-scheduler p,
-#time-zone p,
-#user-management p,
-#dmvpn p,
-#vpn p,
-#ipsec p,
-#l2tp p,
-#openconnect p,
-#pptp-server p,
-#rsa-keys p,
-#site-to-site p,
-#sstp p,
-#container p,
-#firewall p,
-#high-availability p,
-#policy p,
-#pbr p,
-#traffic-policy p,
-#traffic-policy .line-block,
-#vrf p,
-#vrf .line-block,
-#wan-load-balancing p,
-#zone-policy p,
-#bgp-ipv6-unnumbered-with-extended-nexthop p,
-#dhcp-relay-trough-gre-bridge p,
-#dhcp-relay-trough-gre-bridge div.line,
-#dual-hub-dmvpn-with-vyos p,
-#dual-hub-dmvpn-with-vyos td > p,
-#high-availability-walkthrough p,
-#configuration-blueprints p,
-#configuration-blueprints-autotest p,
-#ospf-unnumbered-with-ecmp p,
-#route-based-redundant-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec p,
-#route-based-redundant-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec td > p,
-#route-based-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec p,
-#route-based-site-to-site-vpn-to-azure-bgp-over-ikev2-ipsec td > p,
-#tunnelbroker-net-ipv6 p,
-#wan-load-balancer-examples p,
-#wireguard p,
-#wireguard div.line,
-#zone-policy-example p,
-#build-vyos p,
-#development p,
-#issues-feature-requests p,
-#upstream-packages p,
-#azure p,
-#references p,
-#references p,
-#running-on-gns3 p,
-#running-on-libvirt-qemu-kvm p,
-#running-on-vmware-esxi p,
-#installation p,
-.caption-text,
-#running-on-bare-metal p,
-#boot-options p,
-#boot-options dt,
-#information p,
-#password-recovery p,
-#raid-1 p,
-#ansible p,
-#command-scripting p,
-#vyos-automation p,
-#napalm p,
-#netmiko p,
-#vyos-api p,
-#vyos-cloud-init p,
-#about p,
-#about a .external,
-#command-line-interface p,
-#command-line-interface dl,
-#configuration-overview p,
-#configuration-overview dl,
-#configuration-overview span,
-#terminology span,
-#terminology div.cmd-cfg,
-#copyright-notice p,
-#coverage p,
-#coverage label,
-#coverage div.dataTables_info,
-#debugging p,
-#documentation p,
-#history p,
-#a-note-on-copyright > dl.brackets > dt,
-#a-note-on-copyright > dl.brackets > dt > .brackets > a,
-a.footnote-reference.brackets,
-#troubleshooting p,
-#amazon-aws p,
-#google-cloud-platform p,
-#oracle p,
-#s1 p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  font-weight: 400;
-  color: #525659;
-} */
-
-p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  font-weight: 400;
-  color: #525659;
-}
-
-/* #bond-link-aggregation .cfgcmd,
-#bond-link-aggregation .opcmd,
-#bridge .cfgcmd,
-#bridge .opcmd,
-#dummy .cfgcmd,
-#dummy .opcmd,
-#ethernet .cfgcmd,
-#ethernet .opcmd,
-#geneve .cfgcmd,
-#l2tpv3 .cfgcmd,
-#loopback .opcmd,
-#macsec .cfgcmd,
-#macsec .opcmd,
-#openvpn .opcmd,
-#pppoe .opcmd,
-#pppoe .cfgcmd,
-#macvlan-pseudo-ethernet .cfgcmd,
-#tunnel .cfgcmd,
-#vxlan .cfgcmd,
-#wireguard .opcmd,
-#wireguard .cfgcmd,
-#wlan-wifi-wireless-lan .opcmd,
-#wlan-wifi-wireless-lan .cfgcmd,
-#wwan-wireless-wide-area-network .opcmd,
-#wwan-wireless-wide-area-network .cfgcmd,
-#arp .cfgcmd,
-#arp .opcmd,
-#bfd .opcmd,
-#bfd .cfgcmd,
-#bgp .opcmd,
-#bgp .cfgcmd,
-#is-is .cfgcmd,
-#mpls .cfgcmd,
-#mpls .opcmd,
-#multicast .opcmd,
-#multicast .cfgcmd,
-#ospf .cfgcmd,
-#ospf .opcmd ,
-#rip .cfgcmd,
-#rip .opcmd,
-#rpki .cfgcmd,
-#static .cfgcmd,
-#conntrack-sync .cfgcmd,
-#conntrack-sync .opcmd,
-#console-server .cfgcmd,
-#console-server .opcmd,
-#dhcp-relay .cfgcmd,
-#dhcp-relay .opcmd,
-#dhcp-server .cfgcmd,
-#dhcp-server .opcmd,
-#dns-forwarding .cfgcmd,
-#dns-forwarding .opcmd,
-#dynamic-dns .cfgcmd,
-#dynamic-dns .opcmd,
-#event-handler .cfgcmd,
-#http-api .cfgcmd,
-#lldp .cfgcmd,
-#lldp .opcmd,
-#mdns-repeater .cfgcmd,
-#pppoe-server .cfgcmd,
-#pppoe-server .opcmd,
-#router-advertisements .cfgcmd,
-#salt-minion .cfgcmd,
-#ssh .cfgcmd,
-#ssh .opcmd,
-#tftp-server .cfgcmd,
-#udp-broadcast-relay .cfgcmd,
-#webproxy .cfgcmd,
-#webproxy .opcmd,
-#acceleration .cfgcmd,
-#acceleration .opcmd,
-#conntrack .cfgcmd,
-#default-gateway-route .cfgcmd, 
-#default-gateway-route .opcmd,
-#flow-accounting .cfgcmd, 
-#flow-accounting .opcmd,
-#host-information .cfgcmd,
-#ip .cfgcmd,
-#ipv6 .cfgcmd, 
-#ipv6 .opcmd,
-#ntp .cfgcmd,
-#option .cfgcmd,
-#serial-console .cfgcmd,
-#syslog .cfgcmd, 
-#syslog .opcmd,
-#system-display-lcd .cfgcmd,
-#system-dns .cfgcmd,
-#system-proxy .cfgcmd,
-#task-scheduler .cfgcmd,
-#time-zone .cfgcmd,
-#user-management .cfgcmd,
-#dmvpn .cfgcmd,
-#sstp .cfgcmd,
-#container .cfgcmd,
-#container .opcmd,
-#firewall .cfgcmd,
-#firewall .opcmd,
-#high-availability .cfgcmd,
-#high-availability .opcmd,
-#traffic-policy .opcmd,
-#traffic-policy .cfgcmd,
-#vrf .opcmd,
-#vrf .cfgcmd {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  color: #525659;
-  font-weight: 400;
-} */
-
+p,
 blockquote > div > dl,
 blockquote > div > dd,
 #container dl,
@@ -307,11 +17,22 @@ blockquote > div > dd,
 #development th,
 caption.caption-text,
 .simple > dt,
-div.line-block {
+div.line-block,
+.paginate_button,
+.dataTables_info,
+#operational-commands label,
+.card-body .card-text,
+#search-results a {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
+  font-weight: 400;
   color: #525659;
+}
+
+.card-body .card-text {
+  padding-bottom: 22px;
+  display: block;
 }
 
 .simple > dt {
@@ -350,7 +71,11 @@ p .caption-text {
   color: #121010
 }
 
-#about a .external {
+#about a .external,
+#a-note-on-copyright > dl.brackets > dt,
+#a-note-on-copyright > dl.brackets > dt > .brackets > a,
+a.footnote-reference.brackets,
+#search-results a {
   color: #FD8F01;
 }
 
@@ -359,22 +84,12 @@ p .caption-text {
   margin-bottom: 0;
 }
 
-#a-note-on-copyright > dl.brackets > dt,
-#a-note-on-copyright > dl.brackets > dt > .brackets > a,
-a.footnote-reference.brackets {
-  color: #FD8F01;
-}
-
 #a-note-on-copyright > dl p {
   padding-bottom: 12px;
 }
 
 #search-results a {
-  font-family: 'Roboto', sans-serif;
   font-size: 19px;
-  letter-spacing: -0.5px;
-  font-weight: 400;
-  color: #FD8F01;
 }
 
 #specify-custom-config-file {
