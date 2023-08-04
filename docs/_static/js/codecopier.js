@@ -1,3 +1,11 @@
+// import hamburgerIcon from '../images/hamburger-icon.svg'
+
+const hamburgerIcon = `
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 5.3335H24M0 12.0002H24M0 18.6668H24" stroke="#FFAE12" stroke-width="3"/>
+  </svg>
+`
+
 const svg = `
   <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="4.95605" y="4.5" width="7" height="7" rx="1.5" stroke="#FD8F01"/>
@@ -13,7 +21,7 @@ function formDiv(id) {
 `
 }
 
-$(document).ready(async function() {
+$(document).ready(async function () {
   const codeSnippets = $(
     '.rst-content div[class^=highlight] div[class^=highlight], .rst-content pre.literal-block div[class^=highlight]'
   )
@@ -24,14 +32,18 @@ $(document).ready(async function() {
 
   const copyButton = $('.copyDiv')
 
-  copyButton.click(async ({ currentTarget }) => {
+  copyButton.click(async ({
+    currentTarget
+  }) => {
     // we obtain text and copy it
     const id = currentTarget.dataset.identifier
 
     try {
       await navigator.clipboard.writeText(currentTarget.offsetParent.innerText)
     } catch (error) {
-      console.log('Copiing text failed, please try again', {error})
+      console.log('Copiing text failed, please try again', {
+        error
+      })
     }
 
     // we edit the copyDiv connected to copied text
@@ -39,11 +51,145 @@ $(document).ready(async function() {
     divWithNeededId.addClass('copiedNotifier')
     divWithNeededId.html('<p>copied</p>')
 
-    setTimeout(() => { 
+    setTimeout(() => {
       divWithNeededId.html(svg)
-      divWithNeededId.removeClass('copiedNotifier') 
+      divWithNeededId.removeClass('copiedNotifier')
 
     }, 2000)
   })
 
 });
+
+
+// sidebar part
+$(document).ready(function () {
+  removeOverlay()
+  documentLoaded()
+
+  $(window).on("resize", function () {
+    const screenWidth = window.innerWidth
+
+    if (screenWidth <= 768) return userIsInTabletScreenWidth(screenWidth)
+    return removeOverlayAndButtons()
+  })
+
+})
+
+function removeButtons() {
+  const alreadyCreatedOpenButtonCheck = $('.openLeftSidebarMenuButton')
+  const alreadyCreatedCloseButtonCheck = $('.closeButtonDivLine')
+
+  if(alreadyCreatedOpenButtonCheck[0]) alreadyCreatedOpenButtonCheck[0].remove()
+  if(alreadyCreatedCloseButtonCheck[0]) alreadyCreatedCloseButtonCheck[0].remove()
+
+}
+
+function changeBackgroundOnBreadcrumbs() {
+  const breadcrumbs = $('ul.wy-breadcrumbs li:not(:last-of-type)')
+  breadcrumbs.each((el, index) => {
+    changeBreadcrumbs(el, index)
+  })
+}
+
+function changeBreadcrumbs(element, index) {
+  
+}
+
+function documentLoaded() {
+  const screenWidth = window.innerWidth
+
+  if (screenWidth <= 768) return userIsInTabletScreenWidth(screenWidth)
+  return
+}
+
+function userIsInTabletScreenWidth(screenWidth) {
+  const alreadyCreatedButtonCheck = $('.openLeftSidebarMenuButton')
+  if (alreadyCreatedButtonCheck[0]) return
+
+  createOpenSidebarButton()
+  createCloseSidebarButton()
+}
+
+function createOverlay() {
+  const contentContainer = $('.wy-nav-content')
+  contentContainer.addClass('overlay')
+  changeBackgroundOnBreadcrumbs()
+
+  $('.wy-nav-content.overlay').on('click', onOverlayClickHandler)
+}
+
+function onOverlayClickHandler() {
+  removeOverlay()
+}
+
+function removeOverlay() {
+  const contentContainer = $('.wy-nav-content')
+  contentContainer.removeClass('overlay')
+
+  const leftSidebarOpened = $('nav.wy-nav-side.shift')
+  leftSidebarOpened.removeClass('shift')
+}
+
+function createOpenSidebarButton() {
+  const divToInsert = $('div[role=navigation][aria-label="Page navigation"]')
+  divToInsert[0].insertAdjacentHTML('afterbegin', formOpenSidebarButton())
+ 
+  const newlyCreatedButton = $('.openLeftSidebarMenuButton')
+
+  newlyCreatedButton.on('click', onOpenLeftSidebarMenuButtonClickHandler)
+}
+
+function formOpenSidebarButton() {
+  return `
+    <div class='openLeftSidebarMenuButton'>
+      ${hamburgerIcon}
+    </div>
+  `
+}
+
+function onOpenLeftSidebarMenuButtonClickHandler(e) {
+  e.stopPropagation()
+  const leftSidebar = $('nav.wy-nav-side')
+  const leftSidebarOpened = $('nav.wy-nav-side.shift')
+  if(leftSidebarOpened[0]) {
+    leftSidebarOpened.removeClass('shift')
+    removeOverlay()
+  }
+
+  createOverlay()
+  return leftSidebar.addClass('shift')
+}
+
+function createCloseSidebarButton() {
+  // const updatedLeftSidebarScrollDiv = $('div.wy-side-scroll')
+  const updatedLeftSidebarScrollDiv = $('nav.wy-nav-side')
+
+  const alreadyCreatedButtonCheck = $('div.closeLeftSidebarMenuButton')
+  if(alreadyCreatedButtonCheck[0]) return 
+
+  updatedLeftSidebarScrollDiv[0].insertAdjacentHTML('beforeend', formCloseLeftSidebarButton())
+  updatedLeftSidebarScrollDiv.addClass('additionalStylesForShift')
+
+  const createdCloseSidebarButton = $('.closeButtonDivLine')
+
+  createdCloseSidebarButton.on('click', function () {
+    const sidebar = $('nav.wy-nav-side.shift')
+
+    sidebar.removeClass('shift')
+  })
+}
+
+function formCloseLeftSidebarButton() {
+  return `
+    <div class='closeButtonDivLine'>
+      <div class='closeLeftSidebarMenuButton'>
+        Close
+      </div>
+    </div>
+  `
+}
+
+function removeOverlayAndButtons() {
+  removeOverlay()
+  removeButtons()
+}

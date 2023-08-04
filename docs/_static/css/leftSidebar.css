@@ -1,18 +1,45 @@
-.wy-nav-side {
-  border-radius: 16px;
+@media screen and (max-width: 768px) {
+  .wy-nav-side {
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wy-nav-side {
+    border-radius: 16px;
+  }
 }
 
 .wy-nav-side {
   padding: 20px 19px;
   top: 0;
   position: sticky;
+  /* position: absolute; */
+  /* position: relative; */
   width: 294px;
-  height: 100vh;
-  position:-webkit-sticky;
+  height: calc(100vh - 50px);
+}
+
+@media screen and (max-width: 1200px) {
+  .wy-nav-side {
+    height: calc(100vh - 50px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wy-nav-side {
+    height: calc(100vh - 73px);
+  }
 }
 
 .wy-form input {
   height: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .wy-side-scroll::-webkit-scrollbar {
+    display: none
+  }
 }
 
 .wy-form input::placeholder {
@@ -48,7 +75,7 @@
 }
 
 .wy-menu-vertical {
-  padding: 0 19px 0 0;
+  padding: 10px 19px 0 0;
   width: 100%;
   max-width: 292px;
 }
