@@ -141,6 +141,16 @@ p.devwarning {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.wy-nav-content-wrap .wy-nav-content {
+		padding: 0 0 26px 32px;
+	}
+
+	.wy-grid-for-nav {
+		padding: 80px 15px 0;
+	}
+}
+
 /* main-page content */
 
 #vyos-user-guide .container {
