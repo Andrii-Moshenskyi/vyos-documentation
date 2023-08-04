@@ -47,11 +47,9 @@ p.devwarning {
 .wy-nav-content-wrap {
 	width: 100%;
 	margin-left: auto;
-	background-color: #fff;
 }
 
 .wy-nav-content {
-	background-color: #fff;
 	max-width: 100%;
 }
 
@@ -60,11 +58,12 @@ p.devwarning {
 	.wy-nav-content-wrap.shift {
 		max-width: 100%;
 		margin: 0 auto;
+		width: calc(100% - 294px);
 	}
 
 	.wy-nav-content-wrap.shift {
 		/* left: calc(100% - 410px); */
-		left: 50%;
+		/* left: 50%; */
 		padding: 70px 15px 0;
 		overflow: auto;
 	}
@@ -78,6 +77,16 @@ p.devwarning {
 		width: 294px;
 	}
 }
+
+.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li a::before,
+.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li a::after,
+.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li::before,
+.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li::after,
+.wy-nav-content.overlay > div > div.document div.card,
+.wy-nav-content.overlay > div > div.document div.card-header {
+	background-color: #E7E7E7;
+} 
+
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
 	.wy-nav-content {
