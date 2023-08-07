@@ -181,6 +181,13 @@ p.devwarning {
 	}
 }
 
+@media screen and (max-width: 575px) {
+	.wy-grid-for-nav {
+		padding: 80px 20px 0;
+		max-width: 738px;
+	}
+}
+
 /* main-page content */
 
 #vyos-user-guide .container {
@@ -308,87 +315,4 @@ footer {
 footer p:has(a) > a,
 footer p:has(a) > a:visited {
 	color: #636a6d;
-}
-
-
-/* open/close sidebar styles */
-.wy-side-scroll {
-  /* that makes scroll possible to the end of div */
-  height: 90%;
-}
-
-.wy-nav-top {
-  display: none;
-}
-
-.openLeftSidebarMenuButton {
-	width: 24px;
-	height: 24px;
-	cursor: pointer;
-	transition: transform 250ms linear;
-}
-
-.openLeftSidebarMenuButton:hover,
-.closeLeftSidebarMenuButton:hover {
-	transform: scale(1.05);
-}
-
-div.wy-nav-content > div.rst-content > div:has(div.openLeftSidebarMenuButton) {
-	display: flex;
-}
-
-div.wy-nav-content
-	> div.rst-content
-	> div:has(div.openLeftSidebarMenuButton)
-	> .wy-breadcrumbs {
-	margin-left: 20px;
-	width: 100%;
-}
-
-.closeButtonDivLine {
-	width: 100%;
-	display: flex;
-	position: sticky;
-	bottom: 10px;
-	height: 30px;
-	background-color: #F6F7F7;
-	justify-content: flex-end;
-}
-
-.closeLeftSidebarMenuButton {
-  width: 83px;
-  height: 30px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #FFBF12;
-  border-radius: 4px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  font-weight: 400;
-  color: #FFF;
-  cursor: pointer;
-  align-self: flex-end;
-	transition: transform 250ms linear;
-}
-
-.closeLeftSidebarMenuButton::before {
-  content: url('../images/close-sidebar-icon.svg');
-  height: 100%;
-  display: flex;
-  align-items: center;
-  width: 14px;
-  margin-right: 10px;
-  margin-top: 3px;
-}
-
-.additionalStylesForShift {
-  display: block !important;
-  padding-bottom: 10px !important;
-}
-
-.overlay {
-	background-color: #E7E7E7;
 }
