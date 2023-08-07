@@ -84,17 +84,6 @@ function removeButtons() {
 
 }
 
-function changeBackgroundOnBreadcrumbs() {
-  const breadcrumbs = $('ul.wy-breadcrumbs li:not(:last-of-type)')
-  breadcrumbs.each((el, index) => {
-    changeBreadcrumbs(el, index)
-  })
-}
-
-function changeBreadcrumbs(element, index) {
-  
-}
-
 function documentLoaded() {
   const screenWidth = window.innerWidth
 
@@ -113,7 +102,6 @@ function userIsInTabletScreenWidth(screenWidth) {
 function createOverlay() {
   const contentContainer = $('.wy-nav-content')
   contentContainer.addClass('overlay')
-  changeBackgroundOnBreadcrumbs()
 
   $('.wy-nav-content.overlay').on('click', onOverlayClickHandler)
 }
@@ -173,9 +161,7 @@ function createCloseSidebarButton() {
   const createdCloseSidebarButton = $('.closeButtonDivLine')
 
   createdCloseSidebarButton.on('click', function () {
-    const sidebar = $('nav.wy-nav-side.shift')
-
-    sidebar.removeClass('shift')
+    removeOverlay()
   })
 }
 

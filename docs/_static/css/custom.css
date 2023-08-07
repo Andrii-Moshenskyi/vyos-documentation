@@ -44,13 +44,19 @@ p.devwarning {
 	display: flex;
 }
 
+.wy-grid-for-nav:has(nav.wy-nav-side.shift) {
+	background: #E7E7E7;
+}
+
 .wy-nav-content-wrap {
 	width: 100%;
 	margin-left: auto;
+	background-color: transparent;
 }
 
 .wy-nav-content {
 	max-width: 100%;
+	background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
@@ -58,24 +64,36 @@ p.devwarning {
 	.wy-nav-content-wrap.shift {
 		max-width: 100%;
 		margin: 0 auto;
-		width: calc(100% - 294px);
+		width: 100%
 	}
 
 	.wy-nav-content-wrap.shift {
-		/* left: calc(100% - 410px); */
-		/* left: 50%; */
 		padding: 70px 15px 0;
 		overflow: auto;
+		width: calc(100% - 294px);
+
 	}
 
 	.wy-nav-side {
 		display: none;
+		min-height: unset;
 	}
 
 	.wy-nav-side.shift {
 		display: inherit;
 		width: 294px;
 	}
+}
+
+.wy-grid-for-nav:not(:has(nav.shift)) > section > div.overlay {
+	background-color: transparent
+}
+
+.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::before,
+.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::after,
+.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li::before,
+.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li::after {
+	background-color: #fff;
 }
 
 .wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li a::before,
@@ -88,7 +106,7 @@ p.devwarning {
 } 
 
 
-@media screen and (min-width: 767px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 	.wy-nav-content {
 		padding: 25px 0 27px 40px;
 	}
@@ -98,7 +116,8 @@ p.devwarning {
 	}
 
 	.wy-grid-for-nav {
-		max-width: 708px;
+		max-width: 738px;
+		padding: 70px 15px 0;
 	}
 }
 
@@ -152,11 +171,13 @@ p.devwarning {
 
 @media screen and (max-width: 768px) {
 	.wy-nav-content-wrap .wy-nav-content {
-		padding: 0 0 26px 32px;
+		padding: 0 0 26px 0;
+
 	}
 
 	.wy-grid-for-nav {
 		padding: 80px 15px 0;
+		max-width: 738px;
 	}
 }
 
