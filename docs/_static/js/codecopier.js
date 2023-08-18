@@ -58,5 +58,9 @@ $(document).ready(async function () {
     }, 2000)
   })
 
+  const readTheDocsButton = $('div.rst-versions')
+
+  console.log({readTheDocsButton})
+
 });
 
