@@ -60,7 +60,7 @@ $(document).ready(async function () {
 
   const readTheDocsButton = $('div.rst-versions')
   // readTheDocsButton.remove()
-  console.log({readTheDocsButton})
+  console.log(5555, {readTheDocsButton})
 
 });
 
