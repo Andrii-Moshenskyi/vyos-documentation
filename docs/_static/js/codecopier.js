@@ -59,7 +59,7 @@ $(document).ready(async function () {
   })
 
   const readTheDocsButton = $('div.rst-versions')
-  readTheDocsButton.remove()
+  // readTheDocsButton.remove()
   console.log({readTheDocsButton})
 
 });
