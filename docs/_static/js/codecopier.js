@@ -59,7 +59,7 @@ $(document).ready(async function () {
   })
 
   const readTheDocsButton = $('div.rst-versions')
-  readTheDocsButton.appendTo('nav.wy-nav-side')
+  readTheDocsButton.remove()
   console.log({readTheDocsButton})
 
 });
