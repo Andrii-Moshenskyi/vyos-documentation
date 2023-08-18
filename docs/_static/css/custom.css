@@ -321,3 +321,11 @@ footer p:has(a) > a,
 footer p:has(a) > a:visited {
 	color: #636a6d;
 }
+
+
+
+
+
+.rst-versions {
+	background: red
+}
