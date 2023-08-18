@@ -59,7 +59,7 @@ $(document).ready(async function () {
   })
 
   const readTheDocsButton = $('div.rst-versions')
-  readTheDocsButton.appendTo('nav.[data-toggle=wy-nav-shift')
+  readTheDocsButton.appendTo('nav.wy-nav-side')
   console.log({readTheDocsButton})
 
 });
