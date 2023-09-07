@@ -329,12 +329,14 @@ footer p:has(a) > a:visited {
 	position: static;
 	background: transparent;
 	margin-top: 35px;
+	transition: height 250ms linear;
 }
 
 .rst-versions.shift-up {
-	margin-top: -340px;
+	/* margin-top: -340px; */
 	background: #525659;
 	z-index: 100;
+	position: absolute;
 }
 
 .rst-versions .rst-current-version {
