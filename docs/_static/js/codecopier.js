@@ -63,6 +63,7 @@ $(document).ready(async function () {
   const navbar = $('nav[data-toggle=wy-nav-shift]')
   // readTheDocsButton[0].remove()
   console.log(5555, {navbar})
+  navbar.append(readTheDocsButton)
 
 });
 
