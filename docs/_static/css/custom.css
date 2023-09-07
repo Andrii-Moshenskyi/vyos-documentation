@@ -333,5 +333,5 @@ footer p:has(a) > a:visited {
 }
 
 .rst-versions .rst-current-version span {
-	color: yellow;
+	color: yellow !important;
 }
