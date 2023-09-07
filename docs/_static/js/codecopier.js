@@ -60,8 +60,9 @@ $(document).ready(async function () {
 
   // we edit the button that is added by readthedocs portal
   const readTheDocsButton = $('div.rst-versions')
-  readTheDocsButton[0].remove()
-  console.log(5555, {readTheDocsButton})
+  const navbar = $('nav[data-toggle=`wy-nav-shift`')
+  // readTheDocsButton[0].remove()
+  console.log(5555, {navbar})
 
 });
 
