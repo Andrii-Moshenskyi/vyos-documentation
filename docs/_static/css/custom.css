@@ -327,5 +327,12 @@ footer p:has(a) > a:visited {
 
 
 .rst-versions .rst-current-version {
-	background: red
+	position: unset;
+	background-color: #525659;
+	color: green; 
+
+	span {
+		color: yellow;
+	}
+
 }
