@@ -330,7 +330,6 @@ footer p:has(a) > a:visited {
 	background: transparent;
 	margin-top: 35px;
 	width: 262px;
-	overflow: hidden;
 }
 
 .rst-versions.shift-up {
@@ -339,6 +338,7 @@ footer p:has(a) > a:visited {
 	position: absolute;
 	left: 19px;
 	border-radius: 6px;
+	overflow: hidden;
 }
 
 .rst-versions .rst-current-version {
