@@ -333,6 +333,8 @@ footer p:has(a) > a:visited {
 
 .rst-versions.shift-up {
 	margin-top: -340px;
+	background: #525659;
+	z-index: 100;
 }
 
 .rst-versions .rst-current-version {
