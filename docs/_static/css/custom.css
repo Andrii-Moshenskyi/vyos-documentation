@@ -328,7 +328,7 @@ footer p:has(a) > a:visited {
 .rst-versions {
 	position: static;
 	background: transparent;
-	margin-top: 35px;
+	/* margin-top: 35px; */
 	width: 262px;
 }
 
