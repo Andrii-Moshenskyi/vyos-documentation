@@ -344,8 +344,33 @@ footer p:has(a) > a:visited {
 	color: #01D38E; 
 	border-radius: 8px;
 	width: 264px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	letter-spacing: -0.5px;
+}
+
+.rst-other-versions dt {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	letter-spacing: -0.5px;
+}
+
+.rst-other-versions small {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: -0.5px;
+	color: #fff;
+}
+
+.rst-other-versions small a {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: -0.5px;
+	color: #fd8f01;
 }
 
 .rst-versions .rst-current-version span.fa-book {
 	color: #fff !important;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	letter-spacing: -0.5px;
 }
