@@ -325,11 +325,13 @@ footer p:has(a) > a:visited {
 
 
 
+.rst-versions {
+	position: static;
+}
 
 .rst-versions .rst-current-version {
 	background-color: #525659;
 	color: #01D38E; 
-	position: static;
 }
 
 .rst-versions .rst-current-version span.fa-book {
