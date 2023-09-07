@@ -345,7 +345,6 @@ footer p:has(a) > a:visited {
 	border-radius: 8px;
 	width: 264px;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
 	letter-spacing: -0.5px;
 }
 
@@ -371,6 +370,5 @@ footer p:has(a) > a:visited {
 .rst-versions .rst-current-version span.fa-book {
 	color: #fff !important;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
 	letter-spacing: -0.5px;
 }
