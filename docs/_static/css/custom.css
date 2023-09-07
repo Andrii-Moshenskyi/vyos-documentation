@@ -327,7 +327,6 @@ footer p:has(a) > a:visited {
 
 
 .rst-versions .rst-current-version {
-	position: unset;
 	background-color: #525659;
 	color: #01D38E; 
 	position: static;
