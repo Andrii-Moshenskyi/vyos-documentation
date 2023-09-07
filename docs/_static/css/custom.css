@@ -331,7 +331,7 @@ footer p:has(a) > a:visited {
 	margin-top: 35px;
 }
 
-.rst-versions .shift-up {
+.rst-versions.shift-up {
 	margin-top: -340px;
 }
 
