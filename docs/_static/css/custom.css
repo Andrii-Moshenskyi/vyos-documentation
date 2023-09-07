@@ -330,6 +330,7 @@ footer p:has(a) > a:visited {
 	background: transparent;
 	margin-top: 35px;
 	transition: height 250ms linear;
+	width: 262px;
 }
 
 .rst-versions.shift-up {
