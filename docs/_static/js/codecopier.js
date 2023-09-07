@@ -58,8 +58,9 @@ $(document).ready(async function () {
     }, 2000)
   })
 
+  // we edit the button that is added by readthedocs portal
   const readTheDocsButton = $('div.rst-versions')
-  // readTheDocsButton.remove()
+  readTheDocsButton.remove()
   console.log(5555, {readTheDocsButton})
 
 });

@@ -326,6 +326,6 @@ footer p:has(a) > a:visited {
 
 
 
-.rst-versions {
+.rst-versions .rst-current-version {
 	background: red
 }
