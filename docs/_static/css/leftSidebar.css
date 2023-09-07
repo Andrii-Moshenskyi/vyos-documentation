@@ -5,7 +5,7 @@
 }
 
 nav.wy-nav-side {
-  padding-bottom: 1em;
+  padding-bottom: 1em !important;
 }
 
 @media screen and (min-width: 768px) {
