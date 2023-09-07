@@ -333,16 +333,17 @@ footer p:has(a) > a:visited {
 }
 
 .rst-versions.shift-up {
-	/* margin-top: -340px; */
 	background: #525659;
 	z-index: 100;
 	position: absolute;
+	left: 19px;
+	border-radius: 6px;
 }
 
 .rst-versions .rst-current-version {
 	background-color: #525659;
 	color: #01D38E; 
-	border-radius: 8px;
+	border-radius: 6px;
 	width: 264px;
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: -0.5px;
@@ -357,7 +358,6 @@ footer p:has(a) > a:visited {
 
 .rst-other-versions small {
 	font-family: 'Roboto', sans-serif;
-	letter-spacing: -0.5px;
 	color: #fff;
 }
 
