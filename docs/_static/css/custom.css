@@ -416,6 +416,16 @@ footer p:has(a) > a:visited {
 	}
 }
 
+@media screen and (min-height: 1601px) {
+	.rst-versions {
+		margin-top: 35px;
+	}
+
+	.closeButtonDivLine {
+		bottom: 85px;
+	}
+}
+
 div#rtd-sidebar {
 	display: none;
 }
