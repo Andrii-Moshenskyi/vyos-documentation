@@ -415,3 +415,7 @@ footer p:has(a) > a:visited {
 		bottom: 75px;
 	}
 }
+
+div#rtd-sidebar {
+	display: none;
+}
