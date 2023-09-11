@@ -312,7 +312,6 @@ div.wy-nav-content
 	width: 100%;
 	display: flex;
 	position: sticky;
-	bottom: 10px;
 	height: 30px;
 	/* background-color: #F6F7F7; */
 	justify-content: flex-end;
