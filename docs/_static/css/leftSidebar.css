@@ -262,19 +262,19 @@ ul.current > li.toctree-l1.current >
   }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (min-height: 301px) and (max-height: 500px) {
   .wy-side-scroll {
     height: 88%;
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (min-height: 501px) and (max-height: 700px) {
   .wy-side-scroll {
     height: 90%;
   }
 }
 
-@media screen and (max-height: 1000px) {
+@media screen and (min-height: 701px) {
   .wy-side-scroll {
     height: 94%;
   }

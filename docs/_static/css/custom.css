@@ -386,7 +386,7 @@ footer p:has(a) > a:visited {
 	}
 }
 
-@media screen and (max-height: 1000px) {
+@media screen and (min-height: 501px) {
 	.rst-versions {
 		margin-top: 15px;
 	}
