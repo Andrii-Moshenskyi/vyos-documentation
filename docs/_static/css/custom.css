@@ -105,6 +105,10 @@ p.devwarning {
 	background-color: #E7E7E7;
 } 
 
+.wy-nav-content.overlay > div.rst-content > footer > .rst-footer-buttons > a {
+	background-color: #E7E7E7 !important;
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
 	.wy-nav-content {
 		padding: 25px 0 27px 40px;
