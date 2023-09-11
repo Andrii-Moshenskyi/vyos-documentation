@@ -386,12 +386,22 @@ footer p:has(a) > a:visited {
 	}
 }
 
-@media screen and (min-height: 501px) {
+@media screen and (min-height: 501px) and (max-height: 1000px) {
 	.rst-versions {
 		margin-top: 15px;
 	}
 
 	.closeButtonDivLine {
-		bottom: 55px;
+		bottom: 45px;
+	}
+}
+
+@media screen and (min-height: 1001px) and (max-height: 1500px) {
+	.rst-versions {
+		margin-top: 20px;
+	}
+
+	.closeButtonDivLine {
+		bottom: 60px;
 	}
 }
