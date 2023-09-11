@@ -325,8 +325,7 @@ div.wy-nav-content
 
 .closeLeftSidebarMenuButton {
   width: 83px;
-  height: 30px;
-  margin-top: 20px;
+  height: 32px;
   margin-right: -6px;
   display: flex;
   justify-content: center;
