@@ -388,11 +388,11 @@ footer p:has(a) > a:visited {
 
 @media screen and (min-height: 501px) and (max-height: 1000px) {
 	.rst-versions {
-		margin-top: 15px;
+		margin-top: 20px;
 	}
 
 	.closeButtonDivLine {
-		bottom: 45px;
+		bottom: 55px;
 	}
 }
 
