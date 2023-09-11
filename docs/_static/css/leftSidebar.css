@@ -256,6 +256,30 @@ ul.current > li.toctree-l1.current >
   height: 94%;
 }
 
+@media screen and (max-height: 300px) {
+  .wy-side-scroll {
+    height: 78%;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .wy-side-scroll {
+    height: 88%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .wy-side-scroll {
+    height: 90%;
+  }
+}
+
+@media screen and (max-height: 1000px) {
+  .wy-side-scroll {
+    height: 94%;
+  }
+}
+
 .wy-nav-top {
   display: none;
 }
@@ -290,7 +314,7 @@ div.wy-nav-content
 	position: sticky;
 	bottom: 10px;
 	height: 30px;
-	background-color: #F6F7F7;
+	/* background-color: #F6F7F7; */
 	justify-content: flex-end;
 }
 

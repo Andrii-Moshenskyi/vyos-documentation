@@ -375,3 +375,23 @@ footer p:has(a) > a:visited {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: -0.5px;
 }
+
+@media screen and (max-height: 500px) {
+	.rst-versions {
+		margin-top: 10px;
+	}
+
+	.closeButtonDivLine {
+		bottom: 45px;
+	}
+}
+
+@media screen and (max-height: 1000px) {
+	.rst-versions {
+		margin-top: 15px;
+	}
+
+	.closeButtonDivLine {
+		bottom: 55px;
+	}
+}
