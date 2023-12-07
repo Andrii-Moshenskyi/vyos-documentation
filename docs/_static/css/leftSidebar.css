@@ -24,7 +24,7 @@ nav.wy-nav-side {
   .wy-nav-side {
     position: fixed;
     left: unset;
-    top: 60px;
+    top: 70px;
     min-height: unset;
   }
 }
