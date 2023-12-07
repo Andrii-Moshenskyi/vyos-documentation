@@ -57,6 +57,7 @@ p.devwarning {
 .wy-nav-content {
 	max-width: 100%;
 	background-color: transparent;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -273,7 +274,7 @@ div.card-header {
 
 .card-header,
 .card-body {
-	padding: 0 15px 0 0;
+	padding: 0;
 }
 
 @media screen and (max-width: 575px) {
