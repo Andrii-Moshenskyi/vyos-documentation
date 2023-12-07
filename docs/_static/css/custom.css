@@ -357,7 +357,7 @@ footer p:has(a) > a:visited {
 }
 
 .rst-other-versions dt {
-	color: #fff;
+	color: #808080;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	letter-spacing: -0.5px;
