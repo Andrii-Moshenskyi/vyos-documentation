@@ -362,7 +362,14 @@ footer p:has(a) > a:visited {
 }
 
 
-
+.rst-content h1, 
+.rst-content h2, 
+.rst-content h3, 
+.rst-content h4, 
+.rst-content h5, 
+.rst-content h6 {
+	margin-top: 320px;
+}
 
 .rst-versions {
 	position: static;
