@@ -290,10 +290,17 @@ div.card-header {
 	padding: 0;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 320px) and (max-width: 575px) {
 	.card-header,
 	.card-body {
-		padding: 0 15px;
+		/* padding: 0 15px; */
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.card-header,
+	.card-body {
+		/* padding: 0; */
 	}
 }
 
