@@ -85,6 +85,16 @@
   z-index: 2;
 }
 
+.wy-breadcrumbs > li:last-of-type {
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background-color: #121010;
+  
+
+}
+
 .wy-breadcrumbs > li:last-of-type::before {
   display: none
 }

@@ -206,17 +206,17 @@ p.devwarning {
 }
 
 #vyos-user-guide .container > .docutils > .p-2 {
-	padding: 7px 1px 10px 0px !important;
+	/* padding: 7px 1px 10px 0px !important; */
 	max-width: 387px;
 	box-shadow: none;
 	flex: none;
 
 	&:nth-child(1n + 3) {
-		margin-top: 14px;
+		/* margin-top: 14px; */
 	}
 
 	&:nth-child(2n) {
-		margin-left: 30px;
+		/* margin-left: 30px; */
 	}
 
 	& .card-body .card-text {
