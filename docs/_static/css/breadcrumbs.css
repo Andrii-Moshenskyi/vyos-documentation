@@ -95,6 +95,8 @@
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
 
 .wy-breadcrumbs > li:last-of-type a::before {
