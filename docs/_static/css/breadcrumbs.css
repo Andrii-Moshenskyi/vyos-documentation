@@ -97,6 +97,15 @@
   letter-spacing: -0.02em;
 }
 
+.wy-breadcrumbs > li:last-of-type a::before {
+  content: url('../images//github.svg');
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-color: transparent;
+}
+
 .wy-breadcrumbs > li:last-of-type::before {
   display: none
 }
