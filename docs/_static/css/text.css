@@ -28,6 +28,7 @@ div.line-block,
   letter-spacing: -0.5px;
   font-weight: 400;
   color: #525659;
+  line-height: 1.6;
 }
 
 .card-body .card-text {
