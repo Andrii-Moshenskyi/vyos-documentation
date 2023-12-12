@@ -97,6 +97,7 @@
   letter-spacing: -0.02em;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .wy-breadcrumbs > li:last-of-type a::before {
