@@ -86,13 +86,15 @@
 }
 
 .wy-breadcrumbs > li:last-of-type {
+  background-color: #121010;
+}
+
+.wy-breadcrumbs > li:last-of-type a {
+  color: #ffffff;
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  background-color: #121010;
-  color: #ffffff;
-
 }
 
 .wy-breadcrumbs > li:last-of-type::before {
