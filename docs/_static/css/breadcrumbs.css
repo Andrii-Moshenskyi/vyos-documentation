@@ -88,6 +88,8 @@
 .wy-breadcrumbs > li:last-of-type {
   background-color: #121010;
   padding: 0;
+  height: 30px;
+  border-radius: 4px;
 }
 
 .wy-breadcrumbs > li:last-of-type a {
