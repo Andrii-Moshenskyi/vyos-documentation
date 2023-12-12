@@ -368,7 +368,7 @@ footer p:has(a) > a:visited {
 .rst-content h4, 
 .rst-content h5, 
 .rst-content h6 {
-	margin-top: 320px;
+	margin-top: 32px;
 }
 
 .rst-versions {
