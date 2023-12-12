@@ -261,7 +261,7 @@ p.devwarning {
 	}
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 320px) and (max-width: 575px) {
 	#vyos-user-guide .container > .row {
 		grid-gap: 0px 15px
 	}
