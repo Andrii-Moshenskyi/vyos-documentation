@@ -60,7 +60,7 @@ p.devwarning {
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.wy-nav-content-wrap,
 	.wy-nav-content-wrap.shift {
 		max-width: 100%;
@@ -173,7 +173,7 @@ p.devwarning {
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.wy-nav-content-wrap .wy-nav-content {
 		padding: 0 0 26px 0;
 
@@ -237,21 +237,40 @@ p.devwarning {
 	}
 }
 
-@media screen and (min-width: 575px) and (max-width: 1500px) {
+/* @media screen and (min-width: 575px) and (max-width: 1500px) {
 	#vyos-user-guide .container > .docutils > .p-2 {
 		width: calc(50% - 15px);
 	}
-}
+} */
 
-@media screen and (min-width: 1500px) {
+/* @media screen and (min-width: 1500px) {
 	#vyos-user-guide .container > .docutils > .p-2 {
 		max-width: 480px;
 	}
-}
+} */
 
 #vyos-user-guide .container > .row {
 	margin: 0;
-	justify-content: space-between;
+	display: grid;
+}
+
+@media screen and (min-width: 575px) {
+	#vyos-user-guide .container > .row {
+		grid-gap: 0px 40px;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+	#vyos-user-guide .container > .row {
+		grid-gap: 0px 15px
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#vyos-user-guide .container > .row {
+		grid-template-columns: 1fr;
+	}
 }
 
 #vyos-user-guide > .pb-4 {
@@ -277,10 +296,17 @@ div.card-header {
 	padding: 0;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 320px) and (max-width: 575px) {
 	.card-header,
 	.card-body {
 		/* padding: 0 15px; */
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.card-header,
+	.card-body {
+		/* padding: 0; */
 	}
 }
 
