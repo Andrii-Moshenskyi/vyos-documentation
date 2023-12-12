@@ -106,6 +106,10 @@ p.devwarning {
 	background-color: #E7E7E7;
 } 
 
+..rst-footer-buttons {
+	margin-top: 32px;
+}
+
 .wy-nav-content.overlay > div.rst-content > footer > .rst-footer-buttons > a {
 	background-color: #E7E7E7 !important;
 }
@@ -459,3 +463,4 @@ footer p:has(a) > a:visited {
 div#rtd-sidebar {
 	display: none;
 }
+
