@@ -1,12 +1,12 @@
 $(document).ready(function () {
-  removeOverlay()
+  removeOverlayAndCloseSidebar()
   documentLoaded()
 
   $(window).on("resize", function () {
     const screenWidth = window.innerWidth
 
     if (screenWidth <= 768) return userIsInTabletScreenWidth(screenWidth)
-    return removeOverlayAndButtons()
+    return removeOverlayAndButtons(screenWidth)
   })
 
 })
@@ -29,12 +29,12 @@ function documentLoaded() {
 function userIsInTabletScreenWidth(screenWidth) {
   const alreadyCreatedButtonCheck = $('.openLeftSidebarMenuButton')
   if (alreadyCreatedButtonCheck[0]) return
-
-  createOpenSidebarButton()
-  createCloseSidebarButton()
+  createOpenSidebarButton(screenWidth)
+  createCloseSidebarButton(screenWidth)
+  removeOverlayAndCloseSidebar()
 }
 
-function createOverlay() {
+function createOverlay(screenWidth) {
   const contentContainer = $('.wy-nav-content')
   contentContainer.addClass('overlay')
 
@@ -42,15 +42,45 @@ function createOverlay() {
 }
 
 function onOverlayClickHandler() {
-  removeOverlay()
+  removeOverlayAndCloseSidebar()
 }
 
-function removeOverlay() {
+function removeOverlayAndCloseSidebar() {
+  const screenWidth = window.innerWidth
+
   const contentContainer = $('.wy-nav-content')
   contentContainer.removeClass('overlay')
 
   const leftSidebarOpened = $('nav.wy-nav-side.shift')
+  // leftSidebarOpened.addClass('display_none')
   leftSidebarOpened.removeClass('shift')
+
+  const leftSidebar = $('nav.wy-nav-side')
+
+  // that's working don't touch
+  if(screenWidth > 768) {
+    // when user is not in tablet -> we add classes on opened sidebar and remove classes on closed sidebar
+    const contentSection = $('section.wy-nav-content-wrap')
+    const contentDiv = $('div.wy-nav-content')
+    contentSection.addClass('wy-nav-content-wrap-opened-sidebar')
+    contentDiv.addClass('wy-nav-content-opened-sidebar')
+    contentSection.removeClass('wy-nav-content-wrap-closed-sidebar')
+    contentDiv.removeClass('wy-nav-content-closed-sidebar')
+    leftSidebar.removeClass('display_none')
+    return 
+  }
+
+  if(screenWidth <= 768) {
+    // I add closed classes to make contentContainer 100% width
+    const contentSection = $('section.wy-nav-content-wrap')
+    const contentDiv = $('div.wy-nav-content')
+    contentSection.removeClass('wy-nav-content-wrap-opened-sidebar')
+    contentDiv.removeClass('wy-nav-content-opened-sidebar')
+    contentSection.addClass('wy-nav-content-wrap-closed-sidebar')
+    contentDiv.addClass('wy-nav-content-closed-sidebar')
+    leftSidebar.addClass('display_none')
+  }
+  
 }
 
 function createOpenSidebarButton() {
@@ -67,15 +97,24 @@ function onOpenLeftSidebarMenuButtonClickHandler(e) {
   const leftSidebar = $('nav.wy-nav-side')
   const leftSidebarOpened = $('nav.wy-nav-side.shift')
   if(leftSidebarOpened[0]) {
-    leftSidebarOpened.removeClass('shift')
-    removeOverlay()
+    // leftSidebarOpened.removeClass('shift')
+    removeOverlayAndCloseSidebar()
   }
 
   createOverlay()
+  if(leftSidebar.hasClass('display_none')) leftSidebar.removeClass('display_none')
+  if(leftSidebar.hasClass('.additionalStylesForShift')) leftSidebar.removeClass('.additionalStylesForShift')
+  // here I add classes to contentSection and contentDiv to make them margined left and remove closed classes if any
+  const contentSection = $('section.wy-nav-content-wrap')
+  const contentDiv = $('div.wy-nav-content')
+  contentSection.removeClass('wy-nav-content-wrap-closed-sidebar')
+  contentDiv.removeClass('wy-nav-content-closed-sidebar')
+  contentSection.addClass('wy-nav-content-wrap-opened-sidebar')
+  contentDiv.addClass('wy-nav-content-opened-sidebar')
   return leftSidebar.addClass('shift')
 }
 
-function createCloseSidebarButton() {
+function createCloseSidebarButton(screenWidth) {
   const updatedLeftSidebarScrollDiv = $('nav.wy-nav-side')
 
   const alreadyCreatedButtonCheck = $('div.closeLeftSidebarMenuButton')
@@ -87,7 +126,7 @@ function createCloseSidebarButton() {
   const createdCloseSidebarButton = $('.closeButtonDivLine')
 
   createdCloseSidebarButton.on('click', function () {
-    removeOverlay()
+    removeOverlayAndCloseSidebar()
   })
 }
 
@@ -109,7 +148,7 @@ function formCloseLeftSidebarButton() {
   `
 }
 
-function removeOverlayAndButtons() {
-  removeOverlay()
+function removeOverlayAndButtons(screenWidth) {
+  removeOverlayAndCloseSidebar()
   removeButtons()
 }

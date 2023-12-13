@@ -63,8 +63,14 @@ p.devwarning {
 @media screen and (max-width: 767px) {
 	.wy-nav-content-wrap,
 	.wy-nav-content-wrap.shift {
-		max-width: 100%;
 		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 575px) and (max-width: 768px) {
+	.wy-nav-content-wrap,
+	.wy-nav-content-wrap.shift {
+		max-width: 100%;
 		width: 100%
 	}
 
@@ -86,9 +92,34 @@ p.devwarning {
 	}
 }
 
+@media screen and (max-width: 575px) {
+	.wy-nav-content-wrap,
+	.wy-nav-content-wrap.shift {
+		max-width: 100%;
+		width: 100%
+	}
+
+	.wy-nav-content-wrap.shift {
+		padding: 70px 15px 0;
+		overflow: auto;
+	}
+
+	.wy-nav-side {
+		display: none;
+		min-height: unset;
+	}
+
+	.wy-nav-side.shift {
+		display: inherit;
+		width: 100%;
+		max-width: 430px;
+	}
+}
+
 .wy-grid-for-nav:not(:has(nav.shift)) > section > div.overlay {
 	background-color: transparent
 }
+
 
 .wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::before,
 .wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::after,
@@ -106,17 +137,8 @@ p.devwarning {
 	background-color: #E7E7E7;
 } 
 
-.rst-footer-buttons {
-	margin-top: 32px;
-}
-
 .wy-nav-content.overlay > div.rst-content > footer > .rst-footer-buttons > a {
 	background-color: #E7E7E7 !important;
-}
-
-.rst-content div[class^=highlight], 
-.rst-content pre.literal-block {
-	margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -362,14 +384,7 @@ footer p:has(a) > a:visited {
 }
 
 
-.rst-content h1, 
-.rst-content h2, 
-.rst-content h3, 
-.rst-content h4, 
-.rst-content h5, 
-.rst-content h6 {
-	margin-top: 32px;
-}
+
 
 .rst-versions {
 	position: static;
@@ -476,3 +491,28 @@ div#rtd-sidebar {
 	display: none;
 }
 
+/* test styles */
+.wy-nav-content-opened-sidebar {
+	padding: 25px 0 27px 40px;
+}
+
+.wy-nav-content-wrap-opened-sidebar {
+	max-width: calc(100% - 294px);
+	margin-left: 294px;
+}
+
+@media screen and (max-width: 575px) {
+	.wy-nav-content-wrap-opened-sidebar {
+		max-width: 100%;
+		margin-left: unset;
+	}
+}
+
+.wy-nav-content-closed-sidebar {
+	padding: 26px 0 !important;
+}
+
+.wy-nav-content-wrap-closed-sidebar {
+	max-width: 100% !important;
+	width: 100% !important;
+}
