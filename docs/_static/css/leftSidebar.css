@@ -359,3 +359,8 @@ div.wy-nav-content
 .overlay {
 	background-color: #E7E7E7;
 }
+
+
+.display_none {
+	display: none !important;
+}
