@@ -4,7 +4,6 @@
 <style>#vyos-header-iframe{position:fixed;top:0;left:0;right:0;z-index:999999999;width:100%;border:none}</style>
 <style>#vyos-footer-iframe{position:fixed;bottom:0;left:0;right:0;z-index:999999999;width:100%;border:none}</style>
 <iframe src='https://vyos.io/iframes/header' id='vyos-header-iframe'></iframe>
-<iframe src='https://vyos.io/iframes/footer' id='vyos-footer-iframe'></iframe>
 <script>const iframeHeader=document.getElementById('vyos-header-iframe');const postMessageToIframe=()=>{iframeHeader.contentWindow.postMessage({height:window.innerHeight,width:window.width},'*')};window.addEventListener('message',function(message){if(message.data.headerIframeHeight){iframeHeader.style.height=`${message.data.headerIframeHeight}px`;postMessageToIframe()}});window.addEventListener('resize',event=>{postMessageToIframe()})</script>
     <link href="{{ pathto("_static/css/custom.css", True) }}" rel="stylesheet" type="text/css">
     <link href="{{ pathto("_static/css/lists.css", True) }}" rel="stylesheet" type="text/css">
@@ -28,15 +27,17 @@
     <script type="text/javascript" charset="utf8" src="{{ pathto("_static/js/tables.js", True) }}"></script>
     <script type="text/javascript" charset="utf8" src="{{ pathto("_static/js/codecopier.js", True) }}"></script>
     <script type="text/javascript" charset="utf8" src="{{ pathto("_static/js/sidebar.js", True) }}"></script>
+    
+<iframe src='https://vyos.io/iframes/footer' id='vyos-footer-iframe'></iframe>
     <script>
         const iframeFooter=document.getElementById('vyos-footer-iframe');
         const title = window.document.getElementsByTagName('title')?.[0]?.text;
         const href = window.location.href;
         window.addEventListener('message',function(message){
-          if(message.data.footerIframeHeight){
+            if(message.data.footerIframeHeight){
             iframeFooter.style.minHeight=`${message.data.footerIframeHeight+1}px`;
             iframeFooter.contentWindow.postMessage({title, href},'*');
-          }
+            }
         })
-      </script>
+    </script>
 {% endblock %}
