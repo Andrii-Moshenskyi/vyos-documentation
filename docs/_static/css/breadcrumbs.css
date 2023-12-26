@@ -91,8 +91,10 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   background-color: #121010;
-  color: #fff !important;
+}
 
+.wy-breadcrumbs > li:last-of-type a {
+  color: #fff !important;
 }
 
 .wy-breadcrumbs > li:last-of-type::before {
