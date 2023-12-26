@@ -85,7 +85,7 @@
   z-index: 2;
 }
 
-.wy-breadcrumbs > li:last-of-type {
+.wy-breadcrumbs > li:last-child(1) {
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -93,10 +93,10 @@
   background-color: #121010;
 }
 
-.wy-breadcrumbs > li:last-of-type a {
+.wy-breadcrumbs > li:last-child(1) a {
   color: #fff !important;
 }
 
-.wy-breadcrumbs > li:last-of-type::before {
+.wy-breadcrumbs > li:last-child(1)::before {
   display: none
 }
