@@ -20,6 +20,7 @@
   text-align: center;
 }
 
+
 #coverage table.docutils:not(.field-list) tr:nth-child(2n-1) td.coverage-fail p,
 #coverage table.docutils td.coverage-fail p {
   color: red;
