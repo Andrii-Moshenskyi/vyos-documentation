@@ -207,6 +207,8 @@
   color: #d6f5e6;
 }
 
-.rst-content blockquote {
-  margin: 0
+@media screen and (max-width: 575px) {
+  .rst-content blockquote {
+    margin: 0
+  }
 }
