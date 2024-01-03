@@ -77,19 +77,39 @@ h5:has(a) > a {
   padding-left: 5px;
 } 
 
-h1:has(a) {
-  font-size: 34px !important;
+
+
+@media screen and (max-width:575px) {
+  h1 {
+    padding-top: 15px;
+  }
 }
 
-h2:has(a) {
-  font-size: 24px !important;
+@media screen and (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 18px !important;
+  }
 }
 
-h3:has(a) {
-  font-size: 22px !important;
-}
-
-h4:has(a), 
-h5:has(a) {
-  font-size: 20px !important;
+@media screen and (min-width: 768px) {
+  h1:has(a) {
+    font-size: 34px !important;
+  }
+  
+  h2:has(a) {
+    font-size: 24px !important;
+  }
+  
+  h3:has(a) {
+    font-size: 22px !important;
+  }
+  
+  h4:has(a), 
+  h5:has(a) {
+    font-size: 20px !important;
+  }
 }

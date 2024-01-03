@@ -13,7 +13,7 @@ p > a.reference.external,
 p > a,
 #partaker-i5 > p > a.external {
   color: #FD8F01;
-  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .rst-footer-buttons > .btn-neutral {

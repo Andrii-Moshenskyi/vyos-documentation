@@ -341,8 +341,15 @@ div.card-header {
 	}
 }
 
-.rst-content > div > hr {
-	margin: 16px 0 26px 0;
+@media screen and (max-width: 767px) {
+	.rst-content > div > hr {
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) {
+	.rst-content > div > hr {
+		margin: 16px 0 26px 0;
+	}
 }
 
 .internal > .std-ref,
