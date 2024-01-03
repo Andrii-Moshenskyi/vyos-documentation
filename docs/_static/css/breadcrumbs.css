@@ -2,14 +2,31 @@
 .wy-breadcrumbs > li a {
   color: #636A6D;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.5px;
   height: 26px;
 }
 
-.wy-breadcrumbs > li {
-  padding: 5px 5px 5px 10px;
+@media screen and (max-width: 375px) {
+  .wy-breadcrumbs > li {
+    padding: 5px 5px 5px 0;
+  }
+
+  .wy-breadcrumbs > li,
+  .wy-breadcrumbs > li a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .wy-breadcrumbs > li {
+    padding: 5px 5px 5px 10px;
+  }
+
+  .wy-breadcrumbs > li,
+  .wy-breadcrumbs > li a {
+    font-size: 16px;
+  }
 }
 
 .wy-breadcrumbs > li a {
@@ -35,31 +52,45 @@
   content: 'Home';
   visibility: visible;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   letter-spacing: -0.5px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
-.wy-breadcrumbs > li:nth-child(2) {
-  font-weight: 500;
-  color: #121010;
+@media screen and (max-width: 375px) {
+  .wy-breadcrumbs > li > .icon-home::before {
+    font-size: 14px;
+  }
 }
 
-.wy-breadcrumbs > li:nth-child(3) {
+@media screen and (min-width: 376px) {
+  .wy-breadcrumbs > li > .icon-home::before {
+    font-size: 16px;
+  }
+}
+
+.wy-breadcrumbs > li:nth-child(n + 1) {
   font-weight: 500;
-  color: #121010;
   position: relative;
 }
 
-.wy-breadcrumbs > li:nth-child(4) {
-  font-weight: 500;
-  color: #121010;
-  position: relative;
+/* this hides the arrows which are text here */
+.wy-breadcrumbs > li:nth-child(n + 1) {
+  color: transparent;
 }
 
-.wy-breadcrumbs > li:nth-child(3)::before {
+/* this returns text to be visible in pre-last li */
+.wy-breadcrumbs > li:nth-last-child(2) {
+  color: #121010;
+}
+
+.wy-breadcrumbs > li:nth-last-child(2)::after,
+.wy-breadcrumbs > li:nth-last-child(1)::after {
+  display: none !important
+}
+
+.wy-breadcrumbs > li:nth-child(n + 1)::after {
   content: url('../images/breadcrumbs-icon.svg');
-  left: -17px;
+  right: -7px;
   top: 0;
   position: absolute;
   width: 20px;
@@ -68,24 +99,9 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  z-index: 2;
 }
 
-.wy-breadcrumbs > li:nth-child(3):has( + li + li)::after {
-  content: url('../images/breadcrumbs-icon.svg');
-  right: -5px;
-  top: 0;
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  z-index: 2;
-}
-
-.wy-breadcrumbs > li:last-child(1) {
+.wy-breadcrumbs > li:last-of-type {
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -93,10 +109,12 @@
   background-color: #121010;
 }
 
-.wy-breadcrumbs > li:last-child(1) a {
-  color: #fff !important;
+.wy-breadcrumbs > li:last-of-type::before {
+  display: none
 }
 
-.wy-breadcrumbs > li:last-child(1)::before {
-  display: none
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  ul.wy-breadcrumbs:has(li + li + li + li) li:nth-last-child(1) {
+    margin-top: 10px;
+  }
 }

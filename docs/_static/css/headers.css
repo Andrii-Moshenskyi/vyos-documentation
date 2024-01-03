@@ -77,15 +77,11 @@ h5:has(a) > a {
   padding-left: 5px;
 } 
 
-
-
-@media screen and (max-width:575px) {
+@media screen and (max-width: 767px) {
   h1 {
     padding-top: 15px;
   }
-}
 
-@media screen and (max-width: 767px) {
   h1,
   h2,
   h3,
