@@ -206,3 +206,7 @@
 .highlight .m {
   color: #d6f5e6;
 }
+
+.rst-content blockquote {
+  margin: 0
+}
