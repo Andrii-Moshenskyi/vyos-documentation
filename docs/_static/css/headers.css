@@ -2,12 +2,14 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: 'Archivo', sans-serif !important;
   font-weight: 700 !important;
   letter-spacing: -0.02em !important;
   display: flex;
   color: #121010;
+  margin-bottom: 10px
 }
 
 @media screen and (min-width: 992px) {
