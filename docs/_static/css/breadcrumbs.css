@@ -101,6 +101,7 @@
   background-color: #fff;
 }
 
+.wy-breadcrumbs > li:last-of-type:has(a),
 .wy-breadcrumbs > li:last-of-type:has(a) a {
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
