@@ -4,8 +4,43 @@ div.warning,
 div.error,
 div.seealso,
 div.tip {
-  padding: 20px !important;
   border-radius: 8px;
+}
+
+@media screen and (min-width: 992px) {
+  div.note,
+  div.hint,
+  div.warning,
+  div.error,
+  div.seealso,
+  div.tip {
+    padding: 24px 32px !important;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  div.note,
+  div.hint,
+  div.warning,
+  div.error,
+  div.seealso,
+  div.tip {
+    padding: 24px 32px !important;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  div.note,
+  div.hint,
+  div.warning,
+  div.error,
+  div.seealso,
+  div.tip {
+    padding: 24px 32px !important;
+    border-radius: 8px;
+  }
 }
 
 div.note,
@@ -25,6 +60,16 @@ div.tip > .admonition-title {
   font-size: 14px !important;
   letter-spacing: -0.02em !important;
   font-weight: 600 !important;
+  margin: -12px -16px 12px;
+}
+
+div.note > .highlight-none,
+div.hint > .highlight-none,
+div.warning > .highlight-none,
+div.error > .highlight-none,
+div.seealso > .highlight-none,
+div.tip > .highlight-none {
+  margin-top: 10px;
 }
 
 div.note > .admonition-title,
@@ -38,21 +83,22 @@ div.hint > .admonition-title::before,
 div.warning > .admonition-title::before,
 div.error > .admonition-title::before,
 div.seealso > .admonition-title::before,
-div.tip > .admonition-title ::before {
+div.tip > .admonition-title::before {
   content: url('../images/note-icon.svg');
 }
 
-div.note > p:nth-child(1n+1),
-div.hint > p:nth-child(1n+1),
-div.warning > p:nth-child(1n+1),
-div.error > p:nth-child(1n+1),
-div.seealso > p:nth-child(1n+1),
-div.tip > p:nth-child(1n+1) {
+div.note > p:nth-child(1n+2),
+div.hint > p:nth-child(1n+2),
+div.warning > p:nth-child(1n+2),
+div.error > p:nth-child(1n+2),
+div.seealso > p:nth-child(1n+2),
+div.tip > p:nth-child(1n+2) {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: -0.5px;
   color: #525659;
   font-weight: 400;
+  margin: 10px 0 0 0  !important;
 }
 
 #running-on-bare-metal div.note > p:nth-child(2) {

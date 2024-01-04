@@ -12,6 +12,7 @@
   color: #121010 !important;
   border-radius: 4px;
   padding: 3px 6px;
+  word-break: break-all;
 }
 
 .rst-content code.literal > span.pre:nth-child(n+ 2) {
