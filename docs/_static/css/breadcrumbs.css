@@ -101,7 +101,8 @@
   background-color: #fff;
 }
 
-.wy-breadcrumbs > li:last-of-type {
+.wy-breadcrumbs > li:last-of-type,
+.wy-breadcrumbs > li:last-of-type a {
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
   font-weight: 700;
