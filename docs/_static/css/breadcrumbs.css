@@ -111,12 +111,12 @@
 }
 
 .wy-breadcrumbs > li:last-of-type::before {
-  content: url('../images//github.svg');
+  content: url('../images/github.svg');
   margin-right: 4px;
 }
 
 .wy-breadcrumbs > li:last-of-type::before {
-  display: none
+  display: none;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
