@@ -12,12 +12,6 @@
   color: #121010 !important;
   border-radius: 4px;
   padding: 3px 6px;
-  display: inline-flex;
-  width: auto;
-  height: 20px;
-  justify-content: center;
-  overflow: hidden;
-  align-items: center;
 }
 
 .rst-content code.literal > span.pre:nth-child(n+ 2) {
@@ -31,6 +25,15 @@ div.cfgcmd-heading {
   background-color: unset;
   border: none;
   margin-bottom: 15px;
+  border-radius: 8px 0 0 8px;
+}
+
+div.opcmd-heading {
+  border-left: 5px solid #B8E9F9;
+}
+
+div.cfgcmd-heading {
+  border-left: 5px solid #FD8F01;
 }
 
 span.opcmd,
@@ -38,7 +41,6 @@ span.cfgcmd {
   display: flex;
   padding: 4px 16px 8px 30px;
   align-items: center;
-  border-radius: 8px 0 0 8px;
   color: #121010 !important;
   font-size: 16px !important;
   font-family: 'Roboto Mono', monospace !important;
@@ -49,12 +51,10 @@ span.cfgcmd {
 
 span.opcmd {
   background-color: #EBF9FF;
-  border-left: 5px solid #B8E9F9;
 }
 
 span.cfgcmd {
   background-color: #FFF4E6;
-  border-left: 5px solid #FD8F01;
 }
 
 span.opcmd::before,
