@@ -31,6 +31,10 @@ div.line-block,
   line-height: 1.6;
 }
 
+p > strong {
+  color: #121010;
+}
+
 .card-body .card-text {
   padding-bottom: 22px;
   display: block;
