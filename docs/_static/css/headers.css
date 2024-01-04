@@ -10,15 +10,7 @@ h6 {
   display: flex;
   color: #121010;
   margin-bottom: 10px !important;
-}
-
-h1:has(a.reference) a.reference,
-h2:has(a.reference) a.reference,
-h3:has(a.reference) a.reference,
-h4:has(a.reference) a.reference,
-h5:has(a.reference) a.reference,
-h6:has(a.reference) a.reference {
-  margin-right: 6px;
+  margin-top: 5px !important;
 }
 
 @media screen and (min-width: 992px) {

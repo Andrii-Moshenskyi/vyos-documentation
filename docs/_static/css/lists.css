@@ -55,3 +55,7 @@
   background-color: #000;
   border-radius: 50%;
 }
+
+.rst-content ul {
+  margin-bottom: 0 !important;
+}
