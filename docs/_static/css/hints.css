@@ -72,6 +72,21 @@ div.tip > .highlight-none {
   margin-top: 10px;
 }
 
+div.note:has(a.reference) a.reference,
+div.hint:has(a.reference) a.reference,
+div.warning:has(a.reference) a.reference,
+div.error:has(a.reference) a.reference,
+div.seealso:has(a.reference) a.reference,
+div.tip:has(a.reference) a.reference,
+div.note:has(a.reference) a.reference span,
+div.hint:has(a.reference) a.reference span,
+div.warning:has(a.reference) a.reference span,
+div.error:has(a.reference) a.reference span,
+div.seealso:has(a.reference) a.reference span,
+div.tip:has(a.reference) a.reference span {
+  color: #508EEB !important;
+}
+
 div.note > .admonition-title,
 div.seealso > .admonition-title {
   background-color: #CCEFFB !important;
