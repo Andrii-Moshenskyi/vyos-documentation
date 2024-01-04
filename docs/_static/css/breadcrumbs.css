@@ -109,6 +109,16 @@
   letter-spacing: -0.02em;
   color: #fff;
   background-color: #121010;
+  display: flex;
+  align-items: center;
+}
+
+.wy-breadcrumbs > li:last-of-type {
+  padding: 7px 10px;
+}
+
+.wy-breadcrumbs > li:last-of-type a {
+  max-height: 100%;
 }
 
 .wy-breadcrumbs > li:last-of-type a::before {
