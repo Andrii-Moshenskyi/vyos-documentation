@@ -101,8 +101,7 @@
   background-color: #fff;
 }
 
-.wy-breadcrumbs > li:last-of-type,
-.wy-breadcrumbs > li:last-of-type a {
+.wy-breadcrumbs > li:last-of-type:has(a) a {
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -113,17 +112,17 @@
   align-items: center;
 }
 
-.wy-breadcrumbs > li:last-of-type {
+.wy-breadcrumbs > li:last-of-type:has(a) {
   padding: 7px 10px;
   border-radius: 4px;
   height: 30px;
 }
 
-.wy-breadcrumbs > li:last-of-type a {
+.wy-breadcrumbs > li:last-of-type:has(a) a {
   max-height: 100%;
 }
 
-.wy-breadcrumbs > li:last-of-type a::before {
+.wy-breadcrumbs > li:last-of-type:has(a) a::before {
   content: url('../images/github.svg');
   margin-right: 4px;
   display: flex;
