@@ -110,7 +110,7 @@
   background-color: #121010;
 }
 
-.wy-breadcrumbs > li.wy-breadcrumbs-aside::before a {
+.wy-breadcrumbs > li:last-of-type a::before {
   content: url('../images/github.svg');
   margin-right: 4px;
 }
