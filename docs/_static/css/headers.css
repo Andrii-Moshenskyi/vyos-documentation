@@ -2,8 +2,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-family: 'Archivo', sans-serif !important;
   font-weight: 700 !important;
   letter-spacing: -0.02em !important;
@@ -15,8 +14,7 @@ h6 {
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   margin-top: 15px !important;
 }
 
@@ -88,35 +86,44 @@ h5:has(a) > a {
 
 @media screen and (max-width: 767px) {
   h1 {
+    font-size: 28px !important;
+  }
+  
+  h2 {
     font-size: 22px !important;
   }
-  h2 {
+  
+  h3 {
     font-size: 20px !important;
   }
-  h3 {
+  
+  h4 {
     font-size: 18px !important;
-  }
-  h4,
+  } 
+  
   h5 {
     font-size: 16px !important;
-  }
+  } 
 }
 
 @media screen and (min-width: 768px) {
-  h1:has(a) {
+  h1 {
+    font-size: 48px !important;
+  }
+  
+  h2 {
     font-size: 34px !important;
   }
   
-  h2:has(a) {
+  h3 {
     font-size: 24px !important;
   }
   
-  h3:has(a) {
+  h4 {
     font-size: 22px !important;
-  }
-  
-  h4:has(a), 
-  h5:has(a) {
+  } 
+
+  h5 {
     font-size: 20px !important;
   }
 }
