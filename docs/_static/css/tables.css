@@ -1,6 +1,7 @@
-/* .wy-table-responsive { */
-  /* overflow : scroll ; */
-/* } */
+.wy-table-responsive {
+  overflow : auto !important ;
+  width: 100%;
+}
 
 .wy-table-responsive table td {
   white-space : normal;
@@ -8,7 +9,6 @@
 
 #coverage .wy-table-responsive {
   /* overflow : visible !important; */
-  overflow : scroll
 }
 
 #coverage .wy-table-responsive table td {
@@ -19,7 +19,6 @@
   color: green;
   text-align: center;
 }
-
 
 #coverage table.docutils:not(.field-list) tr:nth-child(2n-1) td.coverage-fail p,
 #coverage table.docutils td.coverage-fail p {
@@ -65,4 +64,133 @@ table > caption:hover a::after {
   background-color: #fff;
   width: 20px;
   height: 100%;
+}
+
+/* file:///D:/start/vyos-documentation/docs/_build/coverage.html */
+
+table {
+  border: none !important;
+}
+#table-cfgcmd_wrapper label {
+  color: #121010 !important;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+} 
+
+#table-cfgcmd_wrapper option {
+  color: #8D9499 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+#table-cfgcmd_wrapper select {
+  height: 40px;
+  max-width: 80px;
+  padding: 10px 14px;
+  margin: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #C6C9CC !important;
+  color: #8D9499;
+  font-size: 16px;
+}
+
+#table-cfgcmd_wrapper input {
+  margin-left: 16px;
+  height: 40px;
+  padding: 10px 14px;
+  width: 245px;
+  border: 1px solid #C6C9CC !important;
+  color: #8D9499;
+  font-size: 16px;
+}
+
+#table-cfgcmd_wrapper .wy-table-responsive {
+  padding-top: 24px;
+}
+
+thead tr th p {
+  color: #121010 !important;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-right: 3px;
+}
+
+tbody tr td p {
+  color: #525659 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px !important;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+thead tr th {
+  padding: 10px 16px !important;
+  border: none !important;
+  max-height: 40px;
+}
+
+.rst-content table.docutils td, 
+.wy-table-bordered-all td {
+  border-left: none !important;
+}
+
+.rst-content table.docutils th:nth-child(2n), 
+.rst-content table.field-list th:nth-child(2n), 
+.wy-table td, .wy-table th:nth-child(2n) {
+  border-radius: 8px 8px 0 0 ;
+}
+
+.rst-content table.docutils td:nth-child(2n), 
+.rst-content table.docutils th:nth-child(2n), 
+.rst-content table.field-list td:nth-child(2n), 
+.rst-content table.field-list th:nth-child(2n), 
+.wy-table td, .wy-table th:nth-child(2n) {
+  background-color: #FAFAFA !important; 
+}
+
+.rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td, 
+.wy-table-backed, 
+.wy-table-odd td, 
+.wy-table-striped tr:nth-child(2n-1) td {
+  background-color: unset;
+}
+
+tbody tr td.coverage-ok p {
+  color: transparent !important;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+tbody tr td.coverage-ok p::before {
+  content: url('../images/check.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.dataTables_info {
+  color: #121010 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px !important;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.paginate_button {
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px !important;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }

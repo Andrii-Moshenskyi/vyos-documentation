@@ -20,7 +20,9 @@
 }
 
 div.opcmd-heading,
-div.cfgcmd-heading {
+div.cfgcmd-heading,
+.opcmd,
+.cfgcmd {
   padding: 0;
   display: flex;
   background-color: unset;
@@ -29,11 +31,13 @@ div.cfgcmd-heading {
   border-radius: 8px 0 0 8px;
 }
 
-div.opcmd-heading {
+div.opcmd-heading,
+.opcmd {
   border-left: 5px solid #B8E9F9;
 }
 
-div.cfgcmd-heading {
+div.cfgcmd-heading,
+.cfgcmd {
   border-left: 5px solid #FD8F01;
 }
 
@@ -48,6 +52,7 @@ span.cfgcmd {
   letter-spacing: -0.04em !important;
   font-weight: 500 !important;
   position: relative;
+  word-break: break-all;
 }
 
 span.opcmd {

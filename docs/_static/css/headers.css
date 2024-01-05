@@ -10,7 +10,14 @@ h6 {
   display: flex;
   color: #121010;
   margin-bottom: 10px !important;
-  margin-top: 5px !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 15px !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -37,7 +44,6 @@ h6 {
 }
 
 @media screen and (max-width: 991px) {
-
   a.headerlink {
     opacity: 1 !important;
     color: transparent;
@@ -82,15 +88,17 @@ h5:has(a) > a {
 
 @media screen and (max-width: 767px) {
   h1 {
-    padding-top: 15px;
+    font-size: 22px !important;
   }
-
-  h1,
-  h2,
-  h3,
+  h2 {
+    font-size: 20px !important;
+  }
+  h3 {
+    font-size: 18px !important;
+  }
   h4,
   h5 {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
 }
 
