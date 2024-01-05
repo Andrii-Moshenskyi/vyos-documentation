@@ -21,8 +21,8 @@
 
 div.opcmd-heading,
 div.cfgcmd-heading,
-.opcmd,
-.cfgcmd {
+table .opcmd,
+table .cfgcmd {
   padding: 0;
   display: flex;
   background-color: unset;
