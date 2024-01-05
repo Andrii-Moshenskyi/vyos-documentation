@@ -32,12 +32,12 @@ table .cfgcmd {
 }
 
 div.opcmd-heading,
-.opcmd {
+table .opcmd {
   border-left: 5px solid #B8E9F9;
 }
 
 div.cfgcmd-heading,
-.cfgcmd {
+table .cfgcmd {
   border-left: 5px solid #FD8F01;
 }
 
