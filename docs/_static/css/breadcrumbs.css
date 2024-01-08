@@ -101,41 +101,34 @@
   background-color: #fff;
 }
 
-.wy-breadcrumbs > li:last-of-type:has(a),
-.wy-breadcrumbs > li:last-of-type:has(a) a {
+.wy-breadcrumbs > li:last-of-type {
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #fff;
   background-color: #121010;
-  display: flex;
-  align-items: center;
 }
 
-.wy-breadcrumbs > li:last-of-type:has(a) {
-  padding: 7px 10px;
-  border-radius: 4px;
-  height: 30px;
-}
-
-.wy-breadcrumbs > li:last-of-type:has(a) a {
-  max-height: 100%;
-}
-
-.wy-breadcrumbs > li:last-of-type:has(a) a::before {
+.wy-breadcrumbs > li:last-of-type a::before {
   content: url('../images/github.svg');
   margin-right: 4px;
-  display: flex;
-  align-items: center;
 }
 
 .wy-breadcrumbs > li:last-of-type::before {
   display: none;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   ul.wy-breadcrumbs:has(li + li + li + li) li:nth-last-child(1) {
+    margin-top: 15px;
+  }
+
+  ul.wy-breadcrumbs:has(li + li + li) li:nth-last-child(1) {
+    margin-top: 15px;
+  }
+
+  ul.wy-breadcrumbs:has(li + li) li:nth-last-child(1) {
     margin-top: 10px;
   }
 }
