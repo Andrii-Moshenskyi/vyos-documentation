@@ -56,6 +56,12 @@
   border-radius: 50%;
 }
 
-.rst-content ul {
-  /* margin-bottom: 0 !important; */
+#site-to-site ul,
+#troubleshooting ol,
+#troubleshooting ul {
+  margin-bottom: 0 !important;
+}
+
+.rst-content:has(#troubleshooting) .rst-footer-buttons {
+  margin-top: 20px !important;
 }

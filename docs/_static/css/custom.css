@@ -364,6 +364,7 @@ div.card-header {
 img {
 	height: auto !important;
 	border: 1px solid #E1E4E5;
+	margin-bottom: 20px !important;
 }
 
 /* footer */
