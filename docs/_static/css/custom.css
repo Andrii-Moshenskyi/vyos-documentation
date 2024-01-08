@@ -531,3 +531,7 @@ div#rtd-sidebar {
 		padding-left: 0 !important;
 	}
 }
+
+html {
+  scroll-padding-top: 90px !important;
+}
