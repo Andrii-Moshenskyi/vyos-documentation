@@ -100,3 +100,7 @@ a.footnote-reference.brackets,
 #specify-custom-config-file {
   padding-top: 15px;
 }
+
+.caption-text {
+  font-family: 'Roboto', sans-serif;
+}
