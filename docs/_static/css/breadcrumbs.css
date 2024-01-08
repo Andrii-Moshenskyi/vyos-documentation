@@ -124,11 +124,11 @@
     margin-top: 15px
   }
 
-  /* ul.wy-breadcrumbs:has(li + li + li) li:nth-last-child(1) {
+  ul.wy-breadcrumbs:has(li + li + li) li:nth-last-child(1) {
     margin-top: 15px
-  } */
+  }
 
-  /* ul.wy-breadcrumbs:has(li + li) li:nth-last-child(1) {
+  ul.wy-breadcrumbs:has(li + li) li:nth-last-child(1) {
     margin-top: 10px
-  } */
+  }
 }
