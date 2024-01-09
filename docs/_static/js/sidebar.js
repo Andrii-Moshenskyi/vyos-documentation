@@ -5,7 +5,7 @@ $(document).ready(function () {
   $(window).on("resize", function () {
     const screenWidth = window.innerWidth
 
-    if (screenWidth <= 768) return userIsInTabletScreenWidth(screenWidth)
+    if (screenWidth <= 991) return userIsInTabletScreenWidth(screenWidth)
     return removeOverlayAndButtons(screenWidth)
   })
 
@@ -22,7 +22,7 @@ function removeButtons() {
 function documentLoaded() {
   const screenWidth = window.innerWidth
 
-  if (screenWidth <= 768) return userIsInTabletScreenWidth(screenWidth)
+  if (screenWidth <= 991) return userIsInTabletScreenWidth(screenWidth)
   return
 }
 
@@ -58,7 +58,7 @@ function removeOverlayAndCloseSidebar() {
   const leftSidebar = $('nav.wy-nav-side')
 
   // that's working don't touch
-  if(screenWidth > 768) {
+  if(screenWidth > 991) {
     // when user is not in tablet -> we add classes on opened sidebar and remove classes on closed sidebar
     const contentSection = $('section.wy-nav-content-wrap')
     const contentDiv = $('div.wy-nav-content')
@@ -70,7 +70,7 @@ function removeOverlayAndCloseSidebar() {
     return 
   }
 
-  if(screenWidth <= 768) {
+  if(screenWidth <= 991) {
     // I add closed classes to make contentContainer 100% width
     const contentSection = $('section.wy-nav-content-wrap')
     const contentDiv = $('div.wy-nav-content')
