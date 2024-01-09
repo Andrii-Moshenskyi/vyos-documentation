@@ -30,7 +30,7 @@
   .rst-content .linenodiv pre, 
   .rst-content div[class^=highlight] pre, 
   .rst-content pre.literal-block {
-    padding: 24px 84px 24px 36px;
+    padding: 24px 36px 18px;
   }
 }
 
@@ -47,42 +47,23 @@
   display: flex;
   align-items: center;
   transition: transform linear 250ms, width linear 250ms;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 5px 12px;
+  justify-content: end;
+  background-color: #393C3F;
+  height: 32px;
+  margin-top: 4px;
 }
 
 @media screen and (min-width: 992px) {
-  .highlight > .copyDiv {
-    top: 16px;
-    right: 14px;
-    background-color: #111111;
-    width: 62px;
-    height: 32px;
-    justify-content: center;
-    position: absolute;
-    border-radius: 8px;
-  }
-
-  .copyDiv:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-
   .copyDiv > p {
     display: none;
   }
 }
 
 @media screen and (max-width: 991px) {
-  .highlight > .copyDiv {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    padding: 5px 12px;
-    justify-content: end;
-    background-color: #393C3F;
-    height: 32px;
-    margin-top: 4px;
-  }
-
   .copyDiv > p {
     margin: 0 10px 0 0;
     color: #fff;
@@ -98,24 +79,11 @@
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 992px) {
-  .rst-content .linenodiv pre, 
-  .rst-content div[class^=highlight] pre, 
-  .rst-content pre.literal-block {
-    scrollbar-color: #99A0A5 transparent;
-    scroll-behavior: smooth;
-    /* width: 88%; */
-    /* height: calc(100% - 40px); */
-  }
-}
-
-@media screen and (min-width: 991px) {
-  .rst-content .linenodiv pre, 
-  .rst-content div[class^=highlight] pre, 
-  .rst-content pre.literal-block {
-    scrollbar-color: #99A0A5 transparent;
-    scroll-behavior: smooth;
-  }
+.rst-content .linenodiv pre, 
+.rst-content div[class^=highlight] pre, 
+.rst-content pre.literal-block {
+  scrollbar-color: #99A0A5 transparent;
+  scroll-behavior: smooth;
 }
 
 /* scrolls */
