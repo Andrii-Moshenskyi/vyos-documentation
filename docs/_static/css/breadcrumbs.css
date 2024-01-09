@@ -135,9 +135,15 @@
 }
 
 @media screen and (max-width: 1200px) {
-  ul.wy-breadcrumbs:has(li + li + li + li) li:nth-last-child(1) {
+  ul.wy-breadcrumbs:has(li + li + li + li) li.wy-breadcrumbs-aside {
     margin: 25px 0 15px;
     max-width: 140px;
-    float: none
+    float: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  li.wy-breadcrumbs-aside {
+    display: none !important;
   }
 }
