@@ -10,7 +10,7 @@
   background: #525659 !important;
   border-radius: 0;
   border: none;
-  padding: 5px;
+  padding: 0;
   position: relative;
 }
 
@@ -24,48 +24,101 @@
   color: #fff;
   line-height: 1.2;
   overflow-x: scroll;
-  padding: 45px 28px 18px;
+}
+
+@media screen and (min-width: 992px) {
+  .rst-content .linenodiv pre, 
+  .rst-content div[class^=highlight] pre, 
+  .rst-content pre.literal-block {
+    padding: 24px 84px 24px 36px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .rst-content .linenodiv pre, 
+  .rst-content div[class^=highlight] pre, 
+  .rst-content pre.literal-block {
+    padding: 16px 20px;
+  }
 }
 
 /* copy code div */
 .highlight > .copyDiv {
-  position: absolute;
-  top: 16px;
-  right: 14px;
-  background-color: #111111;
-  width: 62px;
-  height: 32px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 8px;
   transition: transform linear 250ms, width linear 250ms;
 }
 
-.copyDiv:hover {
-  cursor: pointer;
-  transform: scale(1.1);
+@media screen and (min-width: 992px) {
+  .highlight > .copyDiv {
+    top: 16px;
+    right: 14px;
+    background-color: #111111;
+    width: 62px;
+    height: 32px;
+    justify-content: center;
+    position: absolute;
+    border-radius: 8px;
+  }
+
+  .copyDiv:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .copyDiv > p {
+    display: none;
+  }
 }
 
-.copiedNotifier {
-  width: 120px !important;
+@media screen and (max-width: 991px) {
+  .highlight > .copyDiv {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px 12px;
+    justify-content: end;
+    background-color: #393C3F;
+    height: 32px;
+    margin-top: 4px;
+  }
+
+  .copyDiv > p {
+    margin: 0 10px 0 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
 }
 
-.copiedNotifier > p {
+.copiedNotifier > span {
   font-size: 14px !important;
   color: #fff !important;
   text-align: center;
   margin-bottom: 0;
 }
 
-/* scrolls */
-.rst-content .linenodiv pre, 
-.rst-content div[class^=highlight] pre, 
-.rst-content pre.literal-block {
-  scrollbar-color: #99A0A5 transparent;
-  scroll-behavior: smooth;
-  width: 88%;
+@media screen and (min-width: 992px) {
+  .rst-content .linenodiv pre, 
+  .rst-content div[class^=highlight] pre, 
+  .rst-content pre.literal-block {
+    scrollbar-color: #99A0A5 transparent;
+    scroll-behavior: smooth;
+    /* width: 88%; */
+    /* height: calc(100% - 40px); */
+  }
 }
+
+@media screen and (min-width: 991px) {
+  .rst-content .linenodiv pre, 
+  .rst-content div[class^=highlight] pre, 
+  .rst-content pre.literal-block {
+    scrollbar-color: #99A0A5 transparent;
+    scroll-behavior: smooth;
+  }
+}
+
+/* scrolls */
 
 .rst-content .linenodiv pre::-webkit-scrollbar, 
 .rst-content div[class^=highlight] pre::-webkit-scrollbar, 
