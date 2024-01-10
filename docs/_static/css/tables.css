@@ -148,12 +148,18 @@ thead tr th {
   border-radius: 8px 8px 0 0 ;
 }
 
-.rst-content table.docutils td:nth-child(2n), 
-.rst-content table.docutils th:nth-child(2n), 
-.rst-content table.field-list td:nth-child(2n), 
-.rst-content table.field-list th:nth-child(2n), 
-.wy-table td, .wy-table th:nth-child(2n) {
+.wy-grid-for-nav:has(nav.display_none) .rst-content table.docutils td:nth-child(2n), 
+.wy-grid-for-nav:has(nav.display_none) .rst-content table.docutils th:nth-child(2n), 
+.wy-grid-for-nav:has(nav.display_none) .rst-content table.field-list td:nth-child(2n), 
+.wy-grid-for-nav:has(nav.display_none) .rst-content table.field-list th:nth-child(2n), 
+.wy-grid-for-nav:has(nav.display_none) .wy-table td, 
+.wy-grid-for-nav:has(nav.display_none) .wy-table th:nth-child(2n) {
   background-color: #FAFAFA !important; 
+}
+
+.wy-grid-for-nav:has(nav.shift) .wy-nav-content-wrap-closed-sidebar .rst-content table th,
+.wy-grid-for-nav:has(nav.shift) .wy-nav-content-wrap-closed-sidebar .rst-content table td {
+	background-color: #E7E7E7 !important;
 }
 
 .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td, 

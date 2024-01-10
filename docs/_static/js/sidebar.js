@@ -38,6 +38,12 @@ function createOverlay(screenWidth) {
   const contentContainer = $('.wy-nav-content')
   contentContainer.addClass('overlay')
 
+  const overlayDiv = `
+    <div class='overlayDiv' />
+  `
+
+  contentContainer.append(overlayDiv)
+
   $('.wy-nav-content.overlay').on('click', onOverlayClickHandler)
 }
 
@@ -51,8 +57,10 @@ function removeOverlayAndCloseSidebar() {
   const contentContainer = $('.wy-nav-content')
   contentContainer.removeClass('overlay')
 
+  const overlayDiv = $('.overlayDiv')
+  overlayDiv.remove()
+
   const leftSidebarOpened = $('nav.wy-nav-side.shift')
-  // leftSidebarOpened.addClass('display_none')
   leftSidebarOpened.removeClass('shift')
 
   const leftSidebar = $('nav.wy-nav-side')
@@ -107,10 +115,10 @@ function onOpenLeftSidebarMenuButtonClickHandler(e) {
   // here I add classes to contentSection and contentDiv to make them margined left and remove closed classes if any
   const contentSection = $('section.wy-nav-content-wrap')
   const contentDiv = $('div.wy-nav-content')
-  contentSection.removeClass('wy-nav-content-wrap-closed-sidebar')
-  contentDiv.removeClass('wy-nav-content-closed-sidebar')
-  contentSection.addClass('wy-nav-content-wrap-opened-sidebar')
-  contentDiv.addClass('wy-nav-content-opened-sidebar')
+  // contentSection.removeClass('wy-nav-content-wrap-closed-sidebar')
+  // contentDiv.removeClass('wy-nav-content-closed-sidebar')
+  // contentSection.addClass('wy-nav-content-wrap-opened-sidebar')
+  // contentDiv.addClass('wy-nav-content-opened-sidebar')
   return leftSidebar.addClass('shift')
 }
 
