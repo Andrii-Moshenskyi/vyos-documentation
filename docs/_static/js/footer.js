@@ -54,18 +54,19 @@ function changeSidebarHeightAndCreateIframe() {
   )
 
   if(isIframeInViewport) {
-    if(resultOfSums <= 70) {
+    if(resultOfSums <= 50) {
       $(sidebar).hide()
       return 
     }
     $(sidebar).show()
     $(sidebar).height(resultOfSums)
     $(sidebar).css('margin-bottom', '20px')
-    $(innerSidebarPart).css('height', `90% - ${resultOfSums}`)
+    $(innerSidebarPart).css('height', `84% - ${resultOfSums}`)
     return
 
   } else {
     $(sidebar).removeAttr('style')
+    $(innerSidebarPart).removeAttr('style')
   }
   
 }
