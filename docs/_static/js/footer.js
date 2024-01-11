@@ -36,6 +36,7 @@ function changeSidebarHeightAndCreateIframe() {
   const isIframeInViewport = 
     (currentPosition + browserHeight + additionalPaddingFromSidebar) > 
     (windowHeight - topPointofIframe - additionalPaddingFromSidebar)
+  const innerSidebarPart = $('.wy-side-scroll')
 
   console.log(
     'windowHeight=', windowHeight,
@@ -60,6 +61,7 @@ function changeSidebarHeightAndCreateIframe() {
     $(sidebar).show()
     $(sidebar).height(resultOfSums)
     $(sidebar).css('margin-bottom', '20px')
+    $(innerSidebarPart).height(`90% - ${resultOfSums}`)
     return
 
   } else {
