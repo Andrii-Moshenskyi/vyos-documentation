@@ -560,7 +560,6 @@ html {
   background-color: #f0f0f0; /* Set a background color or styles for visibility */
 	z-index: 201;
 	overflow: hidden;
-	margin-top: 40px;
 }
 
 .iframe-container::-webkit-scrollbar {
