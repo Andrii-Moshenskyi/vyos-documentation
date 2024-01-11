@@ -54,7 +54,7 @@ function changeSidebarHeightAndCreateIframe() {
   )
 
   if(isIframeInViewport) {
-    if(resultOfSums <= 40) {
+    if(resultOfSums <= 70) {
       $(sidebar).hide()
       return 
     }
