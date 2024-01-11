@@ -39,18 +39,19 @@ function changeSidebarHeightAndCreateIframe() {
   const innerSidebarPart = $('.wy-side-scroll')
 
   console.log(
-    'windowHeight=', windowHeight,
-    'iframeHeight=', iframeHeight,
-    'currentPosition=', currentPosition,
-    'browserHeight=', browserHeight,
-    'resultOfSums=', resultOfSums,
-    'screenWidth=', screenWidth,
-    'currentPositionMinusBrowserHeight=', ( currentPosition - browserHeight),
-    'additionalPaddingFromSidebar=', additionalPaddingFromSidebar,
-    'topPointofIframe=', topPointofIframe,
-    'isIframeInViewport=', isIframeInViewport, 
-    currentPosition + browserHeight + additionalPaddingFromSidebar, 
-    windowHeight - topPointofIframe - additionalPaddingFromSidebar
+    // 'windowHeight=', windowHeight,
+    // 'iframeHeight=', iframeHeight,
+    // 'currentPosition=', currentPosition,
+    // 'browserHeight=', browserHeight,
+    // 'resultOfSums=', resultOfSums,
+    // 'screenWidth=', screenWidth,
+    // 'currentPositionMinusBrowserHeight=', ( currentPosition - browserHeight),
+    // 'additionalPaddingFromSidebar=', additionalPaddingFromSidebar,
+    // 'topPointofIframe=', topPointofIframe,
+    // 'isIframeInViewport=', isIframeInViewport, 
+    // currentPosition + browserHeight + additionalPaddingFromSidebar, 
+    // windowHeight - topPointofIframe - additionalPaddingFromSidebar,
+    {innerSidebarPart}
   )
 
   if(isIframeInViewport) {
