@@ -548,3 +548,50 @@ html {
 	background-color: #121010;
 	opacity: 0.1;
 }
+
+
+.scroll-trigger {
+  height: 1px; /* Set a height to create a scroll trigger */
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0; /* Set a background color or styles for visibility */
+	z-index: 201;
+	overflow: hidden;
+	margin-top: 40px;
+}
+
+.iframe-container::-webkit-scrollbar {
+	display: none;
+}
+
+.iframe-container iframe::-webkit-scrollbar {
+	display: none;
+}
+
+@media screen and (min-width: 992px) {
+	.iframe-container {
+		height: 992px; 
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+	.iframe-container {
+		height: 500px; 
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.iframe-container {
+		height: 815px;
+	}
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+	overflow: hidden;
+}
