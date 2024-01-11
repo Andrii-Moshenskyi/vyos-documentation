@@ -61,7 +61,7 @@ function changeSidebarHeightAndCreateIframe() {
     $(sidebar).show()
     $(sidebar).height(resultOfSums)
     $(sidebar).css('margin-bottom', '20px')
-    $(innerSidebarPart).height(`90% - ${resultOfSums}`)
+    $(innerSidebarPart).css('height', `90% - ${resultOfSums}`)
     return
 
   } else {
