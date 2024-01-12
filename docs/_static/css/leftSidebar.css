@@ -360,6 +360,10 @@ div.wy-nav-content
 	background-color: #E7E7E7;
 }
 
+.wy-body-for-nav:has(.overlay) {
+  background-color: #E7E7E7;
+}
+
 
 .display_none {
 	display: none !important;
