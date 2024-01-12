@@ -361,7 +361,7 @@ div.wy-nav-content
 }
 
 .wy-body-for-nav:has(.overlay) {
-  background-color: #D1D1D1;
+  background-color: rgb(18, 16, 16, 0.1);
 }
 
 
