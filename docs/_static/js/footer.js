@@ -1,45 +1,39 @@
 $(document).ready(function() {
   insertIframe()
   // handmade
-  changeSidebarHeightAndCreateIframe()
+  // changeSidebarHeightAndCreateIframe()
 
   // intersectionObserver
-  // const options = {
-  //   threshold: 0.01,
-  // }
-  // const divDoc = document.querySelector('.iframe-container')
-  // const sidebarDoc = document.querySelector('.wy-side-scroll')
-  // const sidebarJQ = $('.wy-side-scroll')
-  // sidebarJQ.removeAttr('style')
-  // let sidebarJQHeight = $('.wy-side-scroll').height()
+  const options = {
+    threshold: 0.01,
+  }
+  const divDoc = document.querySelector('.iframe-container')
+  const innerSidebar = $('.wy-side-scroll')
+  innerSidebar.removeAttr('style')
+  let innerSidebarHeight = $('.wy-side-scroll').height()
 
-  // intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ)
+  intersectionObserver(options, divDoc, innerSidebarHeight, innerSidebar)
 
   $(window).resize(function() {
     // handmade
-    changeSidebarHeightAndCreateIframe()
+    // changeSidebarHeightAndCreateIframe()
 
     // intersectionObserver
-    // sidebarJQ.removeAttr('style')
-    // sidebarJQHeight = $('.wy-side-scroll').height()
-    // intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ)
+    innerSidebar.removeAttr('style')
+    innerSidebarHeight = $('.wy-side-scroll').height()
+    intersectionObserver(options, divDoc, innerSidebarHeight, innerSidebar)
   })
 
   $(window).scroll(function() {
     // handmade
-    changeSidebarHeightAndCreateIframe()
+    // changeSidebarHeightAndCreateIframe()
 
     // intersectionObserver
-    // sidebarJQ.removeAttr('style')
-    // sidebarJQHeight = $('.wy-side-scroll').height()
-    // intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ)
+    innerSidebar.removeAttr('style')
+    innerSidebarHeight = $('.wy-side-scroll').height()
+    intersectionObserver(options, divDoc, innerSidebarHeight, innerSidebar)
   })
 });
-
-function insertIframe() {
-  const body = $('.wy-body-for-nav')
-  body.append(divWithIframe)
-}
 
 function changeSidebarHeightAndCreateIframe() {
   
@@ -100,29 +94,62 @@ function changeSidebarHeightAndCreateIframe() {
   
 }
 
-function intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ) {
+function intersectionObserver(options, divDoc, innerSidebarHeight, innerSidebar) {
   // we delete any inline-styles from innerSidebar
-  if($(sidebarJQ).attr('style')) {
-    sidebarJQ.removeAttr('style')
+  if($(innerSidebar).attr('style')) {
+    innerSidebar.removeAttr('style')
   }
-  const windowHeight = $(window).height()
+  const screenWidth = $(window).width()
+  const sidebar = $('.wy-nav-side')
+  const documentHeight = $(document).height()
+  const iframeHeight = $('.iframe-container').height()
+  const currentPosition = $(document).scrollTop()
+  const additionalPaddingFromSidebar = screenWidth > 991 ? 70 : 83
+  const heightThatIsAddedByPaddings = 36
+  const resultOfSums = documentHeight - 
+    iframeHeight - 
+    currentPosition - 
+    additionalPaddingFromSidebar - 
+    heightThatIsAddedByPaddings
+  const heightOfAdditionalButton = 50
+
+  console.log({resultOfSums})
 
   const onEntry = (entries, observer) => {
     entries.forEach(entry => {
-      // if() {
-        
-        // entry.isIntersecting ? sidebarJQ.height(windowHeight * (1 - entry.intersectionRatio) - 40) : null
-        console.log(sidebarJQ.height(), $(sidebarJQ).attr('style'), $(window).height() * (1 - (entry.intersectionRatio + (entry.intersectionRatio / windowHeight))) - 40)
-      // }
+      if(entry.isIntersecting) {
+        if(resultOfSums <= 50) {
+          $(sidebar).hide()
+          return 
+        }
+        $(sidebar).show()
+        $(sidebar).height(resultOfSums)
+        $(sidebar).css('margin-bottom', '20px')
+        $(innerSidebar).removeAttr('style')
+        // const heightOfInner = $(innerSidebar).height()
+        // console.log({heightOfInner})
+        $(innerSidebar).height(resultOfSums - heightOfAdditionalButton)
+        return
+        // entry.isIntersecting ? innerSidebar.height(windowHeight * (1 - entry.intersectionRatio) - 40) : null
+        console.log(innerSidebar.height(), $(innerSidebar).attr('style'), $(window).height() * (1 - (entry.intersectionRatio + (entry.intersectionRatio / windowHeight))) - 40)
+      } else {
+        $(sidebar).removeAttr('style')
+        $(innerSidebar).removeAttr('style')
+      }
     })
   }
   const observer = new IntersectionObserver(onEntry, options);
   observer.observe(divDoc)
 
-  if($(sidebarJQ).attr('style')) {
+  if($(innerSidebar).attr('style')) {
     observer.unobserve(divDoc)
   }
 
+}
+
+function insertIframe() {
+  const body = $('.wy-body-for-nav')
+  body.append(divWithIframe)
 }
 
 const divWithIframe = `<div class="iframe-container">
