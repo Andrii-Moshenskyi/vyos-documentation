@@ -48,7 +48,7 @@ function changeSidebarHeightAndCreateIframe() {
     // 'currentPositionMinusBrowserHeight=', ( currentPosition - browserHeight),
     // 'additionalPaddingFromSidebar=', additionalPaddingFromSidebar,
     // 'topPointofIframe=', topPointofIframe,
-    // 'isIframeInViewport=', isIframeInViewport, 
+    'isIframeInViewport=', isIframeInViewport, 
     // currentPosition + browserHeight + additionalPaddingFromSidebar, 
     // windowHeight - topPointofIframe - additionalPaddingFromSidebar,
     // {innerSidebarPart}
