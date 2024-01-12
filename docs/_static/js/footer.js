@@ -118,7 +118,7 @@ function intersectionObserver(options, divDoc, innerSidebarHeight, innerSidebar)
   const onEntry = (entries, observer) => {
     entries.forEach(entry => {
       if(entry.isIntersecting) {
-        if(resultOfSums <= 50) {
+        if(resultOfSums <= 60) {
           $(sidebar).hide()
           return 
         }
