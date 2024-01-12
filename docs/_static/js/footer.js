@@ -1,13 +1,38 @@
 $(document).ready(function() {
   insertIframe()
+  // handmade
   changeSidebarHeightAndCreateIframe()
 
+  // intersectionObserver
+  // const options = {
+  //   threshold: 0.01,
+  // }
+  // const divDoc = document.querySelector('.iframe-container')
+  // const sidebarDoc = document.querySelector('.wy-side-scroll')
+  // const sidebarJQ = $('.wy-side-scroll')
+  // sidebarJQ.removeAttr('style')
+  // let sidebarJQHeight = $('.wy-side-scroll').height()
+
+  // intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ)
+
   $(window).resize(function() {
+    // handmade
     changeSidebarHeightAndCreateIframe()
+
+    // intersectionObserver
+    // sidebarJQ.removeAttr('style')
+    // sidebarJQHeight = $('.wy-side-scroll').height()
+    // intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ)
   })
 
   $(window).scroll(function() {
+    // handmade
     changeSidebarHeightAndCreateIframe()
+
+    // intersectionObserver
+    // sidebarJQ.removeAttr('style')
+    // sidebarJQHeight = $('.wy-side-scroll').height()
+    // intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ)
   })
 });
 
@@ -62,10 +87,10 @@ function changeSidebarHeightAndCreateIframe() {
     $(sidebar).show()
     $(sidebar).height(resultOfSums)
     $(sidebar).css('margin-bottom', '20px')
-    $(innerSidebarPart).removeAttr('style')
-    const heightOfInner = $(innerSidebarPart).height()
-    console.log({heightOfInner})
-    $(innerSidebarPart).height(heightOfInner - 50)
+    // $(innerSidebarPart).removeAttr('style')
+    // const heightOfInner = $(innerSidebarPart).height()
+    // console.log({heightOfInner})
+    // $(innerSidebarPart).height(heightOfInner - 50)
     return
 
   } else {
@@ -73,6 +98,31 @@ function changeSidebarHeightAndCreateIframe() {
     $(innerSidebarPart).removeAttr('style')
   }
   
+}
+
+function intersectionObserver(options, divDoc, sidebarJQHeight, sidebarJQ) {
+  // we delete any inline-styles from innerSidebar
+  if($(sidebarJQ).attr('style')) {
+    sidebarJQ.removeAttr('style')
+  }
+  const windowHeight = $(window).height()
+
+  const onEntry = (entries, observer) => {
+    entries.forEach(entry => {
+      // if() {
+        
+        // entry.isIntersecting ? sidebarJQ.height(windowHeight * (1 - entry.intersectionRatio) - 40) : null
+        console.log(sidebarJQ.height(), $(sidebarJQ).attr('style'), $(window).height() * (1 - (entry.intersectionRatio + (entry.intersectionRatio / windowHeight))) - 40)
+      // }
+    })
+  }
+  const observer = new IntersectionObserver(onEntry, options);
+  observer.observe(divDoc)
+
+  if($(sidebarJQ).attr('style')) {
+    observer.unobserve(divDoc)
+  }
+
 }
 
 const divWithIframe = `<div class="iframe-container">
