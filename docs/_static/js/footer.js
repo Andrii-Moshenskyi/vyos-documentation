@@ -126,12 +126,8 @@ function intersectionObserver(options, divDoc, innerSidebarHeight, innerSidebar)
         $(sidebar).height(resultOfSums)
         $(sidebar).css('margin-bottom', '20px')
         $(innerSidebar).removeAttr('style')
-        // const heightOfInner = $(innerSidebar).height()
-        // console.log({heightOfInner})
         $(innerSidebar).height(resultOfSums - heightOfAdditionalButton)
         return
-        // entry.isIntersecting ? innerSidebar.height(windowHeight * (1 - entry.intersectionRatio) - 40) : null
-        console.log(innerSidebar.height(), $(innerSidebar).attr('style'), $(window).height() * (1 - (entry.intersectionRatio + (entry.intersectionRatio / windowHeight))) - 40)
       } else {
         $(sidebar).removeAttr('style')
         $(innerSidebar).removeAttr('style')
