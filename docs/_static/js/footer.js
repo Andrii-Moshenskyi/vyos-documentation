@@ -60,7 +60,7 @@ function changeSidebarHeightAndCreateIframe() {
   const topPointofIframe = iframeContainer.offset().top
   const isIframeInViewport = 
     (currentPosition + browserHeight + additionalPaddingFromSidebar) > 
-    (windowHeight - topPointofIframe - additionalPaddingFromSidebar)
+    topPointofIframe
   const innerSidebarPart = $('.wy-side-scroll')
 
   console.log(
