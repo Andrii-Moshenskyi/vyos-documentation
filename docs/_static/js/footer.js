@@ -73,18 +73,11 @@ function determineHeightOfFooterContainer() {
   const iframeContainer = $('.iframe-container')
   const href = window.location.href;
 
-  // console.log({iframeFooter: $('.iframe-container iframe').height()})
-  // const iframeContainer = $('.iframe-container')
-  // $(iframeContainer).height($('.iframe-container iframe').height())
-
   window.addEventListener('message',function(message){
-    console.log({message})
     if(message.data.footerIframeHeight){
-      // iframeFooter.style.minHeight=`${message.data.footerIframeHeight+1}px`;
-      $(iframeFooter).css('min-height', `${message.data.footerIframeHeight}px`)
-      // iframeContainer.style.height=`${message.data.footerIframeHeight+1}px`
-      $(iframeContainer).height(message.data.footerIframeHeight)
-      iframeFooter.contentWindow.postMessage({title, href},'*');
+      $(iframeFooter).css('min-height', `${message.data.footerIframeHeight + 1}px`)
+      $(iframeContainer).height(message.data.footerIframeHeight + 1)
+      iframeFooter[0].contentWindow.postMessage({title, href},'*');
     }
   })
 }
