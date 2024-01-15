@@ -141,6 +141,29 @@ function intersectionObserver(options, divDoc, innerSidebarHeight, innerSidebar)
     observer.unobserve(divDoc)
   }
 
+  determineHeightOfFooterContainer()
+
+}
+
+function determineHeightOfFooterContainer() {
+  const iframeFooter= $('#vyos-footer-iframe');
+  const title = window.document.getElementsByTagName('title')?.[0]?.text;
+  const iframeContainer = $('.iframe-container')
+  const href = window.location.href;
+
+  // console.log({iframeFooter: $('.iframe-container iframe').height()})
+  // const iframeContainer = $('.iframe-container')
+  // $(iframeContainer).height($('.iframe-container iframe').height())
+
+  window.addEventListener('message',function(message){
+    if(message.data.footerIframeHeight){
+      // iframeFooter.style.minHeight=`${message.data.footerIframeHeight+1}px`;
+      $(iframeFooter).css('min-height', `${message.data.footerIframeHeight}px`)
+      // iframeContainer.style.height=`${message.data.footerIframeHeight+1}px`
+      $(iframeContainer).height(message.data.footerIframeHeight)
+      iframeFooter.contentWindow.postMessage({title, href},'*');
+    }
+  })
 }
 
 function insertIframe() {

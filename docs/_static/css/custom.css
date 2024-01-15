@@ -112,7 +112,7 @@ p.devwarning {
 	.wy-nav-side.shift {
 		display: inherit;
 		width: 100%;
-		max-width: 430px;
+		max-width: 320px;
 	}
 }
 
@@ -568,24 +568,6 @@ html {
 
 .iframe-container iframe::-webkit-scrollbar {
 	display: none;
-}
-
-@media screen and (min-width: 992px) {
-	.iframe-container {
-		height: 992px; 
-	}
-}
-
-@media screen and (min-width: 576px) and (max-width: 991px) {
-	.iframe-container {
-		height: 500px; 
-	}
-}
-
-@media screen and (max-width: 575px) {
-	.iframe-container {
-		height: 815px;
-	}
 }
 
 .iframe-container iframe {
