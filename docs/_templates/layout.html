@@ -28,5 +28,15 @@
     <script type="text/javascript" charset="utf8" src="{{ pathto("_static/js/codecopier.js", True) }}"></script>
     <script type="text/javascript" charset="utf8" src="{{ pathto("_static/js/sidebar.js", True) }}"></script>
     <script type="text/javascript" charset="utf8" src="{{ pathto("_static/js/footer.js", True) }}"></script>
-    
+    <script>
+        const iframeFooter=document.getElementById('vyos-footer-iframe');
+        const title = window.document.getElementsByTagName('title')?.[0]?.text;
+        const href = window.location.href;
+        window.addEventListener('message',function(message){
+            if(message.data.footerIframeHeight){
+            iframeFooter.style.minHeight=`${message.data.footerIframeHeight+1}px`;
+            iframeFooter.contentWindow.postMessage({title, href},'*');
+            }
+        })
+    </script>
 {% endblock %}
