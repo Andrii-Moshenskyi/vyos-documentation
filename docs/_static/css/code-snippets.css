@@ -5,6 +5,7 @@
   border-radius: 8px;
   padding-left: 5px;
 }
+
 .rst-content div[class^=highlight] div[class^=highlight], 
 .rst-content pre.literal-block div[class^=highlight] {
   background: #525659 !important;
@@ -26,22 +27,6 @@
   overflow-x: scroll;
 }
 
-@media screen and (min-width: 992px) {
-  .rst-content .linenodiv pre, 
-  .rst-content div[class^=highlight] pre, 
-  .rst-content pre.literal-block {
-    padding: 24px 36px 18px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .rst-content .linenodiv pre, 
-  .rst-content div[class^=highlight] pre, 
-  .rst-content pre.literal-block {
-    padding: 16px 20px;
-  }
-}
-
 /* copy code div */
 .highlight > .copyDiv {
   display: flex;
@@ -55,21 +40,6 @@
   background-color: #393C3F;
   height: 32px;
   margin-top: 4px;
-}
-
-@media screen and (min-width: 992px) {
-  .copyDiv > p {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .copyDiv > p {
-    margin: 0 10px 0 0;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-  }
 }
 
 .copiedNotifier > span {
@@ -230,4 +200,31 @@
 
 .rst-content blockquote {
   margin: 0
+}
+
+@media screen and (max-width: 991px) {
+  .rst-content .linenodiv pre, 
+  .rst-content div[class^=highlight] pre, 
+  .rst-content pre.literal-block {
+    padding: 16px 20px;
+  }
+
+  .copyDiv > p {
+    margin: 0 10px 0 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .rst-content .linenodiv pre, 
+  .rst-content div[class^=highlight] pre, 
+  .rst-content pre.literal-block {
+    padding: 24px 36px 18px;
+  }
+
+  .copyDiv > p {
+    display: none;
+  }
 }

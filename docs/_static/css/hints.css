@@ -7,42 +7,6 @@ div.tip {
   border-radius: 8px;
 }
 
-@media screen and (min-width: 992px) {
-  div.note,
-  div.hint,
-  div.warning,
-  div.error,
-  div.seealso,
-  div.tip {
-    padding: 24px 32px !important;
-    border-radius: 8px;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 991px) {
-  div.note,
-  div.hint,
-  div.warning,
-  div.error,
-  div.seealso,
-  div.tip {
-    padding: 24px 32px !important;
-    border-radius: 8px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  div.note,
-  div.hint,
-  div.warning,
-  div.error,
-  div.seealso,
-  div.tip {
-    padding: 24px 32px !important;
-    border-radius: 8px;
-  }
-}
-
 div.note,
 div.seealso {
   background-color: #F5FCFF !important;
@@ -140,4 +104,40 @@ div.warning > .admonition-title,
 div.error > .admonition-title {
   background-color: #F0C6C6 !important;
   color: #8E2F2F !important;
+}
+
+@media screen and (min-width: 992px) {
+  div.note,
+  div.hint,
+  div.warning,
+  div.error,
+  div.seealso,
+  div.tip {
+    padding: 24px 32px !important;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  div.note,
+  div.hint,
+  div.warning,
+  div.error,
+  div.seealso,
+  div.tip {
+    padding: 24px 32px !important;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  div.note,
+  div.hint,
+  div.warning,
+  div.error,
+  div.seealso,
+  div.tip {
+    padding: 24px 32px !important;
+    border-radius: 8px;
+  }
 }

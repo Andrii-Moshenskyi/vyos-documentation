@@ -7,10 +7,6 @@
   white-space : normal;
 }
 
-#coverage .wy-table-responsive {
-  /* overflow : visible !important; */
-}
-
 #coverage .wy-table-responsive table td {
   white-space : normal !important;
 }
@@ -65,8 +61,6 @@ table > caption:hover a::after {
   width: 20px;
   height: 100%;
 }
-
-/* file:///D:/start/vyos-documentation/docs/_build/coverage.html */
 
 table {
   border: none !important;

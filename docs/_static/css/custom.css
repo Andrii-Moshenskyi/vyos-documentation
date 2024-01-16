@@ -19,7 +19,6 @@ p.devwarning {
 }
 
 /* main page */
-
 .wy-body-for-nav {
 	background: #fff;
   overflow-y: hidden
@@ -131,8 +130,6 @@ img {
 	margin-bottom: 20px !important;
 }
 
-/* footer */
-
 footer > hr {
 	display: none;
 }
@@ -159,7 +156,6 @@ footer p:has(a) > a:visited {
 .rst-versions {
 	position: static;
 	background: transparent;
-	/* margin-top: 35px; */
 	width: 262px;
 	display: block;
 }
@@ -211,7 +207,6 @@ div#rtd-sidebar {
 	display: none;
 }
 
-/* test styles */
 .wy-nav-content-opened-sidebar {
 	padding: 25px 0 27px 40px;
 }
@@ -220,7 +215,6 @@ div#rtd-sidebar {
 	max-width: calc(100% - 294px);
 	margin-left: 294px;
 }
-
 
 .wy-nav-content-closed-sidebar {
 	padding: 26px 0 !important;
@@ -248,14 +242,10 @@ html {
 	opacity: 0.1;
 }
 
-.scroll-trigger {
-  height: 1px; /* Set a height to create a scroll trigger */
-}
-
 .iframe-container {
   position: relative;
   width: 100%;
-  background-color: #f0f0f0; /* Set a background color or styles for visibility */
+  background-color: #f0f0f0; 
 	z-index: 201;
 	overflow: hidden;
 }
@@ -275,7 +265,11 @@ html {
 	overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+	.wy-nav-content-wrap,
+	.wy-nav-content-wrap.shift {
+		margin: 0 auto;
+	}
 
 	.wy-nav-top {
 		background-color: #fdab10;
@@ -288,12 +282,18 @@ html {
 	#vyos-user-guide .container {
 		max-width: none;
 	}
-}
 
-@media screen and (max-width: 767px) {
-	.wy-nav-content-wrap,
-	.wy-nav-content-wrap.shift {
-		margin: 0 auto;
+	.wy-nav-content-wrap .wy-nav-content {
+		padding: 0 0 26px 0;
+	}
+
+	.wy-grid-for-nav {
+		padding: 80px 15px 0;
+		max-width: 738px;
+	}
+
+	.rst-content > div > hr {
+		display: none;
 	}
 }
 
@@ -375,6 +375,11 @@ html {
 	dl.footnote > dt {
 		padding-left: 0 !important;
 	}
+
+	.wy-grid-for-nav {
+		padding: 80px 20px 0;
+		max-width: 738px;
+	}
 }
 
 @media screen and (min-width: 320px) and (max-width: 575px) {
@@ -447,29 +452,6 @@ html {
 
 	.rst-content > div > hr {
 		margin: 16px 0 26px 0;
-	}
-}
-
-@media screen and (max-width: 767px) {
-	.wy-nav-content-wrap .wy-nav-content {
-		padding: 0 0 26px 0;
-
-	}
-
-	.wy-grid-for-nav {
-		padding: 80px 15px 0;
-		max-width: 738px;
-	}
-
-	.rst-content > div > hr {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 575px) {
-	.wy-grid-for-nav {
-		padding: 80px 20px 0;
-		max-width: 738px;
 	}
 }
 
