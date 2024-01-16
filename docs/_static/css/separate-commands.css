@@ -1,9 +1,6 @@
 .rst-content code.literal {
   border: unset;
   background-color: unset;
-}
-
-.rst-content code.literal  {
   border: 1px solid rgba(253, 143, 1, 0.2);
   background-color: #FFF4E6;
   font-family: 'Archivo', sans-serif !important;
@@ -13,10 +10,10 @@
   border-radius: 4px;
   padding: 3px 6px;
   word-break: break-all;
-}
 
-.rst-content code.literal > span.pre:nth-child(n+ 2) {
-  padding-left: 5px;
+  & > span.pre:nth-child(n+ 2) {
+    padding-left: 5px;
+  }
 }
 
 div.opcmd-heading,
@@ -41,54 +38,54 @@ table .cfgcmd {
   border-left: 5px solid #FD8F01;
 }
 
-span.opcmd,
-span.cfgcmd {
-  display: flex;
-  padding: 4px 8px 8px 30px;
-  align-items: center;
-  color: #121010 !important;
-  font-size: 16px !important;
-  font-family: 'Roboto Mono', monospace !important;
-  letter-spacing: -0.04em !important;
-  font-weight: 500 !important;
-  position: relative;
-  word-break: break-all;
-}
+span {
+  &.opcmd,
+  &.cfgcmd {
+    display: flex;
+    padding: 4px 8px 8px 30px;
+    align-items: center;
+    color: #121010 !important;
+    font-size: 16px !important;
+    font-family: 'Roboto Mono', monospace !important;
+    letter-spacing: -0.04em !important;
+    font-weight: 500 !important;
+    position: relative;
+    word-break: break-all;
 
-span.opcmd {
-  background-color: #EBF9FF;
-}
+    &::before {
+      content: url('../images/cmnd-link-dollar-icon.svg');
+      display: flex;
+      padding-right: 8px;
+      align-items: center;
+      position: absolute;
+      top: 6px;
+      left: 8px;
+    }
+  }
 
-span.cfgcmd {
-  background-color: #FFF4E6;
-}
-
-span.opcmd::before,
-span.cfgcmd::before {
-  content: url('../images/cmnd-link-dollar-icon.svg');
-  display: flex;
-  padding-right: 8px;
-  align-items: center;
-  position: absolute;
-  top: 6px;
-  left: 8px;
+  &.opcmd {
+    background-color: #EBF9FF;
+  }
+  
+  &.cfgcmd {
+    background-color: #FFF4E6;
+  }
 }
 
 .opcmd-heading > a.cmdlink,
 .cfgcmd-heading > a.cmdlink {
   display: flex;
-}
 
-.opcmd-heading a.cmdlink:after,
-.cfgcmd-heading a.cmdlink:after {
-  display: flex;
-  align-items: center;
-  content: '';
-  height: 100%;
-  align-items: center;
-  padding-right: 12px;
-  padding-top: 3px;
-  border-radius: 0 8px 8px 0;
+  &::after {
+    display: flex;
+    align-items: center;
+    content: '';
+    height: 100%;
+    align-items: center;
+    padding-right: 12px;
+    padding-top: 3px;
+    border-radius: 0 8px 8px 0;
+  }
 }
 
 .opcmd-heading:hover a.cmdlink:after,

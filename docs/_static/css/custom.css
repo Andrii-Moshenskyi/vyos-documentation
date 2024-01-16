@@ -29,10 +29,21 @@ p.devwarning {
 	position: relative;
 	padding-top: 80px;
 	display: flex;
-}
 
-.wy-grid-for-nav:has(nav.wy-nav-side.shift) {
-	background: #E7E7E7;
+	&:has(nav.wy-nav-side.shift) {
+		background: #E7E7E7;
+	}
+
+	&:not(:has(nav.shift)) > section > div.overlay {
+		background-color: transparent
+	}
+	
+	&:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::before,
+	&:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::after,
+	&:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li::before,
+	&:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li::after {
+		background-color: #fff;
+	}
 }
 
 .wy-nav-content-wrap {
@@ -44,56 +55,46 @@ p.devwarning {
 .wy-nav-content {
 	max-width: 100%;
 	background-color: transparent;
-}
 
-.wy-grid-for-nav:not(:has(nav.shift)) > section > div.overlay {
-	background-color: transparent
-}
+	&.overlay > div > div[role=navigation] .wy-breadcrumbs > li a::before,
+	&.overlay > div > div[role=navigation] .wy-breadcrumbs > li a::after,
+	&.overlay > div > div[role=navigation] .wy-breadcrumbs > li::before,
+	&.overlay > div > div[role=navigation] .wy-breadcrumbs > li::after,
+	&.overlay > div > div.document div.card,
+	&.overlay > div > div.document div.card-header {
+		background-color: #E7E7E7;
+	} 
 
-.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::before,
-.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li a::after,
-.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li::before,
-.wy-grid-for-nav:not(:has(nav.shift)) section > div.overlay > div .wy-breadcrumbs > li::after {
-	background-color: #fff;
-}
-
-.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li a::before,
-.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li a::after,
-.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li::before,
-.wy-nav-content.overlay > div > div[role=navigation] .wy-breadcrumbs > li::after,
-.wy-nav-content.overlay > div > div.document div.card,
-.wy-nav-content.overlay > div > div.document div.card-header {
-	background-color: #E7E7E7;
-} 
-
-.wy-nav-content.overlay > div.rst-content > footer > .rst-footer-buttons > a {
-	background-color: #E7E7E7 !important;
-}
-
-/* main-page content */
-
-#vyos-user-guide .container {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-#vyos-user-guide .container > .docutils > .p-2 {
-	max-width: 387px;
-	box-shadow: none;
-	flex: none;
-
-	& .card-body .card-text {
-		min-height: 120px;
+	&.overlay > div.rst-content > footer > .rst-footer-buttons > a {
+		background-color: #E7E7E7 !important;
 	}
 }
 
-#vyos-user-guide .container > .row {
-	margin: 0;
-	display: grid;
-}
-
-#vyos-user-guide > .pb-4 {
-	padding-bottom: 1.4rem !important;
+/* main-page content */
+#vyos-user-guide {
+	& .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	& .container > .docutils > .p-2 {
+		max-width: 387px;
+		box-shadow: none;
+		flex: none;
+	
+		& .card-body .card-text {
+			min-height: 120px;
+		}
+	}
+	
+	& .container > .row {
+		margin: 0;
+		display: grid;
+	}
+	
+	& > .pb-4 {
+		padding-bottom: 1.4rem !important;
+	}
 }
 
 div.card-header {
@@ -131,15 +132,6 @@ img {
 	border-radius: 8px;
 }
 
-footer > hr {
-	display: none;
-}
-
-footer p {
-	margin-top: 105px;
-}
-
-footer p,
 footer {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
@@ -147,11 +139,26 @@ footer {
 	font-weight: 400;
 	letter-spacing: -0.5px;
 	color: #636a6d;
-}
 
-footer p:has(a) > a,
-footer p:has(a) > a:visited {
-	color: #636a6d;
+	& > hr {
+		display: none;
+	}
+	
+	& p {
+		margin-top: 105px;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: -0.5px;
+		color: #636a6d;
+
+		&:has(a) > a,
+		&:has(a) > a:visited {
+			color: #636a6d;
+		}
+	}
+	
 }
 
 .rst-versions {
@@ -159,49 +166,52 @@ footer p:has(a) > a:visited {
 	background: transparent;
 	width: 262px;
 	display: block;
+
+	&.shift-up {
+		background: #525659;
+		z-index: 100;
+		position: absolute;
+		left: 19px;
+		bottom: 30px;
+		border-radius: 6px;
+		overflow: hidden;
+	}
+	
+	& .rst-current-version {
+		background-color: #525659;
+		color: #01D38E; 
+		border-radius: 6px;
+		width: 264px;
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: -0.5px;
+	}
+
+	& .rst-current-version span.fa-book {
+		color: #fff !important;
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: -0.5px;
+	}
 }
 
-.rst-versions.shift-up {
-	background: #525659;
-	z-index: 100;
-	position: absolute;
-	left: 19px;
-	bottom: 30px;
-	border-radius: 6px;
-	overflow: hidden;
-}
+.rst-other-versions {
+	& dt {
+		color: #808080;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		letter-spacing: -0.5px;
+	}
+	
+	& small {
+		font-family: 'Roboto', sans-serif;
+		color: #fff;
 
-.rst-versions .rst-current-version {
-	background-color: #525659;
-	color: #01D38E; 
-	border-radius: 6px;
-	width: 264px;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: -0.5px;
-}
-
-.rst-other-versions dt {
-	color: #808080;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	letter-spacing: -0.5px;
-}
-
-.rst-other-versions small {
-	font-family: 'Roboto', sans-serif;
-	color: #fff;
-}
-
-.rst-other-versions small a {
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: -0.5px;
-	color: #fd8f01;
-}
-
-.rst-versions .rst-current-version span.fa-book {
-	color: #fff !important;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: -0.5px;
+		& a {
+			font-family: 'Roboto', sans-serif;
+			letter-spacing: -0.5px;
+			color: #fd8f01;
+		}
+	}
+	
 }
 
 div#rtd-sidebar {
@@ -249,21 +259,22 @@ html {
   background-color: #f0f0f0; 
 	z-index: 201;
 	overflow: hidden;
-}
 
-.iframe-container::-webkit-scrollbar {
-	display: none;
-}
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	
+	& iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+		overflow: hidden;
 
-.iframe-container iframe::-webkit-scrollbar {
-	display: none;
-}
-
-.iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-	overflow: hidden;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	
 }
 
 @media screen and (min-width: 320px) and (max-width: 575px) {

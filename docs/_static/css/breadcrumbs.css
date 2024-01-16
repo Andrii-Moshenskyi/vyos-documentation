@@ -1,103 +1,100 @@
-.wy-breadcrumbs > li,
-.wy-breadcrumbs > li a {
-  color: #636A6D;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  height: 26px;
-}
+.wy-breadcrumbs {
 
-.wy-breadcrumbs > li a {
-  padding: 0 5px 0 0;
-}
+  & > li,
+  & > li a {
+    color: #636A6D;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    height: 26px;
+  }
 
-.wy-breadcrumbs > li:nth-child(1) {
-  visibility: hidden;
-  position: relative;
-  padding-left: 0;
-}
+  & > li a {
+    padding: 0 5px 0 0;
+  }
 
-.wy-breadcrumbs > li > .icon-home::after {
-  content: url('../images/breadcrumbs-icon.svg');
-  visibility: visible;
-  right: 0px;
-  top: 6px;
-  position: absolute
-}
+  & > li:nth-child(1) {
+    visibility: hidden;
+    position: relative;
+    padding-left: 0;
+  }
 
-.wy-breadcrumbs > li > .icon-home::before {
-  padding-right: 0;
-  content: 'Home';
-  visibility: visible;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: -0.5px;
-  font-weight: 500;
-}
+  & > li > .icon-home::after {
+    content: url('../images/breadcrumbs-icon.svg');
+    visibility: visible;
+    right: 0px;
+    top: 6px;
+    position: absolute
+  }
 
-.wy-breadcrumbs > li:nth-child(n + 1) {
-  font-weight: 500;
-  position: relative;
-}
+  & > li > .icon-home::before {
+    padding-right: 0;
+    content: 'Home';
+    visibility: visible;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+  }
 
-/* this hides the arrows which are text here */
-.wy-breadcrumbs > li:nth-child(n + 1) {
-  color: transparent;
-}
+  & > li:nth-child(n + 1) {
+    font-weight: 500;
+    position: relative;
+  }
 
-/* this returns text to be visible in pre-last li */
-.wy-breadcrumbs > li:nth-last-child(2) {
-  color: #121010;
-}
+  & > li:nth-last-child(2) {
+    color: #121010;
+  }
 
-.wy-breadcrumbs > li:nth-last-child(2)::after,
-.wy-breadcrumbs > li:nth-last-child(1)::after {
-  display: none !important
-}
+  & > li:nth-last-child(2)::after,
+  & > li:nth-last-child(1)::after {
+    display: none !important
+  }
 
-.wy-breadcrumbs > li:nth-child(n + 1)::after {
-  content: url('../images/breadcrumbs-icon.svg');
-  right: -7px;
-  top: 0;
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-}
-
-.wy-breadcrumbs > li:last-of-type:has(a),
-.wy-breadcrumbs > li:last-of-type:has(a) a {
-  font-family: 'Archivo', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #fff;
-  background-color: #121010;
-  display: flex;
-  align-items: center;
-}
-
-.wy-breadcrumbs > li:last-of-type:has(a) {
-  padding: 7px 10px;
-  border-radius: 4px;
-  height: 30px;
-}
-
-.wy-breadcrumbs > li:last-of-type:has(a) a {
-  max-height: 100%;
-}
-
-.wy-breadcrumbs > li:last-of-type:has(a) a::before {
-  content: url('../images/github.svg');
-  margin-right: 4px;
-  display: flex;
-  align-items: center;
-}
-
-.wy-breadcrumbs > li:last-of-type::before {
-  display: none;
+  & > li:nth-child(n + 1)::after {
+    content: url('../images/breadcrumbs-icon.svg');
+    right: -7px;
+    top: 0;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  
+  & > li:last-of-type:has(a),
+  & > li:last-of-type:has(a) a {
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+    background-color: #121010;
+    display: flex;
+    align-items: center;
+  }
+  
+  & > li:last-of-type:has(a) {
+    padding: 7px 10px;
+    border-radius: 4px;
+    height: 30px;
+  }
+  
+  & > li:last-of-type:has(a) a {
+    max-height: 100%;
+  }
+  
+  & > li:last-of-type:has(a) a::before {
+    content: url('../images/github.svg');
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  & > li:last-of-type::before {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 375px) {

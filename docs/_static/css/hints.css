@@ -1,109 +1,89 @@
-div.note,
-div.hint,
-div.warning,
-div.error,
-div.seealso,
-div.tip {
-  border-radius: 8px;
-}
+div {
+  &.note,
+  &.hint,
+  &.warning,
+  &.error,
+  &.seealso,
+  &.tip {
+    border-radius: 8px;
 
-div.note,
-div.seealso {
-  background-color: #F5FCFF !important;
-}
+    & > .admonition-title {
+      padding: 5px 8px;
+      border-radius: 6px;
+      font-family: 'Archivo', sans-serif !important;
+      font-size: 14px !important;
+      letter-spacing: -0.02em !important;
+      font-weight: 600 !important;
+      margin: -12px -16px 12px;
+    }
 
-div.note > .admonition-title,
-div.hint > .admonition-title,
-div.warning > .admonition-title,
-div.error > .admonition-title,
-div.seealso > .admonition-title,
-div.tip > .admonition-title {
-  padding: 5px 8px;
-  border-radius: 6px;
-  font-family: 'Archivo', sans-serif !important;
-  font-size: 14px !important;
-  letter-spacing: -0.02em !important;
-  font-weight: 600 !important;
-  margin: -12px -16px 12px;
-}
+    & > .admonition-title::before {
+      content: url('../images/note-icon.svg');
+    }
 
-div.note > .highlight-none,
-div.hint > .highlight-none,
-div.warning > .highlight-none,
-div.error > .highlight-none,
-div.seealso > .highlight-none,
-div.tip > .highlight-none {
-  margin-top: 10px;
-}
+    & > .highlight-none {
+      margin-top: 10px;
+    }
 
-div.note:has(a.reference) a.reference,
-div.hint:has(a.reference) a.reference,
-div.warning:has(a.reference) a.reference,
-div.error:has(a.reference) a.reference,
-div.seealso:has(a.reference) a.reference,
-div.tip:has(a.reference) a.reference,
-div.note:has(a.reference) a.reference span,
-div.hint:has(a.reference) a.reference span,
-div.warning:has(a.reference) a.reference span,
-div.error:has(a.reference) a.reference span,
-div.seealso:has(a.reference) a.reference span,
-div.tip:has(a.reference) a.reference span {
-  color: #508EEB !important;
-}
+    & > p:nth-child(1n+2) {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      letter-spacing: -0.5px;
+      color: #525659;
+      font-weight: 400;
+      margin: 10px 0 0 0  !important;
+    }
+  }
 
-div.note > .admonition-title,
-div.seealso > .admonition-title {
-  background-color: #CCEFFB !important;
-  color: #356E81 !important;
-}
+  &.note,
+  &.seealso {
+    background-color: #F5FCFF !important;
+  }
 
-div.note > .admonition-title::before,
-div.hint > .admonition-title::before,
-div.warning > .admonition-title::before,
-div.error > .admonition-title::before,
-div.seealso > .admonition-title::before,
-div.tip > .admonition-title::before {
-  content: url('../images/note-icon.svg');
-}
+  &.note:has(a.reference),
+  &.hint:has(a.reference),
+  &.warning:has(a.reference),
+  &.error:has(a.reference),
+  &.seealso:has(a.reference),
+  &.tip:has(a.reference) {
+    & a.reference,
+    & a.reference span {
+      color: #508EEB !important;
+    }
+  }
 
-div.note > p:nth-child(1n+2),
-div.hint > p:nth-child(1n+2),
-div.warning > p:nth-child(1n+2),
-div.error > p:nth-child(1n+2),
-div.seealso > p:nth-child(1n+2),
-div.tip > p:nth-child(1n+2) {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  color: #525659;
-  font-weight: 400;
-  margin: 10px 0 0 0  !important;
+  &.note,
+  &.seealso {
+    & > .admonition-title {
+      background-color: #CCEFFB !important;
+      color: #356E81 !important;
+    }
+  }
+
+  &.hint,
+  &.tip {
+    background-color: #F7FDFB !important;
+
+    & > .admonition-title {
+      background-color: #C6F0E3 !important;
+      color: #3F6461 !important;
+    }
+  }
+
+  &.warning,
+  &.error {
+    background-color: #FDF7F7 !important;
+
+    & > .admonition-title {
+      background-color: #F0C6C6 !important;
+      color: #8E2F2F !important;
+    }
+  }
+
 }
 
 #running-on-bare-metal div.note > p:nth-child(2) {
   padding: 8px 12px 0 12px;
-}
-
-div.hint,
-div.tip {
-  background-color: #F7FDFB !important;
-}
-
-div.hint > .admonition-title,
-div.tip > .admonition-title {
-  background-color: #C6F0E3 !important;
-  color: #3F6461 !important;
-}
-
-div.warning,
-div.error {
-  background-color: #FDF7F7 !important;
-}
-
-div.warning > .admonition-title,
-div.error > .admonition-title {
-  background-color: #F0C6C6 !important;
-  color: #8E2F2F !important;
 }
 
 @media screen and (max-width: 575px) {

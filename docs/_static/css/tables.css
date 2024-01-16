@@ -1,14 +1,30 @@
 .wy-table-responsive {
   overflow : auto !important ;
   width: 100%;
-}
 
-.wy-table-responsive table td {
-  white-space : normal;
-}
+  & table {
+    border: none !important;
 
-#coverage .wy-table-responsive table td {
-  white-space : normal !important;
+
+    & td {
+      white-space : normal  !important;
+    }
+
+    & > caption:hover a {
+      position: relative;
+
+      &::after {
+        content: url('../images/cmnd-link-icon.svg');
+        position: absolute;
+        top: 0;
+        right: -3px;
+        z-index: 2;
+        background-color: #fff;
+        width: 20px;
+        height: 100%;
+      }
+    }
+  }
 }
 
 #coverage table.docutils td.coverage-ok p {
@@ -47,80 +63,47 @@
   color: #121010 !important;
 }
 
-table > caption:hover a {
-  position: relative;
-}
+#table-cfgcmd_wrapper {
+  & label {
+    color: #121010 !important;
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  } 
 
-table > caption:hover a::after {
-  content: url('../images/cmnd-link-icon.svg');
-  position: absolute;
-  top: 0;
-  right: -3px;
-  z-index: 2;
-  background-color: #fff;
-  width: 20px;
-  height: 100%;
-}
+  & option {
+    color: #8D9499 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
 
-table {
-  border: none !important;
-}
-#table-cfgcmd_wrapper label {
-  color: #121010 !important;
-  font-family: 'Archivo', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-} 
+  & select {
+    height: 40px;
+    max-width: 80px;
+    padding: 10px 14px;
+    margin: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #C6C9CC !important;
+    color: #8D9499;
+    font-size: 16px;
+  }
 
-#table-cfgcmd_wrapper option {
-  color: #8D9499 !important;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
+  & input {
+    margin-left: 16px;
+    height: 40px;
+    padding: 10px 14px;
+    width: 245px;
+    border: 1px solid #C6C9CC !important;
+    color: #8D9499;
+    font-size: 16px;
+  }
 
-#table-cfgcmd_wrapper select {
-  height: 40px;
-  max-width: 80px;
-  padding: 10px 14px;
-  margin: 0 10px;
-  border-radius: 4px;
-  border: 1px solid #C6C9CC !important;
-  color: #8D9499;
-  font-size: 16px;
-}
-
-#table-cfgcmd_wrapper input {
-  margin-left: 16px;
-  height: 40px;
-  padding: 10px 14px;
-  width: 245px;
-  border: 1px solid #C6C9CC !important;
-  color: #8D9499;
-  font-size: 16px;
-}
-
-#table-cfgcmd_wrapper .wy-table-responsive {
-  padding-top: 24px;
-}
-
-thead tr th p {
-  color: #121010 !important;
-  font-family: 'Archivo', sans-serif;
-  font-size: 14px !important;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin-right: 3px;
-}
-
-tbody tr td p {
-  color: #525659 !important;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px !important;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  & .wy-table-responsive {
+    padding-top: 24px;
+  }
 }
 
 thead tr th {
@@ -129,6 +112,15 @@ thead tr th {
   border-left: none !important;
   border-right: none !important;
   max-height: 40px;
+
+  & p {
+    color: #121010 !important;
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px !important;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-right: 3px;
+  }
 }
 
 .rst-content table.docutils td, 
@@ -163,23 +155,35 @@ thead tr th {
   background-color: unset;
 }
 
-tbody tr td.coverage-ok p {
-  color: transparent !important;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  position: relative;
-}
+tbody tr td {
+  & p {
+    color: #525659 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px !important;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
 
-tbody tr td.coverage-ok p::before {
-  content: url('../images/check.svg');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
+  &.coverage-ok {
+    & p {
+      color: transparent !important;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      position: relative;
+
+      &::before {
+        content: url('../images/check.svg');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
 }
 
 .dataTables_info {
