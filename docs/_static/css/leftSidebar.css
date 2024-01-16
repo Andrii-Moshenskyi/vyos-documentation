@@ -290,6 +290,22 @@ div.wy-nav-content
 	display: none !important;
 }
 
+@media screen and (max-width: 575px) {
+  .wy-menu-vertical {
+    padding: 10px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .wy-side-nav-search {
+    max-width: 256px;
+  }
+
+  .wy-menu-vertical {
+    padding: 10px 35px 0 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .wy-nav-side {
     border-radius: 0;
@@ -321,22 +337,6 @@ div.wy-nav-content
 @media screen and (min-width: 1200px) {
   .wy-nav-side {
     height: calc(100vh - 73px);
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .wy-side-nav-search {
-    max-width: 256px;
-  }
-
-  .wy-menu-vertical {
-    padding: 10px 35px 0 0;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .wy-menu-vertical {
-    padding: 10px 0 0 0;
   }
 }
 
