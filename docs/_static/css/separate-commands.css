@@ -24,8 +24,12 @@ table .cfgcmd {
   display: flex;
   background-color: unset;
   border: none;
-  margin-bottom: 15px;
   border-radius: 8px 0 0 8px;
+}
+
+div.opcmd-heading,
+div.cfgcmd-heading {
+  margin-bottom: 15px;
 }
 
 div.opcmd-heading,
@@ -45,7 +49,7 @@ span {
     padding: 4px 8px 8px 30px;
     align-items: center;
     color: #121010 !important;
-    font-size: 16px !important;
+    font-size: 13px !important;
     font-family: 'Roboto Mono', monospace !important;
     letter-spacing: -0.04em !important;
     font-weight: 500 !important;

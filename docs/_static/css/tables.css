@@ -63,7 +63,8 @@
   color: #121010 !important;
 }
 
-#table-cfgcmd_wrapper {
+#table-cfgcmd_wrapper,
+#table-opcmd_wrapper {
   & label {
     color: #121010 !important;
     font-family: 'Archivo', sans-serif;
@@ -89,6 +90,7 @@
     border: 1px solid #C6C9CC !important;
     color: #8D9499;
     font-size: 16px;
+
   }
 
   & input {
