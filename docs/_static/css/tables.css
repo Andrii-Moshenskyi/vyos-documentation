@@ -63,6 +63,16 @@
   color: #121010 !important;
 }
 
+.selectDiv {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 11111;
+  background-color: red;
+}
+
 #table-cfgcmd_wrapper,
 #table-opcmd_wrapper {
   & label {
@@ -83,14 +93,20 @@
 
   & select {
     height: 40px;
-    max-width: 80px;
+    width: 80px;
     padding: 10px 14px;
     margin: 0 10px;
     border-radius: 4px;
     border: 1px solid #C6C9CC !important;
     color: #8D9499;
     font-size: 16px;
-
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../images/select-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 18px top 50%;
   }
 
   & input {
@@ -105,6 +121,17 @@
 
   & .wy-table-responsive {
     padding-top: 24px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #table-cfgcmd_wrapper,
+  #table-opcmd_wrapper {
+    & label {
+      & input {
+        margin-top: 10px
+      }
+    }
   }
 }
 
