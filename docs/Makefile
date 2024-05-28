@@ -1,16 +1,12 @@
 # Minimal makefile for Sphinx documentation
 #
 
-# You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = VyOS
-SOURCEDIR     = .
-BUILDDIR      = _build
-
-AUTOHOST      = 0.0.0.0
-AUTOPORT      = 8000
-AUTOOPTS      = --watch .
+# You can set these variables from the command line, and also
+# from the environment for the first two.
+SPHINXOPTS    ?=
+SPHINXBUILD   ?= sphinx-build
+SOURCEDIR     = source
+BUILDDIR      = build
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -22,12 +18,3 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-livehtml:
-	sphinx-autobuild --host $(AUTOHOST) --port $(AUTOPORT) $(AUTOOPTS) \
-		"$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-
-defaultvalue: export VYOS_DEFAULT=True
-defaultvalue:	
-	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
