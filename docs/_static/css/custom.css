@@ -1,7 +1,5 @@
 p.devwarning {
-	top: 10px;
-	position: sticky;
-	margin: 10px 10px 10px 310px;
+	position: absolute;
 	padding: 5px 10px;
 	border-radius: 4px;
 	letter-spacing: 1px;
@@ -16,6 +14,31 @@ p.devwarning {
 			rgba(255, 255, 255, 0.2) 112px
 		);
 	background-color: #fdab10;
+}
+
+@media screen and (min-width: 992px) {
+  p.devwarning {
+    top: 70px;
+    left: 330px;
+    width: calc(100% - 330px);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  p.devwarning {
+    top: 80px;
+    left: 15px;
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  p.devwarning {
+    top: 80px;
+    left: 15px;
+    width: calc(100% - 30px);
+    font-size: 14px;
+  }
 }
 
 /* main page */
@@ -395,10 +418,6 @@ html {
 		background-color: #fdab10;
 	}
 
-	p.devwarning {
-		margin: 10px 10px 10px 10px;
-	}
-
 	#vyos-user-guide .container {
 		max-width: none;
 	}
@@ -532,4 +551,28 @@ html {
 	.closeButtonDivLine {
 		bottom: 85px;
 	}
+}
+
+@media screen and (min-width: 1101px) {
+  .additionalPaddingForMainContent {
+    padding-top: 110px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+  .additionalPaddingForMainContent {
+    padding-top: 130px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .additionalPaddingForMainContent {
+    padding-top: 130px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .additionalPaddingForMainContent {
+    padding-top: 130px;
+  }
 }

@@ -9,6 +9,8 @@ $(document).ready(function () {
     return removeOverlayAndButtons(screenWidth)
   })
 
+  insertDevWarning()
+
 })
 
 function removeButtons() {
