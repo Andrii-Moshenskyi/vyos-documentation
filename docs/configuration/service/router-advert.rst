@@ -13,6 +13,7 @@ Supported interface types:
     * bonding
     * bridge
     * ethernet
+    * geneve
     * l2tpv3
     * openvpn
     * pseudo-ethernet
@@ -22,11 +23,11 @@ Supported interface types:
     * wireless
     * wwan
 
+*************
+Configuration
+*************
 
-Enabling Advertisments
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. cfgcmd:: set service router-advert interface <interface> ....
+.. cfgcmd:: set service router-advert interface <interface> ...
 
 .. stop_vyoslinter
 
@@ -37,7 +38,7 @@ Enabling Advertisments
    "Cur Hop Limit", "hop-limit", "Hop count field of the outgoing RA packets"
    """Managed address configuration"" flag", "managed-flag", "Tell hosts to use the administered stateful protocol (i.e. DHCP) for autoconfiguration"
    """Other configuration"" flag", "other-config-flag", "Tell hosts to use the administered (stateful) protocol (i.e. DHCP) for autoconfiguration of other (non-address) information"
-   "MTU","link-mtu","Link MTU value placed in RAs, exluded in RAs if unset"
+   "MTU","link-mtu","Link MTU value placed in RAs, excluded in RAs if unset"
    "Router Lifetime","default-lifetime","Lifetime associated with the default router in units of seconds"
    "Reachable Time","reachable-time","Time, in milliseconds, that a node assumes a neighbor is reachable after having received a reachability confirmation"
    "Retransmit Timer","retrans-timer","Time in milliseconds between retransmitted Neighbor Solicitation messages"
@@ -50,9 +51,13 @@ Enabling Advertisments
 
 
 Advertising a Prefix
-''''''''''''''''''''
+--------------------
 
-.. cfgcmd:: set service router-advert interface <interface> prefix 2001:DB8::/32
+.. cfgcmd:: set service router-advert interface <interface> prefix <prefix/mask>
+
+   .. note:: You can also opt for using `::/64` as prefix for your :abbr:`RAs (Router
+    Advertisements)`. This will take the IPv6 GUA prefix assigned to the interface,
+    which comes in handy when using DHCPv6-PD.
 
 .. stop_vyoslinter
 
@@ -69,30 +74,48 @@ Advertising a Prefix
 
 .. start_vyoslinter
 
+Advertising a NAT64 Prefix
+--------------------------
+
+.. cfgcmd:: set service router-advert interface <interface> nat64prefix <prefix/mask>
+
+   Enable PREF64 option as outlined in :rfc:`8781`.
+
+   NAT64 prefix mask must be one of: /32, /40, /48, /56, /64 or 96.
+
+   .. note:: The well known NAT64 prefix is ``64:ff9b::/96``
+
+.. stop_vyoslinter
+
+.. csv-table::
+    :header: "VyOS Field", "Description"
+    :widths: 10,30
+
+    "valid-lifetime","Time in seconds that the prefix will remain valid (default: 65528 seconds)"
+
+.. start_vyoslinter
+
 Disabling Advertisements
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 To disable advertisements without deleting the configuration:
 
 .. cfgcmd:: set service router-advert interface <interface> no-send-advert
 
-Example Configuration
-~~~~~~~~~~~~~~~~~~~~~
+
+*******
+Example
+*******
+
+Your LAN connected on eth0 uses prefix ``2001:db8:beef:2::/64`` with the router
+beeing ``2001:db8:beef:2::1``
 
 .. code-block:: none
 
-     interface eth0.2 {
-        default-preference high
-        hop-limit 64
-        interval {
-            max 600
-        }
-        name-server 2001:db8::1
-        name-server 2001:db8::2
-        other-config-flag
-        prefix 2001:db8:beef:2::/64 {
-            valid-lifetime 2592000
-        }
-        reachable-time 0
-        retrans-timer 0
-     }
+    set interfaces ethernet eth0 address 2001:db8:beef:2::1/64
+
+    set service router-advert interface eth0 default-preference 'high'
+    set service router-advert interface eth0 name-server '2001:db8::1'
+    set service router-advert interface eth0 name-server '2001:db8::2'
+    set service router-advert interface eth0 other-config-flag
+    set service router-advert interface eth0 prefix 2001:db8:beef:2::/64

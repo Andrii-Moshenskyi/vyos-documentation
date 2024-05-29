@@ -143,32 +143,99 @@ avoid being tracked by the provider of your upstream DNS server.
    168.192.in-addr.arpa, 16-31.172.in-addr.arpa, which enabling upstream
    DNS server(s) to be used for reverse lookups of these zones.
 
-.. cfgcmd:: set service dns forwarding serve-stale-extension <0-65535>
+Authoritative zones
+-------------------
 
-   Maximum number of times an expired record’s TTL is extended by 30s when
-   serving stale. Extension only occurs if a record cannot be refreshed. A
-   value of 0 means the Serve Stale mechanism is not used. To allow records
-   becoming stale to be served for an hour, use a value of 120.
+The VyOS DNS forwarder can also be configured to host authoritative records for a domain.
 
-.. cfgcmd:: set service dns forwarding exclude-throttle-address <ip|prefix>
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> disable
 
-   When an authoritative server does not answer a query or sends a reply the
-   recursor does not like, it is throttled. Any servers matching the supplied
-   netmasks will never be throttled.
+   Disable hosting authoritative zone for `<domain-name>` without deleting from
+   configuration.
 
-.. cfgcmd:: set service dns forwarding options ecs-add-for <address>
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records <type>
+   <name> disable
 
-   The requestor netmask for which the requestor IP Address should be used as the
-   EDNS Client Subnet for outgoing queries.
+   Disable specific record without deleting it from configuration.
 
-.. cfgcmd:: set service dns forwarding options ecs-ipv4-bits <number>
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records <type>
+   <name> ttl <seconds>
 
-   Number of bits of client IPv4 address to pass when sending EDNS Client Subnet
-   address information.
+   Set the :abbr:`TTL (Time-to-live)` for the record in seconds. Default is 300 seconds.
 
-.. cfgcmd:: set service dns forwarding options edns-subnet-allow-list <address|domain>
+Record types
+^^^^^^^^^^^^
 
-   The netmask or domain that EDNS Client Subnet should be enabled for in outgoing queries.
+Below are a list of record types available to be configured within VyOS. Some records
+support special `<name>` keywords:
+
+* ``@`` Use @ as record name to set the record for the root domain.
+
+* ``any`` Use any as record name to configure the record as a wildcard.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   a <name> address <x.x.x.x>
+
+   Set an :abbr:`A (Address)` record. Supports ``@`` and ``any`` keywords.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   aaaa <name> address <h:h:h:h:h:h:h:h>
+
+   Set an :abbr:`AAAA (IPv6 Address)` record. Supports ``@`` and ``any`` keywords.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   cname <name> target <target-domain-name>
+
+   Set an :abbr:`CNAME (Canonical name)` record. Supports ``@`` keyword.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   naptr <name> rule <rule-number> <option> <value>
+
+   Set an :abbr:`NAPTR (Naming authority pointer)` record. Supports ``@`` keyword.
+   NAPTR records support the following options:
+
+   * **lookup-a** A Flag.
+
+   * **lookup-srv** S flag.
+
+   * **order** Rule order. Requires `<value>`.
+
+   * **preference** Rule preference. Requires `<value>`. Defaults to 0 if not set.
+
+   * **protocol-specific** P flag.
+
+   * **regexp** Regular expression. Requires `<value>`.
+
+   * **replacement** Replacement DNS name.
+
+   * **resolve-uri** U flag.
+
+   * **service** Service type. Requires `<value>`.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   ns <name> target <target-name>
+
+   Set an :abbr:`NS (Nameserver)` record.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   ptr <name> target <target-name>
+
+   Set an :abbr:`PTR (Pointer record)` record. Supports ``@`` keyword.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   spf <name> value <value>
+
+   Set an :abbr:`SPF (Sender policy framework)` record. Supports ``@`` keyword.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   srv <name> entry <entry-number> [hostname | port | priority | weight] <value>
+
+   Set an :abbr:`SRV (Service)` record. Supports ``@`` keyword.
+
+.. cfgcmd:: set service dns forwarding authoritative-domain <domain-name> records
+   txt <name> value <value>
+
+   Set an :abbr:`TXT (Text)` record. Supports ``@`` keyword.
 
 Example
 =======
@@ -231,11 +298,11 @@ this only one purpose.
 
 ddclient_ uses two methods to update a DNS record. The first one will send
 updates directly to the DNS daemon, in compliance with :rfc:`2136`. The second
-one involves a third party service, like DynDNS.com or any other similar
-website. This method uses HTTP requests to transmit the new IP address. You
+one involves a third party service, like DynDNS.com or any other such
+service provider. This method uses HTTP requests to transmit the new IP address. You
 can configure both in VyOS.
 
-.. _dns:dynmaic_config:
+.. _dns:dynamic_config:
 
 Configuration
 =============
@@ -243,48 +310,45 @@ Configuration
 :rfc:`2136` Based
 -----------------
 
-.. cfgcmd:: set service dns dynamic address <interface> rfc2136 <service-name>
+.. cfgcmd:: set service dns dynamic name <service-name> address interface <interface>
 
-   Create new :rfc:`2136` DNS update configuration which will update the IP
+   Create new dynamic DNS update configuration which will update the IP
    address assigned to `<interface>` on the service you configured under
    `<service-name>`.
 
-.. cfgcmd:: set service dns dynamic address <interface> rfc2136 <service-name>
-   key <keyfile>
+.. cfgcmd:: set service dns dynamic name <service-name> description <text>
+   
+   Set description `<text>` for dynamic DNS service being configured.
 
-   File identified by `<keyfile>` containing the secret RNDC key shared with
-   remote DNS server.
+.. cfgcmd:: set service dns dynamic name <service-name> key <filename>
 
-.. cfgcmd:: set service dns dynamic address <interface> rfc2136 <service-name>
-   server <server>
+   File identified by `<filename>` containing the TSIG authentication key for RFC2136
+   nsupdate on remote DNS server.
+
+.. cfgcmd:: set service dns dynamic name <service-name> server <server>
 
    Configure the DNS `<server>` IP/FQDN used when updating this dynamic
    assignment.
 
-.. cfgcmd:: set service dns dynamic address <interface> rfc2136 <service-name>
-   zone <zone>
+.. cfgcmd:: set service dns dynamic name <service-name> zone <zone>
 
    Configure DNS `<zone>` to be updated.
 
-.. cfgcmd:: set service dns dynamic address <interface> rfc2136 <service-name>
-   record <record>
+.. cfgcmd:: set service dns dynamic name <service-name> host-name <record>
 
-   Configure DNS `<record>` which should be updated. This can be set multiple
-   times.
+   Configure DNS `<record>` which should be updated. This can be set multiple times.
 
-.. cfgcmd:: set service dns dynamic address <interface> rfc2136 <service-name>
-   ttl <ttl>
+.. cfgcmd:: set service dns dynamic name <service-name> ttl <ttl>
 
    Configure optional TTL value on the given resource record. This defaults to
    600 seconds.
 
-.. cfgcmd:: set service dns dynamic timeout <60-3600>
+.. cfgcmd:: set service dns dynamic interval <60-3600>
 
-   Specify timeout / update interval to check if IP address changed.
+   Specify interval in seconds to wait between Dynamic DNS updates.
+   The default is  300 seconds.
 
-   This defaults to 300 seconds.
-
-.. _dns:dynmaic_example:
+.. _dns:dynamic_example:
 
 Example
 ^^^^^^^
@@ -295,32 +359,48 @@ Example
 
 .. code-block:: none
 
+  # Configuration commands entered:
+  #
+  set service dns dynamic name 'VyOS-DNS' address interface 'eth0'
+  set service dns dynamic name 'VyOS-DNS' description 'RFC 2136 dynamic dns service'
+  set service dns dynamic name 'VyOS-DNS' key '/config/auth/my.key'
+  set service dns dynamic name 'VyOS-DNS' server 'ns1.vyos.io'
+  set service dns dynamic name 'VyOS-DNS' zone 'vyos.io'
+  set service dns dynamic name 'VyOS-DNS' host-name 'example.vyos.io'
+  set service dns dynamic name 'VyOS-DNS' protocol 'nsupdate'
+  set service dns dynamic name 'VyOS-DNS' ttl '300'
+
+  # Resulting config:
+  #
   vyos@vyos# show service dns dynamic
-   interface eth0.7 {
-       rfc2136 VyOS-DNS {
-           key /config/auth/my.key
-           record example.vyos.io
-           server ns1.vyos.io
-           ttl 300
-           zone vyos.io
+   name VyOS-DNS {
+       address {
+           interface eth0
        }
+       description "RFC 2136 dynamic dns service"
+       host-name example.vyos.io
+       key /config/auth/my.key
+       protocol nsupdate
+       server ns1.vyos.io
+       ttl 300
+       zone vyos.io
    }
 
 This will render the following ddclient_ configuration entry:
 
 .. code-block:: none
 
+  # ddclient configuration for interface "eth0":
   #
-  # ddclient configuration for interface "eth0.7":
-  #
-  use=if, if=eth0.7
 
-  # RFC2136 dynamic DNS configuration for example.vyos.io.vyos.io
-  server=ns1.vyos.io
-  protocol=nsupdate
-  password=/config/auth/my.key
-  ttl=300
-  zone=vyos.io
+  # Web service dynamic DNS configuration for VyOS-DNS: [nsupdate, example.vyos.io]
+  use=if, \
+  if=eth0, \
+  protocol=nsupdate, \
+  server=ns1.vyos.io, \
+  zone=vyos.io, \
+  password='/config/auth/my.key', \
+  ttl=300 \
   example.vyos.io
 
 .. note:: You can also keep different DNS zone updated. Just create a new
@@ -335,40 +415,43 @@ VyOS is also able to use any service relying on protocols supported by ddclient.
 To use such a service, one must define a login, password, one or multiple
 hostnames, protocol and server.
 
-.. cfgcmd:: set service dns dynamic address <interface> service <service>
-   host-name <hostname>
+.. cfgcmd:: set service dns dynamic name <service-name> address interface <interface>
+  
+   Create new dynamic DNS update configuration which will update the IP   
+   address assigned to `<interface>` on the service you configured under
+   `<service-name>`.
+
+.. cfgcmd:: set service dns dynamic name <service-name> description <text>
+
+   Set description `<text>` for dynamic DNS service being configured.
+
+.. cfgcmd:: set service dns dynamic name <service-name> host-name <hostname>
 
    Setup the dynamic DNS hostname `<hostname>` associated with the DynDNS
-   provider identified by `<service>` when the IP address on address
-   `<interface>` changes.
+   provider identified by `<service-name>`.
 
-.. cfgcmd:: set service dns dynamic address <interface> service <service>
-   username <username>
+.. cfgcmd:: set service dns dynamic name <service-name> username <username>
 
    Configure `<username>` used when authenticating the update request for
-   DynDNS service identified by `<service>`.
-   For Namecheap, set the <domain> you wish to update.
+   DynDNS service identified by `<service-name>`.
 
-.. cfgcmd:: set service dns dynamic address <interface> service <service>
-   password <password>
+.. cfgcmd:: set service dns dynamic name <service-name> password <password>
 
    Configure `<password>` used when authenticating the update request for
-   DynDNS service identified by `<service>`.
+   DynDNS service identified by `<service-name>`.
 
-.. cfgcmd:: set service dns dynamic address <interface> service <service>
-   protocol <protocol>
+.. cfgcmd:: set service dns dynamic name <service-name> protocol <protocol>
 
-   When a ``custom`` DynDNS provider is used the protocol used for communicating
+   When a ``custom`` DynDNS provider is used, the protocol used for communicating
    to the provider must be specified under `<protocol>`. See the embedded
-   completion helper for available protocols.
+   completion helper when entering above command for available protocols.
 
-.. cfgcmd:: set service dns dynamic address <interface> service <service>
-   server <server>
+.. cfgcmd:: set service dns dynamic name <service-name> server <server>
 
    When a ``custom`` DynDNS provider is used the `<server>` where update
    requests are being sent to must be specified.
 
-.. cfgcmd:: set service dns dynamic address <interface> ipv6-enable
+.. cfgcmd:: set service dns dynamic name <service-name> ip-version 'ipv6'
 
    Allow explicit IPv6 address for the interface.
 
@@ -376,14 +459,17 @@ hostnames, protocol and server.
 Example:
 ^^^^^^^^
 
-Use DynDNS as your preferred provider:
+Use deSEC (dedyn.io) as your preferred provider:
 
 .. code-block:: none
 
-  set service dns dynamic address eth0 service dyndns
-  set service dns dynamic address eth0 service dyndns username my-login
-  set service dns dynamic address eth0 service dyndns password my-password
-  set service dns dynamic address eth0 service dyndns host-name my-dyndns-hostname
+  set service dns dynamic name dedyn description 'deSEC dynamic dns service'
+  set service dns dynamic name dedyn username 'myusername'
+  set service dns dynamic name dedyn password 'mypassword'
+  set service dns dynamic name dedyn host-name 'myhostname.dedyn.io'
+  set service dns dynamic name dedyn protocol 'dyndns2'
+  set service dns dynamic name dedyn server 'update.dedyn.io'
+  set service dns dynamic name dedyn address interface 'eth0'
 
 .. note:: Multiple services can be used per interface. Just specify as many
    services per interface as you like!
@@ -393,12 +479,14 @@ Example IPv6 only:
 
 .. code-block:: none
 
-  set service dns dynamic address eth0 ipv6-enable
-  set service dns dynamic address eth0 service dyndns6 username my-login
-  set service dns dynamic address eth0 service dyndns6 password my-password
-  set service dns dynamic address eth0 service dyndns6 host-name my-dyndns-hostname
-  set service dns dynamic address eth0 service dyndns6 protocol dyndns2
-  set service dns dynamic address eth0 service dyndns6 server dyndns-v6-server
+  set service dns dynamic name dedyn description 'deSEC ipv6 dynamic dns service'
+  set service dns dynamic name dedyn username 'myusername'
+  set service dns dynamic name dedyn password 'mypassword'
+  set service dns dynamic name dedyn host-name 'myhostname.dedyn.io'
+  set service dns dynamic name dedyn protocol 'dyndns2'
+  set service dns dynamic name dedyn ip-version 'ipv6'
+  set service dns dynamic name dedyn server 'update6.dedyn.io'
+  set service dns dynamic name dedyn address interface 'eth0'
 
 
 Running Behind NAT
@@ -408,21 +496,15 @@ By default, ddclient_ will update a dynamic dns record using the IP address
 directly attached to the interface. If your VyOS instance is behind NAT, your
 record will be updated to point to your internal IP.
 
-Above, command syntax isn noted to configure dynamic dns on a specific interface.
-It is possible to overlook the additional address option, web, when completeing
-those commands. ddclient_ has another way to determine the WAN IP address, using
-a web-based url to determine the external IP. Each of the commands above will
-need to be modified to use 'web' as the 'interface' specified if this functionality
-is to be utilized.
+ddclient_ has another way to determine the WAN IP address. This is controlled
+by:
 
-This functionality is controlled by adding the following configuration:
-
-.. cfgcmd:: set service dns dynamic address web web-options url <url>
+.. cfgcmd:: set service dns dynamic name <service-name> address web <url>
 
    Use configured `<url>` to determine your IP address. ddclient_ will load
    `<url>` and tries to extract your IP address from the response.
 
-.. cfgcmd:: set service dns dynamic address web web-options skip <pattern>
+.. cfgcmd:: set service dns dynamic name <service-name> address web skip <pattern>
 
    ddclient_ will skip any address located before the string set in `<pattern>`.
 

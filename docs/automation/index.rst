@@ -2,17 +2,12 @@
 VyOS Automation
 ###############
 
-
-  * Nornir
-  * startup scripts
-
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    vyos-api
    vyos-ansible
-   vyos-terraform
+   terraform/index
    vyos-napalm
    vyos-netmiko
    vyos-salt

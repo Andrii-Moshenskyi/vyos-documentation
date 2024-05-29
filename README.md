@@ -11,10 +11,10 @@ Our old wiki with documentation from the VyOS 1.1.x and early 1.2.0 era can stil
 
 Our version follows the very same branching scheme as the VyOS source modules
 itself. We maintain one documentation branch per VyOS release. The default
-branch that contains the most recent VyOS documentation is called `master`
+branch that contains the most recent VyOS documentation is called `current`
 and matches the latest VyOS release which is 1.4 at the time.
 
-All new documentation enhancements go to the `master` branch. If those changes
+All new documentation enhancements go to the `current` branch. If those changes
 are beneficial for previous VyOS documentation versions they will be
 cherry-picked to the appropriate branch(es).
 
@@ -90,12 +90,14 @@ If the `vyos/vyos-documentation` container could not be found locally it will be
 automatically fetched from Dockerhub.
 
 ```bash
-$ docker run --rm -it -v "$(pwd)":/vyos -w /vyos/docs \
-  -e GOSU_UID=$(id -u) -e GOSU_GID=$(id -g) vyos/vyos-documentation make html
+$ git clone https://github.com/vyos/vyos-documentation.git
 
-# sphinx autobuild
-$ docker run --rm -it -p 8000:8000 -v "$(pwd)":/vyos -w /vyos/docs -e \
-  GOSU_UID=$(id -u) -e GOSU_GID=$(id -g) vyos/vyos-documentation make livehtml
+$ cd vyos-documentation
+
+$ docker run --rm -it -v "$(pwd)":/vyos -w /vyos/docs -e GOSU_UID=$(id -u) -e GOSU_GID=$(id -g) vyos/vyos-documentation make html
+
+# For sphinx autobuild
+$ docker run --rm -it -p 8000:8000 -v "$(pwd)":/vyos -w /vyos/docs -e GOSU_UID=$(id -u) -e GOSU_GID=$(id -g) vyos/vyos-documentation make livehtml
 ```
 
 ### Test the docs
@@ -103,13 +105,11 @@ $ docker run --rm -it -p 8000:8000 -v "$(pwd)":/vyos -w /vyos/docs -e \
 To test all files, run:
 
 ```bash
-$ docker run --rm -it -v "$(pwd)":/vyos -w /vyos/docs \
-  -e GOSU_UID=$(id -u) -e GOSU_GID=$(id -g) vyos/vyos-documentation vale .
+$ docker run --rm -it -v "$(pwd)":/vyos -w /vyos/docs -e GOSU_UID=$(id -u) -e GOSU_GID=$(id -g) vyos/vyos-documentation vale .
 ```
 
 to test a specific file (e.g. `quick-start.rst`)
 
 ```bash
-$ docker run --rm -it -v "$(pwd)":/vyos -w /vyos/docs -e GOSU_UID=$(id -u) \
-  -e GOSU_GID=$(id -g) vyos/vyos-documentation vale quick-start.rst
+$ docker run --rm -it -v "$(pwd)":/vyos -w /vyos/docs -e GOSU_UID=$(id -u) -e GOSU_GID=$(id -g) vyos/vyos-documentation vale quick-start.rst
 ```
