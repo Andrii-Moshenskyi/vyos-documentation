@@ -14,7 +14,7 @@ $(document).ready(function() {
   })
 
   $(window).scroll(function() {
-    intersectionObserver(options, divDoc, innerSidebar)
+    // intersectionObserver(options, divDoc, innerSidebar)
   })
 });
 
